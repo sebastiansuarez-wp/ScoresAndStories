@@ -1,0 +1,163 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wagner Prep Mailing List Edition No. 3: deadline first format · Scores and Stories</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:wght@400;500;600&display=swap');
+:root { --navy:#143757; --orange:#ED7D14; --cream:#FBF3E6; --maroon:#8A2B2B; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--cream); font-family:'Raleway',sans-serif; color:var(--navy); }
+.banner { background:var(--maroon); color:#fff; text-align:center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.14em; padding:8px 10px; }
+header { background:var(--navy); padding:30px 22px 26px; }
+.wrap { max-width:980px; margin:0 auto; padding:0 18px; }
+.kicker { font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; letter-spacing:.18em; color:var(--orange); text-transform:uppercase; }
+h1 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:32px; color:#fff; margin:8px 0 4px; }
+.sub { color:#C9D6E2; font-size:14.5px; margin:0; max-width:720px; line-height:1.55; }
+.topnav { margin-top:16px; }
+.topnav a { color:#C9D6E2; font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; margin-right:18px; }
+.topnav a:hover { color:var(--orange); }
+h2 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:19px; margin:34px 0 6px; }
+h2 .n { color:#8FA3B5; font-weight:600; font-size:14px; }
+h3 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:14.5px; margin:24px 0 10px; letter-spacing:.02em; }
+.lede { font-size:14px; color:#3D5468; line-height:1.65; margin:6px 0 4px; max-width:760px; }
+.stats { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 0; }
+.stat { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:12px; padding:10px 16px; color:#fff; }
+.stat b { font-family:'Montserrat',sans-serif; font-size:20px; display:block; color:var(--orange); }
+.stat span { font-size:11.5px; color:#C9D6E2; letter-spacing:.04em; text-transform:uppercase; }
+.notice { background:#FDF1DC; border:1.5px solid #E3B765; border-radius:12px; padding:14px 18px; font-size:13.5px; line-height:1.6; margin:22px 0 0; }
+.urgent { background:#fff; border-left:5px solid var(--orange); border-radius:12px; padding:14px 18px; margin:22px 0 0; box-shadow:0 2px 10px rgba(20,55,87,.08); font-size:14px; line-height:1.6; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(235px,1fr)); gap:13px; }
+a.card { display:block; background:#fff; border-radius:14px; padding:16px 18px; text-decoration:none; color:var(--navy); box-shadow:0 1px 6px rgba(20,55,87,.07); border:1.5px solid transparent; transition:border .15s; }
+a.card:hover { border-color:var(--orange); }
+a.card.primary { grid-column:1 / -1; background:var(--navy); color:#fff; padding:22px 24px; }
+a.card.primary .desc { color:#C9D6E2; }
+.card .name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:15.5px; }
+.card.primary .name { font-size:19px; color:#fff; }
+.card .desc { font-size:12.8px; color:#5A6E80; margin-top:5px; line-height:1.5; }
+.card .go { font-family:'Montserrat',sans-serif; font-weight:700; font-size:11px; letter-spacing:.08em; color:var(--orange); text-transform:uppercase; margin-top:9px; display:inline-block; }
+footer { margin:46px 0 30px; font-size:12.5px; color:#5A6E80; line-height:1.7; }
+.how { background:#fff; border-radius:14px; padding:18px 22px; box-shadow:0 1px 6px rgba(20,55,87,.07); font-size:13.8px; line-height:1.7; }
+.pgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:14px; }
+.pick { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 6px rgba(20,55,87,.07); display:flex; flex-direction:column; gap:8px; }
+.hook { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.12em; color:var(--orange); text-transform:uppercase; }
+.pname { font-family:'Montserrat',sans-serif; font-weight:700; font-size:16.5px; line-height:1.35; }
+.porg { font-family:'Raleway',sans-serif; font-weight:500; font-size:13px; color:#5A6E80; }
+.pwhen { font-size:13.2px; color:#3D5468; }
+.pfit { font-size:13.2px; line-height:1.55; }
+.pmeta { margin-top:auto; padding-top:8px; font-size:12px; color:#5A6E80; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.free { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; background:#2E8B57; color:#fff; padding:3px 9px; border-radius:999px; }
+.paid { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; background:#EFEAE0; color:var(--navy); padding:3px 9px; border-radius:999px; }
+.un { font-size:10px; color:#A05252; letter-spacing:.05em; font-weight:600; }
+.rot { display:flex; flex-wrap:wrap; gap:9px; margin-top:10px; }
+.rot span { background:#fff; border:1.5px solid #D8D2C4; border-radius:999px; padding:8px 14px; font-size:12.5px; font-weight:600; }
+.rot b { color:var(--orange); font-family:'Montserrat',sans-serif; margin-right:5px; }
+.prow { display:flex; justify-content:space-between; align-items:center; }
+.datechip { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.08em; color:#fff; background:var(--navy); padding:4px 11px; border-radius:999px; }
+.ftag { font-family:'Montserrat',sans-serif; font-weight:700; font-size:10px; letter-spacing:.08em; color:#8FA3B5; text-transform:uppercase; }
+.itag { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.05em; background:#7A5AA8; color:#fff; padding:3px 9px; border-radius:999px; }
+.slist { display:flex; flex-direction:column; gap:9px; }
+.srow { background:#fff; border-radius:12px; padding:13px 16px; box-shadow:0 1px 5px rgba(20,55,87,.06); display:flex; gap:14px; align-items:center; font-size:13.2px; }
+.sdate { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11.5px; color:var(--orange); min-width:54px; }
+.sbody { flex:1; line-height:1.5; }
+.snote { font-size:11.8px; color:#5A6E80; }
+.vflag { font-family:'Montserrat',sans-serif; font-weight:800; font-size:9.5px; letter-spacing:.06em; background:var(--maroon); color:#fff; padding:3px 8px; border-radius:999px; white-space:nowrap; }
+
+.mdwrap { max-width:840px; margin:0 auto; padding:8px 18px 60px; }
+.mdbody { background:#fff; border-radius:14px; padding:28px 34px; box-shadow:0 1px 6px rgba(20,55,87,.07); line-height:1.65; font-size:14.5px; }
+.mdbody h1 { color:var(--navy); font-size:23px; margin:18px 0 10px; }
+.mdbody h2 { font-size:18px; border-bottom:2px solid var(--cream); padding-bottom:6px; }
+.mdbody h3 { font-family:'Montserrat',sans-serif; font-size:15px; margin:20px 0 8px; }
+.mdbody a { color:var(--orange); }
+.mdbody table { border-collapse:collapse; width:100%; font-size:13px; margin:14px 0; }
+.mdbody th { background:var(--navy); color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; letter-spacing:.05em; padding:7px 9px; text-align:left; }
+.mdbody td { border:1px solid #EFEAE0; padding:7px 9px; vertical-align:top; }
+.mdbody blockquote { border-left:4px solid var(--orange); margin:14px 0; padding:4px 16px; background:var(--cream); border-radius:0 8px 8px 0; }
+.mdbody code { background:var(--cream); padding:1px 5px; border-radius:5px; font-size:13px; }
+.back { display:inline-block; margin:16px 0 6px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:.06em; color:var(--orange); text-decoration:none; text-transform:uppercase; }
+</style></head><body>
+<div class="banner">INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE</div>
+<div class="mdwrap"><a class="back" href="../index.html">&larr; Back to this week</a>
+<div class="mdbody"><h1>INTERNAL DRAFT. NOT FOR PUBLICATION. VERIFY BEFORE SENDING.</h1>
+<h1>Wagner Prep Mailing List Edition No. 3: deadline first format</h1>
+<p><strong>Working date:</strong> June 10, 2026 · <strong>Format:</strong> deadline first, v3 · <strong>Review status:</strong> Unreviewed, needs counselor sign off
+<strong>Style note:</strong> factual titles and plain categories only, per operator direction June 10. Every item carries its Scores and Stories ledger tag. All six fields covered. Vet codes: ✓ checked at official source this cycle · ◐ official source found, date needs reconfirm · ▲ third party sourced, must hit primary before send.</p>
+<hr />
+<h2>Section 1: Deadlines, soonest first</h2>
+<p><strong>This week, June 10 to 14: Tribeca Festival free events end Sunday. [Stories]</strong>
+Games Gallery at Pier 57, free and open to the public June 10 to 14. Free outdoor anniversary screenings at Hudson Yards through June 14.
+Link: https://tribecafilm.com/festival
+Internal: ✓ tribecafilm.com this cycle · cut after June 14</p>
+<p><strong>August 23: Student Historian Internship application closes. New York Historical. [Both]</strong>
+Paid yearlong research internship, $1,200 stipend, entering grades 10 to 12, NYC metro including parts of NJ and CT. Wednesday evenings October to June.
+Link: https://www.nyhistory.org/education/student-historian-internship-program
+Internal: ✓ reverified this cycle, due 11:59 PM ET aug 23, decisions by oct 6</p>
+<p><strong>Expected September: The Met High School Internship posting. [Both]</strong>
+Grades 10 and 11, $1,100 stipend, school year cycle. Recent pattern: posting in September, deadline late October. The recommendation letter is the long lead item; ask the teacher now.
+Link: https://www.metmuseum.org/about-the-met/internships/high-school
+Internal: ◐ pattern based, flag the day it posts</p>
+<p><strong>Expected fall: Bronx Museum Teen Council fall session. [Both]</strong>
+Paid, 12 students per cycle, ages 14 to 19. Fall 2026 deadline not yet posted as of June 10; the spring deadline was February 1, so expect a summer posting.
+Link: https://bronxmuseum.org/learn/teens/
+Internal: ◐ checked this cycle, deadline not yet live, keep on watch</p>
+<p><strong>January 1 to March 31, 2027: NewYork Presbyterian summer teen volunteering. [Both]</strong>
+Ages 15 to 17, 120 hour summer minimum, application plus interview plus medical clearance. Listed now because the pipeline takes months and juniors planning summer 2027 should mark it.
+Link: https://www.nyp.org/volunteer/summer-volunteering
+Internal: ✓ window dates verified this cycle; 2026 round is closed, this is the 2027 planning note</p>
+<h2>Section 2: Open now, no deadline, apply or attend anytime</h2>
+<p><strong>Teen Takeovers Branch Council, Brooklyn Public Library: paid, ages 16 to 19, rolling application. [Both]</strong>
+High schoolers plan, promote, and host after hours events at BPL branches. Stipend plus community service hours.
+Link: https://www.bklynlibrary.org/support/volunteer/branch-council
+Internal: ✓ this cycle, niche flagship of the week</p>
+<p><strong>Youth Advocacy Ambassador, NAMI-NYC: free, ages 14 to 18, NYC residents. [Both]</strong>
+Mental health advocacy training; certificate on completion and a documented verification letter after three advocacy actions. Youth Council and teen programs alongside.
+Link: https://naminycmetro.org/teen-volunteers/
+Internal: ✓ this cycle, eligibility verbatim: reside in one of the five boroughs, 14 to 18</p>
+<p><strong>High School Scholarship Program, New York Blood Center: free, academic year. [Both]</strong>
+A school that hosts one blood drive per year qualifies; the student who organizes it earns a leadership role and a $500 to $2,000 scholarship track. Plan with the school in early fall.
+Link: https://nybloodcenter.org/support-us/host-blood-drive/high-school-scholarship-program/
+Internal: ✓ this cycle</p>
+<p><strong>Teen Digital Media Lab, Museum of the Moving Image: free design jams, Fridays twice monthly, ages 14 and up. [Stories]</strong>
+Exclusive teen access at the Astoria museum; same institution runs teen game jams and a teen film festival, so the Friday habit has a ladder.
+Link: https://movingimage.org/series/teen-digital-media-lab/
+Internal: ✓ series page this cycle, summer dates not yet posted, confirm before send</p>
+<p><strong>Youth Justice Collective, Queens Public Library: free teen advocacy and podcasting. [Stories]</strong>
+Link: https://www.queenslibrary.org/programs-activities/teens/other-programs/youth-justice-collective
+Internal: ✓ page this cycle, age band and cohort dates thin, confirm before send</p>
+<p><strong>Science Career Ladder, New York Hall of Science: paid Explainer jobs, rolling. [Both]</strong>
+Link: https://nysci.org
+Internal: ✓ carried, verified active in june</p>
+<h2>Section 3: Free events this week and this summer</h2>
+<p><strong>Author talk, Brooklyn Public Library: Tuesday June 16, 4 to 5 PM, ages 13 to 19, free. [Stories]</strong>
+Novelist Page Powars on books, writing process, and video games, part of Summer at the Library.
+Link: https://www.bklynlibrary.org/calendar
+Internal: ✓ this cycle, confirm branch before send</p>
+<p><strong>Free museum admission, standing: MoMA PS1 free for all, Whitney free under 25. [Stories]</strong>
+Link: https://www.momaps1.org and https://whitney.org
+Internal: ▲ carried from v1, hit official admission pages before send</p>
+<p><strong>Free concerts all summer: Celebrate Brooklyn (through September 19) and SummerStage (13 parks). [Stories]</strong>
+Link: https://bricartsmedia.org and https://cityparksfoundation.org/summerstage/
+Internal: ◐ carried, pull dates per send</p>
+<p><strong>School group visits with possible gold vault, Federal Reserve Bank of New York: free, by reservation. [Stories]</strong>
+For counselors and schools, not direct family booking. Eligibility verbatim: only open to visits, by reservation, from school groups and student programs.
+Link: https://www.newyorkfed.org/aboutthefed/museum-and-learning-center-visits
+Internal: ✓ this cycle; pairs with the Fed Challenge (registration expected fall) as a Scores ladder</p>
+<h2>Section 4: Middle school and elementary, brief</h2>
+<p><strong>Middle school: Battle of the Books, Queens Public Library, free, all summer. [Stories]</strong>
+Link: http://summerreading.queenslibrary.org
+Internal: ✓ carried, 2026 page live</p>
+<p><strong>Middle school: STEM Matters NYC free DOE summer science. [Stories]</strong>
+Link: https://www.schools.nyc.gov (search STEM Matters)
+Internal: ▲ carried, MUST verify DOE page before send</p>
+<p><strong>Elementary: Culture Pass (90+ museums via library card) and NYPL summer writing contest ages 6 to 12. [Stories]</strong>
+Link: https://www.culturepass.nyc and https://www.nypl.org/summer/2026
+Internal: ✓ carried · tone rule: zero urgency at this age</p>
+<h2>Internal vetting note (not for the send)</h2>
+<p>NYU SPS Career Edge commuter deadline is Friday June 12, $2,579 per course for one week, open admission. Flagged pay to play pattern. The reply if asked: the paid week reads weaker than the free selective items in Section 2.</p>
+<h2>Pre send checklist</h2>
+<ol>
+<li>Reopen every link day of send; ◐ and ▲ items are not sendable until ✓.</li>
+<li>Tribeca items expire June 14.</li>
+<li>Eligibility language verbatim, especially Fed school groups restriction, BPL 16 to 19, NAMI five borough residency.</li>
+<li>Counselor gut check per item.</li>
+</ol></div>
+<footer>Scores and Stories · Wagner Prep · internal working document.</footer>
+</div></body></html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Behind it · Scores and Stories</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:wght@400;500;600&display=swap');
+:root { --navy:#143757; --orange:#ED7D14; --cream:#FBF3E6; --maroon:#8A2B2B; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--cream); font-family:'Raleway',sans-serif; color:var(--navy); }
+.banner { background:var(--maroon); color:#fff; text-align:center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.14em; padding:8px 10px; }
+header { background:var(--navy); padding:30px 22px 26px; }
+.wrap { max-width:980px; margin:0 auto; padding:0 18px; }
+.kicker { font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; letter-spacing:.18em; color:var(--orange); text-transform:uppercase; }
+h1 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:32px; color:#fff; margin:8px 0 4px; }
+.sub { color:#C9D6E2; font-size:14.5px; margin:0; max-width:720px; line-height:1.55; }
+.topnav { margin-top:16px; }
+.topnav a { color:#C9D6E2; font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; margin-right:18px; }
+.topnav a:hover { color:var(--orange); }
+h2 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:19px; margin:34px 0 6px; }
+h2 .n { color:#8FA3B5; font-weight:600; font-size:14px; }
+h3 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:14.5px; margin:24px 0 10px; letter-spacing:.02em; }
+.lede { font-size:14px; color:#3D5468; line-height:1.65; margin:6px 0 4px; max-width:760px; }
+.stats { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 0; }
+.stat { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:12px; padding:10px 16px; color:#fff; }
+.stat b { font-family:'Montserrat',sans-serif; font-size:20px; display:block; color:var(--orange); }
+.stat span { font-size:11.5px; color:#C9D6E2; letter-spacing:.04em; text-transform:uppercase; }
+.notice { background:#FDF1DC; border:1.5px solid #E3B765; border-radius:12px; padding:14px 18px; font-size:13.5px; line-height:1.6; margin:22px 0 0; }
+.urgent { background:#fff; border-left:5px solid var(--orange); border-radius:12px; padding:14px 18px; margin:22px 0 0; box-shadow:0 2px 10px rgba(20,55,87,.08); font-size:14px; line-height:1.6; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(235px,1fr)); gap:13px; }
+a.card { display:block; background:#fff; border-radius:14px; padding:16px 18px; text-decoration:none; color:var(--navy); box-shadow:0 1px 6px rgba(20,55,87,.07); border:1.5px solid transparent; transition:border .15s; }
+a.card:hover { border-color:var(--orange); }
+a.card.primary { grid-column:1 / -1; background:var(--navy); color:#fff; padding:22px 24px; }
+a.card.primary .desc { color:#C9D6E2; }
+.card .name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:15.5px; }
+.card.primary .name { font-size:19px; color:#fff; }
+.card .desc { font-size:12.8px; color:#5A6E80; margin-top:5px; line-height:1.5; }
+.card .go { font-family:'Montserrat',sans-serif; font-weight:700; font-size:11px; letter-spacing:.08em; color:var(--orange); text-transform:uppercase; margin-top:9px; display:inline-block; }
+footer { margin:46px 0 30px; font-size:12.5px; color:#5A6E80; line-height:1.7; }
+.how { background:#fff; border-radius:14px; padding:18px 22px; box-shadow:0 1px 6px rgba(20,55,87,.07); font-size:13.8px; line-height:1.7; }
+.pgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:14px; }
+.pick { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 6px rgba(20,55,87,.07); display:flex; flex-direction:column; gap:8px; }
+.hook { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.12em; color:var(--orange); text-transform:uppercase; }
+.pname { font-family:'Montserrat',sans-serif; font-weight:700; font-size:16.5px; line-height:1.35; }
+.porg { font-family:'Raleway',sans-serif; font-weight:500; font-size:13px; color:#5A6E80; }
+.pwhen { font-size:13.2px; color:#3D5468; }
+.pfit { font-size:13.2px; line-height:1.55; }
+.pmeta { margin-top:auto; padding-top:8px; font-size:12px; color:#5A6E80; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.free { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; background:#2E8B57; color:#fff; padding:3px 9px; border-radius:999px; }
+.paid { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; background:#EFEAE0; color:var(--navy); padding:3px 9px; border-radius:999px; }
+.un { font-size:10px; color:#A05252; letter-spacing:.05em; font-weight:600; }
+.rot { display:flex; flex-wrap:wrap; gap:9px; margin-top:10px; }
+.rot span { background:#fff; border:1.5px solid #D8D2C4; border-radius:999px; padding:8px 14px; font-size:12.5px; font-weight:600; }
+.rot b { color:var(--orange); font-family:'Montserrat',sans-serif; margin-right:5px; }
+.prow { display:flex; justify-content:space-between; align-items:center; }
+.datechip { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.08em; color:#fff; background:var(--navy); padding:4px 11px; border-radius:999px; }
+.ftag { font-family:'Montserrat',sans-serif; font-weight:700; font-size:10px; letter-spacing:.08em; color:#8FA3B5; text-transform:uppercase; }
+.itag { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.05em; background:#7A5AA8; color:#fff; padding:3px 9px; border-radius:999px; }
+.slist { display:flex; flex-direction:column; gap:9px; }
+.srow { background:#fff; border-radius:12px; padding:13px 16px; box-shadow:0 1px 5px rgba(20,55,87,.06); display:flex; gap:14px; align-items:center; font-size:13.2px; }
+.sdate { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11.5px; color:var(--orange); min-width:54px; }
+.sbody { flex:1; line-height:1.5; }
+.snote { font-size:11.8px; color:#5A6E80; }
+.vflag { font-family:'Montserrat',sans-serif; font-weight:800; font-size:9.5px; letter-spacing:.06em; background:var(--maroon); color:#fff; padding:3px 8px; border-radius:999px; white-space:nowrap; }
+</style></head><body>
+<div class="banner">INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE</div>
+<header><div class="wrap">
+<div class="kicker">Wagner Prep · Scores and Stories</div>
+<h1>Behind it</h1>
+<p class="sub">The research engine that fills the weekly page: how it runs, what it produced last night, and the edition drafts waiting for a voice.</p>
+<nav class="topnav"><a href="index.html">This week</a><a href="feed.html">All opportunities</a><a href="calendar.html">Calendar</a><a href="map.html">Map</a><a href="behind.html">Behind it</a></nav>
+<div class="stats">
+<div class="stat"><b>40</b><span>items in the feed</span></div>
+<div class="stat"><b>30</b><span>niche finds</span></div>
+<div class="stat"><b>25</b><span>map pins</span></div>
+<div class="stat"><b>12</b><span>open deadline windows</span></div>
+<div class="stat"><b>334</b><span>sources monitored</span></div>
+<div class="stat"><b>9</b><span>cycles completed</span></div>
+</div>
+</div></header>
+<div class="wrap">
+<div class="notice"><b>Trial run data.</b> Live verified finds from the June 10 overnight shift mixed with earlier illustrative seed items. Every institution named is real, every item stays <code>unreviewed</code> until a human approves it, and nothing reaches a family without the publication gate: reopen the source same day, confirm dates and eligibility verbatim, gut check.</div>
+
+<h2>How the week manifests</h2>
+<div class="how">
+Once a week (daily in deadline season) the engine runs a cycle: it rotates through six fields and three library systems plus an outer borough anchor, searches the 334 entry source directory, verifies every item at a primary source, scores it with the house rubric, and rebuilds this site. The team opens the weekly page, really looks at the opportunities, picks four or five, and a writer puts a voice on top. Unverifiable items wait in a verification queue, never the page. Operator commands: <code>/cycle</code>, <code>/weekend</code>, <code>/vet</code> a program a parent asked about, <code>/match</code> for confidential single student runs. Then <code>python3 scripts/build_site.py</code> and redeploy.
+</div>
+
+<h2>The rotation</h2>
+<p class="lede">Rotating weekly knowledge, 7th through 12th grade, with picks at the bottom of every edition so everyone always has a reason to open.</p>
+<div class="rot"><span><b>Wk 1</b> Admissions trends, what to know now</span><span><b>Wk 2</b> Middle school and SHSAT</span><span><b>Wk 3</b> Lower high school</span><span><b>Wk 4</b> Upper high school</span></div>
+
+<h2>Edition candidates already drafted</h2>
+<p class="lede">Eight drafts in the agreed formats, ready for a voice pass. The weekend edition expires Sunday; deadline first v3 is the engine's pick to build the next send from.</p>
+<div class="grid"><a class="card" href="drafts/blog-deadline-watch-01-june.html"><div class="name">Blog draft, Deadline Watch No. 1: June 2026</div><div class="desc">Deadline Watch blog draft: five real deadlines, June through October.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="drafts/blog-hidden-gem-01-bpl-branch-council.html"><div class="name">Blog draft, Hidden Gem No. 1: Teen Takeovers Branch Council, Brooklyn Public Library</div><div class="desc">Hidden Gem blog draft: BPL pays teens to produce its events. Ready for Megan's edit.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="drafts/mailing-list-edition-01.html"><div class="name">Wagner Prep Mailing List Edition No. 1</div><div class="desc">Mailing list v1, the seed edition in the age ladder format.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="drafts/mailing-list-edition-02-age-ladder-scores-and-stories.html"><div class="name">Wagner Prep Mailing List Edition No. 2: the Scores and Stories edition</div><div class="desc">Age ladder v2: first all fields edition with Scores and Stories ledger tags.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="drafts/mailing-list-edition-03-deadline-first.html"><div class="name">Wagner Prep Mailing List Edition No. 3: deadline first format</div><div class="desc">Deadline first v3, factual titles, current data. The engine's pick to build the next send from.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="drafts/research-and-competitions-edition-01.html"><div class="name">Wagner Prep Research and Competitions Edition No. 1</div><div class="desc">Research and competitions brief No. 1, seeded by Michael's program links.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="drafts/research-and-competitions-edition-02.html"><div class="name">Research and Competitions Brief No. 2</div><div class="desc">Research and competitions brief No. 2.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="drafts/this-weekend-edition-01-june-13-14.html"><div class="name">Wagner Prep This Weekend Edition No. 1: Saturday June 13 and Sunday June 14, 2026</div><div class="desc">Weekend edition for June 13 to 14. Expires Sunday; send decision needed.</div><span class="go">Open &rarr;</span></a></div>
+
+<h2>The live views</h2>
+<div class="grid">
+<a class="card primary" href="dashboard.html"><div class="name">Open the Dashboard</div>
+<div class="desc">Feed, map, and calendar as tabs in one self contained file. The thing to put on the screen.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="feed.html"><div class="name">Feed</div><div class="desc">Every item as a filterable card: search, field, ring, rung, Scores/Stories ledger, free only, new this week, plus the deadline board.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="map.html"><div class="name">Map</div><div class="desc">25 pins across the five boroughs, color coded by field, popups with dates, cost, and source links.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="calendar.html"><div class="name">Calendar</div><div class="desc">Month grids for June through August: events on their dates, application closes marked as deadlines.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="wagner-prep-internal.ics"><div class="name">Calendar subscription (.ics)</div><div class="desc">Import into Google or Apple Calendar; every event and deadline lands in your real calendar, prefixed WP INTERNAL.</div><span class="go">Open &rarr;</span></a>
+</div>
+
+<h3>From last night's shift</h3>
+<div class="grid"><a class="card" href="morning-report.html"><div class="name">Morning Report</div><div class="desc">The one page summary of the overnight shift: cycles, best finds, judgment calls, and the day's most urgent deadline.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="digest.html"><div class="name">Cycle Digest</div><div class="desc">The dated cycle log, newest first: pulse, top items, deadline changes, and the verification queue.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="shift-log.html"><div class="name">Shift Log</div><div class="desc">The engine's own overnight record: setup, judgment calls, and cycle by cycle decisions.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="outbox/2026-06-10-0301-test-shift-starting.html"><div class="name">2026-06-10-0301-test-shift-starting</div><div class="desc">3:01 AM · shift starting test message.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="outbox/2026-06-10-0445-cycle-2-top-finds.html"><div class="name">2026-06-10-0445-cycle-2-top-finds</div><div class="desc">4:45 AM · cycle 2 top finds.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="outbox/2026-06-10-0605-cycle-4-top-finds.html"><div class="name">2026-06-10-0605-cycle-4-top-finds</div><div class="desc">6:05 AM · cycle 4 top finds.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="outbox/2026-06-10-0655-morning-report.html"><div class="name">MORNING REPORT · Thursday shift of Wednesday June 10, 2026</div><div class="desc">6:55 AM · end of shift morning report.</div><span class="go">Open &rarr;</span></a></div>
+
+<h3>Team briefs (PDF)</h3>
+<div class="grid"><a class="card" href="exports/team-brief-2026-06-10-v1.pdf"><div class="name">Team Brief 2026 06 10 V1</div><div class="desc">One card per item with a takeaways page. Kept for format comparison.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="exports/team-brief-2026-06-10-v2.pdf"><div class="name">Team Brief 2026 06 10 V2</div><div class="desc">One card per item with a takeaways page. Kept for format comparison.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="exports/team-brief-2026-06-10-v3.pdf"><div class="name">Team Brief 2026 06 10 V3</div><div class="desc">One card per item with a takeaways page. Kept for format comparison.</div><span class="go">Open &rarr;</span></a>
+<a class="card" href="exports/team-brief-2026-06-10-v4.pdf"><div class="name">Team Brief 2026 06 10 V4</div><div class="desc">One card per item with a takeaways page. Current version.</div><span class="go">Open &rarr;</span></a></div>
+
+<footer>Scores and Stories · Wagner Prep · generated June 11, 2026 · internal only, not for publication.<br>
+Free first. Niche, backed, internal, on time.</footer>
+</div></body></html>

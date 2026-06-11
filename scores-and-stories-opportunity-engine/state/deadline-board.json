@@ -1,0 +1,113 @@
+{
+ "updated": "2026-06-10",
+ "windows": [
+  {
+   "closes": "June 12, 2026",
+   "closes_iso": "2026-06-12",
+   "program": "NYU SPS Career Edge, commuter application",
+   "field": "Business and Entrepreneurship",
+   "eligibility": "Completed grades 9 to 11; paid program, vetting risk flagged",
+   "url": "https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html",
+   "note": "Added June 10 2026; flagged pay to play pattern, listed because families ask"
+  },
+  {
+   "closes": "June 15, 2026 priority; June 29, 2026 final",
+   "closes_iso": "2026-06-15",
+   "program": "Schomburg Junior Scholars Program 2026 to 2027",
+   "field": "Humanities and History",
+   "eligibility": "Grades 6 to 12; tuition free; 100 scholars per year",
+   "url": "https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program",
+   "note": "Confirmed open at nypl.org June 10 2026; the most urgent real deadline in the feed"
+  },
+  {
+   "closes": "Expected late June 2026 (registration opens)",
+   "closes_iso": "2026-06-30",
+   "program": "Wharton Global HS Investment Competition 2026-27 registration",
+   "field": "Business and Entrepreneurship",
+   "eligibility": "Grades 9 to 12, teams of 4 to 6, teacher advisor required; free",
+   "url": "https://globalyouth.wharton.upenn.edu/competitions/investment-competition/",
+   "note": "Added June 10 2026; last cycle opened June 30, watch for the 2026-27 window opening within days"
+  },
+  {
+   "closes": "July 15, 2026 (verify)",
+   "closes_iso": "2026-07-15",
+   "program": "Bronx Museum Teen Council, fall cycle",
+   "field": "Arts and Film",
+   "eligibility": "NYC HS students 14 to 19; paid",
+   "url": "https://bronxmuseum.org/learn/teens/",
+   "note": "June 10 2026 check: fall 2026 deadline not yet posted on bronxmuseum.org; spring 2026 deadline was February 1; July 15 estimate stays flagged as verify"
+  },
+  {
+   "closes": "August 1, 2026 (verify)",
+   "closes_iso": "2026-08-01",
+   "program": "Apollo Theater Academy fall internships",
+   "field": "Arts and Film",
+   "eligibility": "NYC HS students; paid",
+   "url": "https://www.apollotheater.org",
+   "note": "Sample seed; verify posting"
+  },
+  {
+   "closes": "Rolling",
+   "closes_iso": "2026-08-15",
+   "program": "NYSCI Science Career Ladder (Explainers)",
+   "field": "STEM and Tech",
+   "eligibility": "HS students; paid",
+   "url": "https://nysci.org",
+   "note": "Rolling; verified active June 2026"
+  },
+  {
+   "closes": "August 24, 2026 (rolling)",
+   "closes_iso": "2026-08-24",
+   "program": "JAX Academic Year Fellowship (research)",
+   "field": "STEM and Tech",
+   "eligibility": "HS juniors and seniors; unpaid; 180 hours on site in Maine or Connecticut",
+   "url": "https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships",
+   "note": "Added June 10 2026; rolling research fellowship, out of NYC area, unpaid"
+  },
+  {
+   "closes": "September 2026 opens (watch)",
+   "closes_iso": "2026-09-10",
+   "program": "Scholastic Art and Writing Awards, NYC region",
+   "field": "Arts and Film",
+   "eligibility": "Grades 7 to 12",
+   "url": "https://www.artandwriting.org",
+   "note": "Sample seed; submissions historically open Sept, regional deadlines Dec"
+  },
+  {
+   "closes": "October 2026 (watch)",
+   "closes_iso": "2026-10-15",
+   "program": "NYCSEF registration via schools",
+   "field": "STEM and Tech",
+   "eligibility": "NYC HS students with research projects",
+   "url": "https://nycsef.cs.cuny.edu",
+   "note": "Sample seed; fall registration pattern"
+  },
+  {
+   "closes": "October 26, 2026, 12:00 PM ET",
+   "closes_iso": "2026-10-26",
+   "program": "Congressional App Challenge 2026",
+   "field": "STEM and Tech",
+   "eligibility": "Middle or high school students; teams up to 4; district participation varies",
+   "url": "https://www.congressionalappchallenge.us/",
+   "note": "Window confirmed open at the official site June 10 2026; summer build, fall submission"
+  },
+  {
+   "closes": "November 2026 (watch)",
+   "closes_iso": "2026-11-12",
+   "program": "Regeneron Science Talent Search",
+   "field": "STEM and Tech",
+   "eligibility": "HS seniors with original research",
+   "url": "https://www.societyforscience.org/regeneron-sts/",
+   "note": "Sample seed; annual November deadline pattern"
+  },
+  {
+   "closes": "March 31, 2027 (window opens January 1, 2027)",
+   "closes_iso": "2027-03-31",
+   "program": "NewYork-Presbyterian summer teen volunteering, summer 2027 cohort",
+   "field": "Health and Science of Care",
+   "eligibility": "Ages 15 to 17, valid social security number, 120 hour summer minimum",
+   "url": "https://www.nyp.org/volunteer/summer-volunteering",
+   "note": "Long lead time item: 2026 window closed March 31; flagging now because clearance and references take months"
+  }
+ ]
+}

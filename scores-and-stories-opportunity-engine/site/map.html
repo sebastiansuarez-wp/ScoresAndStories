@@ -1,0 +1,40 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WP Internal Opportunity Map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Raleway:wght@400;600&display=swap');
+body{margin:0;font-family:'Raleway',sans-serif;color:#143757}
+.banner{background:#8A2B2B;color:#fff;text-align:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;padding:7px}
+header{background:#143757;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+h1{font-family:'Montserrat',sans-serif;color:#fff;margin:0;font-size:18px}
+.nav a{color:#ED7D14;font-weight:600;text-decoration:none;font-size:13px;margin-left:14px}
+#map{height:calc(100vh - 92px)}
+.legend{background:#fff;padding:8px 12px;border-radius:10px;box-shadow:0 1px 6px rgba(20,55,87,.2);font-size:12px;line-height:1.7}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.popup b{font-family:'Montserrat',sans-serif}
+.popup .un{color:#8A2B2B;font-size:11px;font-weight:700}
+</style></head><body><div style="background:#B8860B;color:#fff;text-align:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;padding:6px 10px;">TRIAL RUN DATA · live verified finds mixed with illustrative seed items · every item is unreviewed until a human approves it · <a href="index.html" style="color:#fff;">about this site</a></div>
+<div class="banner">INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE</div>
+<header><h1>Opportunity Map</h1><div class="nav"><a href="feed.html">Feed</a><a href="calendar.html">Calendar</a></div></header>
+<div id="map"></div>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="opportunities.js"></script>
+<script>
+const FIELD_COLORS={"Arts and Film":"#ED7D14","STEM and Tech":"#143757","Humanities and History":"#7A5AA8","Civic and Social Impact":"#2E8B57","Business and Entrepreneurship":"#B8860B","Health and Science of Care":"#C0392B"};
+const map=L.map('map').setView([40.72,-73.95],11);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(map);
+const items=(window.FEED_DATA||[]).filter(i=>i.lat&&i.lng&&i.status!=="expired");
+const bounds=[];
+for(const i of items){
+  const c=FIELD_COLORS[i.field]||"#5A6E80";
+  const m=L.circleMarker([i.lat,i.lng],{radius:9,color:"#fff",weight:2,fillColor:c,fillOpacity:.95}).addTo(map);
+  m.bindPopup(`<div class="popup"><b>${i.name}</b><br>${i.org} · ${i.location||""}<br>${i.when||""}<br><b>${i.cost||""}</b> · ${i.ledger||""} · Rung ${i.rung||"?"}${(i.review_status||"unreviewed")!=="approved"?'<br><span class="un">UNREVIEWED</span>':""}${i.url?`<br><a href="${i.url}" target="_blank">Source →</a>`:""}</div>`);
+  bounds.push([i.lat,i.lng]);
+}
+if(bounds.length)map.fitBounds(bounds,{padding:[40,40]});
+const legend=L.control({position:'bottomright'});
+legend.onAdd=()=>{const div=L.DomUtil.create('div','legend');
+div.innerHTML='<b style="font-family:Montserrat">Fields</b><br>'+Object.entries(FIELD_COLORS).map(([f,c])=>`<span class="dot" style="background:${c}"></span>${f}`).join('<br>')+`<br><br>${items.length} pinned of ${(window.FEED_DATA||[]).length} items`;
+return div;};
+legend.addTo(map);
+</script></body></html>

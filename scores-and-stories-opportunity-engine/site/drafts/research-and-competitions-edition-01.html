@@ -1,0 +1,135 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wagner Prep Research and Competitions Edition No. 1 · Scores and Stories</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:wght@400;500;600&display=swap');
+:root { --navy:#143757; --orange:#ED7D14; --cream:#FBF3E6; --maroon:#8A2B2B; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--cream); font-family:'Raleway',sans-serif; color:var(--navy); }
+.banner { background:var(--maroon); color:#fff; text-align:center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.14em; padding:8px 10px; }
+header { background:var(--navy); padding:30px 22px 26px; }
+.wrap { max-width:980px; margin:0 auto; padding:0 18px; }
+.kicker { font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; letter-spacing:.18em; color:var(--orange); text-transform:uppercase; }
+h1 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:32px; color:#fff; margin:8px 0 4px; }
+.sub { color:#C9D6E2; font-size:14.5px; margin:0; max-width:720px; line-height:1.55; }
+.topnav { margin-top:16px; }
+.topnav a { color:#C9D6E2; font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; margin-right:18px; }
+.topnav a:hover { color:var(--orange); }
+h2 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:19px; margin:34px 0 6px; }
+h2 .n { color:#8FA3B5; font-weight:600; font-size:14px; }
+h3 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:14.5px; margin:24px 0 10px; letter-spacing:.02em; }
+.lede { font-size:14px; color:#3D5468; line-height:1.65; margin:6px 0 4px; max-width:760px; }
+.stats { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 0; }
+.stat { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:12px; padding:10px 16px; color:#fff; }
+.stat b { font-family:'Montserrat',sans-serif; font-size:20px; display:block; color:var(--orange); }
+.stat span { font-size:11.5px; color:#C9D6E2; letter-spacing:.04em; text-transform:uppercase; }
+.notice { background:#FDF1DC; border:1.5px solid #E3B765; border-radius:12px; padding:14px 18px; font-size:13.5px; line-height:1.6; margin:22px 0 0; }
+.urgent { background:#fff; border-left:5px solid var(--orange); border-radius:12px; padding:14px 18px; margin:22px 0 0; box-shadow:0 2px 10px rgba(20,55,87,.08); font-size:14px; line-height:1.6; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(235px,1fr)); gap:13px; }
+a.card { display:block; background:#fff; border-radius:14px; padding:16px 18px; text-decoration:none; color:var(--navy); box-shadow:0 1px 6px rgba(20,55,87,.07); border:1.5px solid transparent; transition:border .15s; }
+a.card:hover { border-color:var(--orange); }
+a.card.primary { grid-column:1 / -1; background:var(--navy); color:#fff; padding:22px 24px; }
+a.card.primary .desc { color:#C9D6E2; }
+.card .name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:15.5px; }
+.card.primary .name { font-size:19px; color:#fff; }
+.card .desc { font-size:12.8px; color:#5A6E80; margin-top:5px; line-height:1.5; }
+.card .go { font-family:'Montserrat',sans-serif; font-weight:700; font-size:11px; letter-spacing:.08em; color:var(--orange); text-transform:uppercase; margin-top:9px; display:inline-block; }
+footer { margin:46px 0 30px; font-size:12.5px; color:#5A6E80; line-height:1.7; }
+.how { background:#fff; border-radius:14px; padding:18px 22px; box-shadow:0 1px 6px rgba(20,55,87,.07); font-size:13.8px; line-height:1.7; }
+.pgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:14px; }
+.pick { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 6px rgba(20,55,87,.07); display:flex; flex-direction:column; gap:8px; }
+.hook { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.12em; color:var(--orange); text-transform:uppercase; }
+.pname { font-family:'Montserrat',sans-serif; font-weight:700; font-size:16.5px; line-height:1.35; }
+.porg { font-family:'Raleway',sans-serif; font-weight:500; font-size:13px; color:#5A6E80; }
+.pwhen { font-size:13.2px; color:#3D5468; }
+.pfit { font-size:13.2px; line-height:1.55; }
+.pmeta { margin-top:auto; padding-top:8px; font-size:12px; color:#5A6E80; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.free { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; background:#2E8B57; color:#fff; padding:3px 9px; border-radius:999px; }
+.paid { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; background:#EFEAE0; color:var(--navy); padding:3px 9px; border-radius:999px; }
+.un { font-size:10px; color:#A05252; letter-spacing:.05em; font-weight:600; }
+.rot { display:flex; flex-wrap:wrap; gap:9px; margin-top:10px; }
+.rot span { background:#fff; border:1.5px solid #D8D2C4; border-radius:999px; padding:8px 14px; font-size:12.5px; font-weight:600; }
+.rot b { color:var(--orange); font-family:'Montserrat',sans-serif; margin-right:5px; }
+.prow { display:flex; justify-content:space-between; align-items:center; }
+.datechip { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.08em; color:#fff; background:var(--navy); padding:4px 11px; border-radius:999px; }
+.ftag { font-family:'Montserrat',sans-serif; font-weight:700; font-size:10px; letter-spacing:.08em; color:#8FA3B5; text-transform:uppercase; }
+.itag { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.05em; background:#7A5AA8; color:#fff; padding:3px 9px; border-radius:999px; }
+.slist { display:flex; flex-direction:column; gap:9px; }
+.srow { background:#fff; border-radius:12px; padding:13px 16px; box-shadow:0 1px 5px rgba(20,55,87,.06); display:flex; gap:14px; align-items:center; font-size:13.2px; }
+.sdate { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11.5px; color:var(--orange); min-width:54px; }
+.sbody { flex:1; line-height:1.5; }
+.snote { font-size:11.8px; color:#5A6E80; }
+.vflag { font-family:'Montserrat',sans-serif; font-weight:800; font-size:9.5px; letter-spacing:.06em; background:var(--maroon); color:#fff; padding:3px 8px; border-radius:999px; white-space:nowrap; }
+
+.mdwrap { max-width:840px; margin:0 auto; padding:8px 18px 60px; }
+.mdbody { background:#fff; border-radius:14px; padding:28px 34px; box-shadow:0 1px 6px rgba(20,55,87,.07); line-height:1.65; font-size:14.5px; }
+.mdbody h1 { color:var(--navy); font-size:23px; margin:18px 0 10px; }
+.mdbody h2 { font-size:18px; border-bottom:2px solid var(--cream); padding-bottom:6px; }
+.mdbody h3 { font-family:'Montserrat',sans-serif; font-size:15px; margin:20px 0 8px; }
+.mdbody a { color:var(--orange); }
+.mdbody table { border-collapse:collapse; width:100%; font-size:13px; margin:14px 0; }
+.mdbody th { background:var(--navy); color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; letter-spacing:.05em; padding:7px 9px; text-align:left; }
+.mdbody td { border:1px solid #EFEAE0; padding:7px 9px; vertical-align:top; }
+.mdbody blockquote { border-left:4px solid var(--orange); margin:14px 0; padding:4px 16px; background:var(--cream); border-radius:0 8px 8px 0; }
+.mdbody code { background:var(--cream); padding:1px 5px; border-radius:5px; font-size:13px; }
+.back { display:inline-block; margin:16px 0 6px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:.06em; color:var(--orange); text-decoration:none; text-transform:uppercase; }
+</style></head><body>
+<div class="banner">INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE</div>
+<div class="mdwrap"><a class="back" href="../index.html">&larr; Back to this week</a>
+<div class="mdbody"><h1>INTERNAL DRAFT. NOT FOR PUBLICATION. VERIFY BEFORE SENDING.</h1>
+<h1>Wagner Prep Research and Competitions Edition No. 1</h1>
+<p><strong>Working date:</strong> June 10, 2026 · <strong>Style:</strong> factual, data first, no filler · <strong>Review status:</strong> Unreviewed
+<strong>Origin:</strong> seeded by Michael Wagner's June 10 program links, expanded with matching items already in the feed. Every program below was reverified at its primary source on June 10. Links are the official source pages.
+<strong>Note:</strong> no individual student profile is recorded in this file; it is a general category brief.</p>
+<hr />
+<h2>Category 1: Selective research programs (Scores and Stories, Rung 4)</h2>
+<p><strong>Academic Year Fellowship, The Jackson Laboratory (JAX). [Both]</strong>
+* Rolling applications until August 24, 2026; projects run fall through late spring, 180 hours minimum on site.
+* Eligibility: high school juniors and seniors. Cost: unpaid. Location: Bar Harbor, Maine and Farmington, Connecticut (out of NYC area).
+* Grade group: 11 and 12. Wagner angle: a genuine genetics research credential that is open right now, with two real barriers stated up front, unpaid and out of area.
+* Link: https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships</p>
+<p><strong>Simons Summer Research Program, Stony Brook University. [Both]</strong>
+* 2026 cycle is closed (was February 5). Next cycle opens in winter for summer 2027.
+* Eligibility: 11th grade at time of applying, US citizen or permanent resident, 16 by program start, school nomination required, maximum two students per school. Location: Long Island, LIRR accessible (Ring 2).
+* Grade group: current 10th graders (rising 11th). Wagner angle: the nomination cap means the school conversation has to start a year early; this is a 2027 planning item, not a June action.
+* Link: https://www.stonybrook.edu/simons/</p>
+<h2>Category 2: Science fairs and the research ladder (Scores, Rung 4)</h2>
+<p><strong>New York City Science and Engineering Fair (NYCSEF). [Both]</strong>
+* Annual citywide fair, the ISEF affiliate, roughly 700 students. School year entry begins in fall, fair in late winter. Free.
+* Eligibility: grades 9 to 12 taking relevant courses. Location: all five boroughs, CUNY host campuses.
+* Grade group: 9 to 12. Wagner angle: the destination for any school year research project, free, and the entry process is a fall task, not a spring scramble.
+* Link: https://nycsef.org/</p>
+<p><strong>New York State Science and Engineering Fair (NYSSEF). [Scores]</strong>
+* The state level fair and rules body that sits above the regional fairs.
+* Link: https://www.nyssef.org/
+* Wagner angle: the next rung for a strong NYCSEF project; confirm the current year's regional eligibility before advising.</p>
+<h2>Category 3: Free, accessible, resume building science (Stories into Scores, Rung 2 to 3)</h2>
+<p><strong>Science Career Ladder, Explainer program, New York Hall of Science. [Both]</strong>
+* Paid, rolling, a documented multi year employment ladder for teens on the museum floor in Queens.
+* Link: https://nysci.org (program profile: https://www.snow.day/learning-opportunities/35dfd584-2382-4eb0-8237-bee829b20847/science-career-ladder-scl-explainer)
+* Grade group: 9 to 12. Wagner angle: the strongest free, low barrier science item for Queens families, and it pays.</p>
+<p><strong>Biorocket Youth Research Internship, Genspace, Brooklyn. [Both]</strong>
+* $2,000 stipend, genetic engineering research. At least 16, NYC public or charter school within a 45 minute commute to Sunset Park. January deadline pattern.
+* Link: https://www.genspace.org/biorocket
+* Grade group: current 10th and 11th. Wagner angle: a paid lab research entry point that lives inside the city, applied for in January.</p>
+<h2>Category 4: Finance and business competitions (Scores, Rung 4)</h2>
+<p><strong>Wharton Global High School Investment Competition. [Scores]</strong>
+* Free team competition, grades 9 to 12, teams of four to six with a teacher advisor. The 2025-26 cycle registered June 30 to September 12; the 2026-27 window is expected to open within days.
+* Location: online competition, in person Global Finale at The Wharton School, Philadelphia.
+* Grade group: 9 to 12. Wagner angle: a free named university credential; the action this month is lining up a teacher advisor before registration opens.
+* Link: https://globalyouth.wharton.upenn.edu/competitions/investment-competition/</p>
+<p><strong>High School Fed Challenge, Federal Reserve Bank of New York. [Scores]</strong>
+* Team economics research and writing competition, grades 9 to 12. Last cycle registered in fall, closed February 17; next cycle expected fall 2026.
+* Link: https://www.newyorkfed.org/outreach-and-education/high-school/high-school-fed-challenge
+* Grade group: 9 to 12. Wagner angle: a local, free finance and economics credential to pair with or substitute for the Wharton competition.</p>
+<h2>Professional takeaways (for the team)</h2>
+<ul>
+<li>Open right now: JAX (rolling to August 24) and NYCSEF (fall entry). Wharton 2026-27 registration opens within days; the teacher advisor is the gating step, so secure it now.</li>
+<li>Closed for this year, plan ahead: Simons (winter 2027, school nomination in 11th grade), Fed Challenge (fall 2026), Biorocket (January 2027).</li>
+<li>Geography and cost are the honest filters: NYCSEF, Science Career Ladder, Biorocket, and Fed Challenge are free and local; JAX is unpaid and out of state; Simons is Long Island and nomination capped.</li>
+<li>The free local competitions read at least as strongly to admissions as the out of area paid or unpaid placements, and they keep the family's time and money in reserve.</li>
+</ul>
+<hr />
+<p>Pre publication gate: human review required. Reopen each source same day, confirm dates and eligibility verbatim, counselor gut check. For any single student match, run /match so identifying details stay out of shared files.</p></div>
+<footer>Scores and Stories · Wagner Prep · internal working document.</footer>
+</div></body></html>

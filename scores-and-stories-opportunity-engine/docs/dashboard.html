@@ -1,0 +1,2866 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wagner Prep Opportunity Dashboard</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Raleway:wght@400;600&display=swap');
+*{box-sizing:border-box;} html,body{margin:0;height:100%;}
+body{font-family:'Raleway',sans-serif;background:#143757;display:flex;flex-direction:column;height:100vh;}
+.banner{background:#8A2B2B;color:#fff;text-align:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:.12em;padding:6px;}
+.tabs{display:flex;background:#143757;padding:0 8px;gap:4px;align-items:center;flex-wrap:wrap;}
+.tabs .title{color:#fff;font-family:'Montserrat',sans-serif;font-weight:800;font-size:14px;margin-right:14px;padding:8px 4px;}
+.tab{appearance:none;border:none;cursor:pointer;font-family:'Montserrat',sans-serif;font-weight:700;font-size:13px;
+     color:#C9D6E2;background:transparent;padding:12px 16px;border-radius:10px 10px 0 0;}
+.tab.on{color:#143757;background:#FBF3E6;}
+.meta{margin-left:auto;color:#9DB2C6;font-size:11px;padding:8px;}
+.frames{flex:1;position:relative;background:#FBF3E6;}
+iframe{position:absolute;inset:0;width:100%;height:100%;border:none;display:none;}
+iframe.on{display:block;}
+</style></head><body>
+<div class="banner">INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE</div>
+<div class="tabs">
+  <span class="title">WP Opportunity Dashboard</span>
+  <button class="tab on" data-f="f-feed">Feed</button>
+  <button class="tab" data-f="f-map">Map</button>
+  <button class="tab" data-f="f-cal">Calendar</button>
+  <span class="meta">Generated June 10, 2026 · single file, open anywhere</span>
+</div>
+<div class="frames">
+  <iframe id="f-feed" class="on" srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;UTF-8&quot;&gt;
+&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;Wagner Prep Opportunity Feed&lt;/title&gt;
+&lt;style&gt;
+@import url(&#x27;https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&amp;family=Raleway:wght@400;500;600&amp;display=swap&#x27;);
+:root { --navy:#143757; --orange:#ED7D14; --cream:#FBF3E6; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--cream); font-family:&#x27;Raleway&#x27;,sans-serif; color:var(--navy); }
+header { background:var(--navy); padding:26px 22px; }
+.wrap { max-width:1000px; margin:0 auto; }
+.kicker { font-family:&#x27;Montserrat&#x27;,sans-serif; font-weight:800; font-size:12px; letter-spacing:.18em; color:var(--orange); text-transform:uppercase; }
+h1 { font-family:&#x27;Montserrat&#x27;,sans-serif; font-weight:700; font-size:28px; color:#fff; margin:6px 0 2px; }
+.sub { color:#C9D6E2; font-size:13.5px; margin:0; }
+.panel { background:#fff; border-radius:14px; padding:18px 20px; margin:20px auto; box-shadow:0 2px 12px rgba(20,55,87,.08); }
+.filters { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+select, input[type=text], input[type=number] { padding:9px 11px; border-radius:9px; border:1.5px solid #D8DEE6; font-family:&#x27;Raleway&#x27;,sans-serif; font-size:13.5px; color:var(--navy); background:#fff; }
+input[type=text] { flex:1 1 180px; min-width:150px; }
+.toggle { padding:9px 14px; border-radius:999px; font-size:13px; font-weight:600; cursor:pointer; user-select:none; border:1.5px solid #D8D2C4; background:#EFEAE0; }
+.toggle.on { background:var(--navy); color:#fff; border-color:var(--navy); }
+.toggle.on.orange { background:var(--orange); border-color:var(--orange); }
+.count { font-size:13px; color:#5A6E80; margin:14px 2px 8px; }
+.card { background:#fff; border-radius:14px; padding:18px 20px; margin-bottom:13px; box-shadow:0 1px 6px rgba(20,55,87,.07); }
+.row { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:flex-start; }
+.name { font-family:&#x27;Montserrat&#x27;,sans-serif; font-weight:700; font-size:16.5px; }
+.org { font-size:13px; color:#5A6E80; margin-top:2px; }
+.tags { display:flex; gap:6px; flex-shrink:0; flex-wrap:wrap; }
+.tag { font-family:&#x27;Montserrat&#x27;,sans-serif; font-weight:700; font-size:10.5px; padding:5px 10px; border-radius:999px; letter-spacing:.05em; text-transform:uppercase; background:#EFEAE0; color:var(--navy); }
+.tag.score { background:var(--navy); color:#fff; }
+.tag.new { background:var(--orange); color:#fff; }
+.tag.flag { background:#FFF4D6; color:#8A6A00; }
+.meta { display:flex; gap:16px; flex-wrap:wrap; margin-top:10px; font-size:13px; }
+.meta b { font-family:&#x27;Montserrat&#x27;,sans-serif; font-size:11px; }
+.angle { margin-top:10px; font-size:13.5px; line-height:1.55; background:var(--cream); border-radius:10px; padding:9px 13px; }
+.angle b { font-family:&#x27;Montserrat&#x27;,sans-serif; font-size:11px; color:var(--orange); letter-spacing:.08em; }
+.fit { margin-top:7px; font-size:13.5px; line-height:1.55; background:#F4F7FA; border-radius:10px; padding:9px 13px; }
+.fit b { font-family:&#x27;Montserrat&#x27;,sans-serif; font-size:11px; letter-spacing:.08em; }
+a.src { display:inline-block; margin-top:10px; color:var(--orange); font-weight:600; font-size:13px; text-decoration:none; }
+.empty { text-align:center; padding:36px 20px; color:#5A6E80; }
+h2.sect { font-family:&#x27;Montserrat&#x27;,sans-serif; font-size:15px; letter-spacing:.06em; text-transform:uppercase; margin:28px 2px 10px; }
+table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 6px rgba(20,55,87,.07); font-size:13px; }
+th { background:var(--navy); color:#fff; font-family:&#x27;Montserrat&#x27;,sans-serif; font-size:11px; letter-spacing:.06em; text-transform:uppercase; text-align:left; padding:10px 12px; }
+td { padding:10px 12px; border-top:1px solid #EFEAE0; }
+.updated { font-size:12px; color:#9AAABA; }
+@media (max-width:640px){ .filters{gap:8px} }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div style=&quot;background:#8A2B2B;color:#fff;text-align:center;font-family:&#x27;Montserrat&#x27;,sans-serif;font-weight:800;font-size:12px;letter-spacing:.14em;padding:8px&quot;&gt;INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE&lt;/div&gt;
+&lt;header&gt;&lt;div class=&quot;wrap&quot;&gt;
+  &lt;div class=&quot;kicker&quot;&gt;Wagner Prep · Internal Team Tool&lt;/div&gt;
+  &lt;h1&gt;Opportunity Feed&lt;/h1&gt;
+  &lt;p class=&quot;sub&quot;&gt;Live ranked feed from the research engine. Verify at the source before anything reaches a family. &lt;span class=&quot;updated&quot; id=&quot;updated&quot;&gt;&lt;/span&gt; · &lt;a href=&quot;calendar.html&quot; style=&quot;color:#ED7D14;font-weight:600;text-decoration:none&quot;&gt;Calendar →&lt;/a&gt; · &lt;a href=&quot;map.html&quot; style=&quot;color:#ED7D14;font-weight:600;text-decoration:none&quot;&gt;Map →&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;&lt;/header&gt;
+
+&lt;div class=&quot;wrap&quot; style=&quot;padding:0 18px 60px&quot;&gt;
+  &lt;div class=&quot;panel&quot;&gt;&lt;div class=&quot;filters&quot;&gt;
+    &lt;input type=&quot;text&quot; id=&quot;q&quot; placeholder=&quot;Search names, orgs, neighborhoods...&quot;&gt;
+    &lt;select id=&quot;field&quot;&gt;&lt;option value=&quot;&quot;&gt;All fields&lt;/option&gt;&lt;/select&gt;
+    &lt;select id=&quot;ring&quot;&gt;&lt;option value=&quot;&quot;&gt;All rings&lt;/option&gt;&lt;option value=&quot;1&quot;&gt;Ring 1 · NYC&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;Ring 2 · Commutable&lt;/option&gt;&lt;option value=&quot;3&quot;&gt;Ring 3 · Northeast&lt;/option&gt;&lt;option value=&quot;4&quot;&gt;Ring 4 · Online&lt;/option&gt;&lt;/select&gt;
+    &lt;select id=&quot;rung&quot;&gt;&lt;option value=&quot;&quot;&gt;All rungs&lt;/option&gt;&lt;option value=&quot;1&quot;&gt;1 · Exposure&lt;/option&gt;&lt;option value=&quot;2&quot;&gt;2 · Engagement&lt;/option&gt;&lt;option value=&quot;3&quot;&gt;3 · Production&lt;/option&gt;&lt;option value=&quot;4&quot;&gt;4 · Credential&lt;/option&gt;&lt;/select&gt;
+    &lt;select id=&quot;ledger&quot;&gt;&lt;option value=&quot;&quot;&gt;Scores + Stories&lt;/option&gt;&lt;option&gt;Stories&lt;/option&gt;&lt;option&gt;Scores&lt;/option&gt;&lt;option&gt;Both&lt;/option&gt;&lt;/select&gt;
+    &lt;span class=&quot;toggle orange&quot; id=&quot;free&quot;&gt;✓ Free only&lt;/span&gt;
+    &lt;span class=&quot;toggle&quot; id=&quot;newonly&quot;&gt;New this week&lt;/span&gt;
+    &lt;select id=&quot;review&quot;&gt;&lt;option value=&quot;&quot;&gt;Any review status&lt;/option&gt;&lt;option value=&quot;unreviewed&quot;&gt;Unreviewed&lt;/option&gt;&lt;option value=&quot;approved&quot;&gt;Approved&lt;/option&gt;&lt;/select&gt;
+    &lt;span class=&quot;toggle&quot; id=&quot;niche&quot;&gt;Niche only&lt;/span&gt;
+    &lt;select id=&quot;sort&quot;&gt;&lt;option value=&quot;score&quot;&gt;Sort: score&lt;/option&gt;&lt;option value=&quot;recent&quot;&gt;Sort: newest&lt;/option&gt;&lt;option value=&quot;deadline&quot;&gt;Sort: when&lt;/option&gt;&lt;/select&gt;
+  &lt;/div&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;count&quot; id=&quot;count&quot;&gt;&lt;/div&gt;
+  &lt;div id=&quot;cards&quot;&gt;&lt;/div&gt;
+
+  &lt;h2 class=&quot;sect&quot;&gt;Deadline board&lt;/h2&gt;
+  &lt;div id=&quot;board&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;script&gt;
+// Auto generated by scripts/build_dashboard.py. Do not edit by hand.
+window.FEED_UPDATED = &quot;June 10, 2026 14:35&quot;;
+window.FEED_DATA = [
+ {
+  &quot;name&quot;: &quot;First Saturday (free museum night)&quot;,
+  &quot;org&quot;: &quot;Brooklyn Museum&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Saturday, August 1, 2026, evening (monthly series; July date skipped for holiday weekend, verify)&quot;,
+  &quot;date_start&quot;: &quot;2026-08-01&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Prospect Heights, Brooklyn&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://www.brooklynmuseum.org/visit/first_saturdays&quot;,
+  &quot;score&quot;: 78,
+  &quot;score_rationale&quot;: &quot;Free flagship at a named institution, recurring, strong Stories, low Scores&quot;,
+  &quot;student_fit&quot;: &quot;Explorers, any grade; the lowest friction museum night in the city&quot;,
+  &quot;blog_angle&quot;: &quot;The free museum night that doubles as a Brooklyn block party, and why showing up monthly beats one fancy program&quot;,
+  &quot;niche&quot;: false,
+  &quot;first_seen&quot;: &quot;2026-06-01&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: museum site (recurring series, decades running). Corroboration: wide press coverage.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6712,
+  &quot;lng&quot;: -73.9636
+ },
+ {
+  &quot;name&quot;: &quot;Teen glassblowing demos and open studio&quot;,
+  &quot;org&quot;: &quot;UrbanGlass&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Select Saturdays through summer 2026 (verify session dates)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-21&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Fort Greene, Brooklyn&quot;,
+  &quot;cost&quot;: &quot;Free demos; classes paid with scholarships&quot;,
+  &quot;eligibility&quot;: &quot;Teens welcome at demos&quot;,
+  &quot;url&quot;: &quot;https://urbanglass.org&quot;,
+  &quot;score&quot;: 74,
+  &quot;score_rationale&quot;: &quot;Outer borough bonus, rare craft equals memorable narrative, ladder into classes&quot;,
+  &quot;student_fit&quot;: &quot;Builders and Portfolio Artists, 9th to 11th; tactile kids who hate lectures&quot;,
+  &quot;blog_angle&quot;: &quot;Nobody&#x27;s college essay is about glassblowing in Fort Greene, which is exactly the point&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-01&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: operating since 1977, named teaching staff.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6866,
+  &quot;lng&quot;: -73.9776
+ },
+ {
+  &quot;name&quot;: &quot;Summer Documentary Lab&quot;,
+  &quot;org&quot;: &quot;Reel Works&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 cohort; rolling interviews (verify current window)&quot;,
+  &quot;date_start&quot;: &quot;2026-07-06&quot;,
+  &quot;date_end&quot;: &quot;2026-08-14&quot;,
+  &quot;location&quot;: &quot;Gowanus, Brooklyn&quot;,
+  &quot;cost&quot;: &quot;Free, with mentorship&quot;,
+  &quot;eligibility&quot;: &quot;NYC teens; application and interview&quot;,
+  &quot;url&quot;: &quot;https://www.reelworks.org&quot;,
+  &quot;score&quot;: 86,
+  &quot;score_rationale&quot;: &quot;Free, selective, produces a finished film, mentor recommender; Lead tier&quot;,
+  &quot;student_fit&quot;: &quot;Film students needing a produced artifact; direct fit for portfolio building summers&quot;,
+  &quot;blog_angle&quot;: &quot;A free Brooklyn film lab that ends with a real documentary, versus the four thousand dollar camp that ends with a certificate&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-01&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: 25+ years operating, named funders, alumni in industry.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6745,
+  &quot;lng&quot;: -73.9888
+ },
+ {
+  &quot;name&quot;: &quot;Sculpture park opening and teen art days&quot;,
+  &quot;org&quot;: &quot;Socrates Sculpture Park&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Summer 2026 exhibition season, open daily; teen events monthly (verify)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-14&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Long Island City, Queens&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://socratessculpturepark.org&quot;,
+  &quot;score&quot;: 71,
+  &quot;score_rationale&quot;: &quot;Outer borough bonus, free always, strong setting, low credential value&quot;,
+  &quot;student_fit&quot;: &quot;Explorers; pair with Noguchi Museum across the street for a full art Saturday&quot;,
+  &quot;blog_angle&quot;: &quot;An art world afternoon in Queens that costs nothing: two institutions, one block, zero tickets&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-01&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: park site. Corroboration: NYC Parks partner institution since 1986.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7689,
+  &quot;lng&quot;: -73.9362
+ },
+ {
+  &quot;name&quot;: &quot;Science Career Ladder (Explainers)&quot;,
+  &quot;org&quot;: &quot;New York Hall of Science&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Rolling applications for paid teen Explainer roles (verify current openings)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-15&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Corona, Queens&quot;,
+  &quot;cost&quot;: &quot;Paid employment&quot;,
+  &quot;eligibility&quot;: &quot;HS students; application&quot;,
+  &quot;url&quot;: &quot;https://nysci.org&quot;,
+  &quot;score&quot;: 88,
+  &quot;score_rationale&quot;: &quot;Paid, multi year ladder R2 to R3, famous alumni outcomes, outer borough; Lead tier&quot;,
+  &quot;student_fit&quot;: &quot;STEM kids in Queens especially; the single best teach to learn job in the borough&quot;,
+  &quot;blog_angle&quot;: &quot;The Queens museum job that quietly built a generation of scientists, and how to get on the ladder&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-04&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: NYSCI site (program verified active in June 2026 spot check). Corroboration: 35+ year program, published research on outcomes.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.747,
+  &quot;lng&quot;: -73.8513
+ },
+ {
+  &quot;name&quot;: &quot;Oyster restoration volunteer days&quot;,
+  &quot;org&quot;: &quot;Billion Oyster Project&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 public volunteer days, Governors Island (verify calendar)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-27&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Governors Island&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens welcome; some events 14+ or with adult, verify per event&quot;,
+  &quot;url&quot;: &quot;https://www.billionoysterproject.org&quot;,
+  &quot;score&quot;: 84,
+  &quot;score_rationale&quot;: &quot;Free, hands in the harbor, citizen science data, ladder to school research partnerships&quot;,
+  &quot;student_fit&quot;: &quot;Service hearted and environmental STEM kids; marine angle for sailors&quot;,
+  &quot;blog_angle&quot;: &quot;Your kid can spend Saturday rebuilding the harbor&#x27;s reef, free, ferry included in the story&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-04&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: NY Harbor School partnership, major press, a decade of operation.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6895,
+  &quot;lng&quot;: -74.0167
+ },
+ {
+  &quot;name&quot;: &quot;Open lab afternoons&quot;,
+  &quot;org&quot;: &quot;BioBus / BioBase Harlem&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Weekly community lab sessions (verify summer schedule)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-18&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;East Harlem, Manhattan&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens welcome&quot;,
+  &quot;url&quot;: &quot;https://www.biobus.org&quot;,
+  &quot;score&quot;: 76,
+  &quot;score_rationale&quot;: &quot;Free microscopy access, internship ladder above it, community science culture&quot;,
+  &quot;student_fit&quot;: &quot;9th and 10th grade Explorers curious about lab science without the application barrier yet&quot;,
+  &quot;blog_angle&quot;: &quot;Before the fancy research program: the free Harlem lab where kids just get to look through the microscope&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-04&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: named scientists on staff, NSF and foundation funding.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7957,
+  &quot;lng&quot;: -73.9389
+ },
+ {
+  &quot;name&quot;: &quot;Teen biotech crash course&quot;,
+  &quot;org&quot;: &quot;Genspace&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 session (verify dates and aid)&quot;,
+  &quot;date_start&quot;: &quot;2026-07-13&quot;,
+  &quot;date_end&quot;: &quot;2026-07-24&quot;,
+  &quot;location&quot;: &quot;Sunset Park, Brooklyn&quot;,
+  &quot;cost&quot;: &quot;Paid with scholarships available&quot;,
+  &quot;eligibility&quot;: &quot;HS students&quot;,
+  &quot;url&quot;: &quot;https://www.genspace.org&quot;,
+  &quot;score&quot;: 73,
+  &quot;score_rationale&quot;: &quot;Real wet lab skills, community biolab setting, cost partially offsets&quot;,
+  &quot;student_fit&quot;: &quot;STEM kids ready for pipettes before they are ready for applications&quot;,
+  &quot;blog_angle&quot;: &quot;The community biolab in Sunset Park where teenagers do actual genetic engineering&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-04&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: first community biolab in the country, press history.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;vetting_note_cost&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6566,
+  &quot;lng&quot;: -74.0048
+ },
+ {
+  &quot;name&quot;: &quot;Free public lectures, summer series&quot;,
+  &quot;org&quot;: &quot;CUNY Graduate Center&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Summer and fall 2026 calendar (verify individual events)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-24&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Midtown Manhattan, Fifth Avenue at 34th&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to the public&quot;,
+  &quot;url&quot;: &quot;https://www.gc.cuny.edu/public-programs&quot;,
+  &quot;score&quot;: 75,
+  &quot;score_rationale&quot;: &quot;Major scholars, zero cost, zero barrier, the most underused intellectual resource in midtown&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics, 10th to 12th; send the kid who reads at lunch&quot;,
+  &quot;blog_angle&quot;: &quot;World class minds speak for free in midtown most weeks, and almost no high schooler knows&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-07&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: GC events calendar. Corroboration: university public programming archive going back years.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7486,
+  &quot;lng&quot;: -73.984
+ },
+ {
+  &quot;name&quot;: &quot;Summer Reading Contest&quot;,
+  &quot;org&quot;: &quot;The New York Times Learning Network&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 4,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;June 5 to August 14, 2026; new prompt each Friday, responses due the following Friday 9 AM ET (dates third party sourced, confirm at nytimes.com before send)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-12&quot;,
+  &quot;date_end&quot;: &quot;2026-08-14&quot;,
+  &quot;location&quot;: &quot;Virtual&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Ages 13 to 19 worldwide&quot;,
+  &quot;url&quot;: &quot;https://www.nytimes.com/section/learning&quot;,
+  &quot;score&quot;: 81,
+  &quot;score_rationale&quot;: &quot;Free, weekly publication stakes, writing artifact, national but low barrier; Ring 4 earning its slot&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics and Late Starters; a real byline chance every single week of summer&quot;,
+  &quot;blog_angle&quot;: &quot;A weekly shot at being published by the Times all summer, free, from the couch&quot;,
+  &quot;niche&quot;: false,
+  &quot;first_seen&quot;: &quot;2026-06-07&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: Learning Network contest calendar (annual since 2010). Corroboration: published winner archives.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;sample&quot;,
+   &quot;verify_needed&quot;
+  ]
+ },
+ {
+  &quot;name&quot;: &quot;Book arts and bibliography exhibitions&quot;,
+  &quot;org&quot;: &quot;The Grolier Club&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Current exhibition, free, weekdays plus Saturday hours (verify)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-20&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Upper East Side, Manhattan&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to the public&quot;,
+  &quot;url&quot;: &quot;https://www.grolierclub.org&quot;,
+  &quot;score&quot;: 69,
+  &quot;score_rationale&quot;: &quot;Deep niche, free, extraordinary setting; low connectivity holds the score down&quot;,
+  &quot;student_fit&quot;: &quot;The rare book kid; the Quiet Academic who needs to know this room exists&quot;,
+  &quot;blog_angle&quot;: &quot;The 140 year old book club hiding in plain sight on East 60th, free to walk into&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-07&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: club site. Corroboration: founded 1884, exhibition press reviews.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7637,
+  &quot;lng&quot;: -73.9698
+ },
+ {
+  &quot;name&quot;: &quot;Teen storytelling workshop&quot;,
+  &quot;org&quot;: &quot;The Moth Education Program&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Fall 2026 school year programs; summer community events (verify)&quot;,
+  &quot;date_start&quot;: &quot;2026-09-15&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Various NYC locations&quot;,
+  &quot;cost&quot;: &quot;Free through schools&quot;,
+  &quot;eligibility&quot;: &quot;HS students via participating programs&quot;,
+  &quot;url&quot;: &quot;https://themoth.org/education&quot;,
+  &quot;score&quot;: 80,
+  &quot;score_rationale&quot;: &quot;Narrative skill is essay skill; the most directly transferable program in the humanities section&quot;,
+  &quot;student_fit&quot;: &quot;Every 11th grader about to face the personal statement; especially reluctant writers&quot;,
+  &quot;blog_angle&quot;: &quot;The storytelling stage that secretly teaches the college essay better than any tutor&quot;,
+  &quot;niche&quot;: false,
+  &quot;first_seen&quot;: &quot;2026-06-07&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org education page. Corroboration: national program, published curriculum, radio archive.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null
+ },
+ {
+  &quot;name&quot;: &quot;The People&#x27;s Money: youth participation in citywide voting&quot;,
+  &quot;org&quot;: &quot;NYC Civic Engagement Commission&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Annual participatory budgeting vote window (2026 window dates: verify, historically late spring)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-13&quot;,
+  &quot;date_end&quot;: &quot;2026-06-30&quot;,
+  &quot;location&quot;: &quot;All five boroughs plus online&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;NYC residents age 11 and up can vote&quot;,
+  &quot;url&quot;: &quot;https://www.participate.nyc.gov&quot;,
+  &quot;score&quot;: 77,
+  &quot;score_rationale&quot;: &quot;Real civic act available to minors, citywide, free; a genuinely unusual eligibility story&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors; also a soft civic entry for any Explorer&quot;,
+  &quot;blog_angle&quot;: &quot;Your ninth grader can legally vote this month, on the city budget, and almost nobody tells them&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: NYC CEC portal. Corroboration: city charter mandated program, annual cycles since 2023.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;eligibility_restricted&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null
+ },
+ {
+  &quot;name&quot;: &quot;Citizen Pruner certification course&quot;,
+  &quot;org&quot;: &quot;Trees New York&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 course cycle (verify dates; teens have certified)&quot;,
+  &quot;date_start&quot;: &quot;2026-07-08&quot;,
+  &quot;date_end&quot;: &quot;2026-07-29&quot;,
+  &quot;location&quot;: &quot;Manhattan sessions plus street fieldwork&quot;,
+  &quot;cost&quot;: &quot;Around $100 with reduced rates, verify&quot;,
+  &quot;eligibility&quot;: &quot;Open enrollment, minors verify policy&quot;,
+  &quot;url&quot;: &quot;https://www.treesny.org&quot;,
+  &quot;score&quot;: 72,
+  &quot;score_rationale&quot;: &quot;A real city license a teenager can hold; quirky credential plus ongoing service hours&quot;,
+  &quot;student_fit&quot;: &quot;Environmental kids and Builders; the strangest real credential in the feed&quot;,
+  &quot;blog_angle&quot;: &quot;The city will license your teenager to legally prune street trees, and the story writes itself&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: program running since 1976 under city authorization.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;vetting_note_cost&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7075,
+  &quot;lng&quot;: -74.0113
+ },
+ {
+  &quot;name&quot;: &quot;Open boathouse and community rowing&quot;,
+  &quot;org&quot;: &quot;Rocking the Boat&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Summer 2026 public sessions on the Bronx River (verify calendar)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-28&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Hunts Point, the Bronx&quot;,
+  &quot;cost&quot;: &quot;Free public sessions&quot;,
+  &quot;eligibility&quot;: &quot;Open community events; youth programs by application&quot;,
+  &quot;url&quot;: &quot;https://rockingtheboat.org&quot;,
+  &quot;score&quot;: 79,
+  &quot;score_rationale&quot;: &quot;Outer borough bonus, boatbuilding plus river science ladder above it, sailing crossover&quot;,
+  &quot;student_fit&quot;: &quot;Maritime inclined students; the Bronx answer to the yacht club&quot;,
+  &quot;blog_angle&quot;: &quot;Kids build wooden boats in Hunts Point and row them on the Bronx River, free, and it leads somewhere&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: 25+ years, named funders, documented youth outcomes.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.8155,
+  &quot;lng&quot;: -73.8825
+ },
+ {
+  &quot;name&quot;: &quot;Summer Teen Internship (intergenerational service)&quot;,
+  &quot;org&quot;: &quot;DOROT&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 session (verify application status; often fills by late spring)&quot;,
+  &quot;date_start&quot;: &quot;2026-07-01&quot;,
+  &quot;date_end&quot;: &quot;2026-08-07&quot;,
+  &quot;location&quot;: &quot;Upper West Side, Manhattan plus visits&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;HS students; application&quot;,
+  &quot;url&quot;: &quot;https://www.dorotusa.org&quot;,
+  &quot;score&quot;: 82,
+  &quot;score_rationale&quot;: &quot;Structured service with training and reflection, a distinctive narrative against generic hours&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors consolidating scattered volunteering into one deep thread&quot;,
+  &quot;blog_angle&quot;: &quot;The internship where the deliverable is a friendship with someone four times your age&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: 50 year organization, formal teen program with cohorts.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.787,
+  &quot;lng&quot;: -73.9754
+ },
+ {
+  &quot;name&quot;: &quot;Tribeca Festival Games Gallery&quot;,
+  &quot;org&quot;: &quot;Tribeca Festival&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;cross_field_note&quot;: &quot;Business and Entrepreneurship: game industry exposure&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;June 10 to 14, 2026, during the 25th Tribeca Festival&quot;,
+  &quot;date_start&quot;: &quot;2026-06-10&quot;,
+  &quot;date_end&quot;: &quot;2026-06-14&quot;,
+  &quot;location&quot;: &quot;Pier 57, Hudson River Park at West 15th Street, Chelsea, Manhattan&quot;,
+  &quot;lat&quot;: 40.7424,
+  &quot;lng&quot;: -74.0096,
+  &quot;cost&quot;: &quot;Free and open to the public&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://tribecafilm.com/festival&quot;,
+  &quot;score&quot;: 80,
+  &quot;score_rationale&quot;: &quot;Free at a famous festival, closes Sunday, rare games industry exposure for teens&quot;,
+  &quot;student_fit&quot;: &quot;Builders and game design students, any grade; also Explorers who think museums are not for them&quot;,
+  &quot;blog_angle&quot;: &quot;The famous film festival has a free games wing on a pier this week, and your teenager can walk right in&quot;,
+  &quot;backing&quot;: &quot;Primary: tribecafilm.com festival guide (retrieved this cycle). Corroboration: 25th annual festival, citywide press coverage of the June 3 to 14 edition&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Tribeca at 25: free outdoor screenings&quot;,
+  &quot;org&quot;: &quot;Tribeca Festival&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Festival runs June 3 to 14, 2026; outdoor series at Hudson Yards, check each evening&#x27;s title&quot;,
+  &quot;date_start&quot;: &quot;2026-06-10&quot;,
+  &quot;date_end&quot;: &quot;2026-06-14&quot;,
+  &quot;location&quot;: &quot;Hudson Yards public square, West Side, Manhattan&quot;,
+  &quot;lat&quot;: 40.7536,
+  &quot;lng&quot;: -74.0017,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://tribecafilm.com/festival&quot;,
+  &quot;score&quot;: 75,
+  &quot;score_rationale&quot;: &quot;Free flagship, final festival weekend, anniversary series of landmark premieres&quot;,
+  &quot;student_fit&quot;: &quot;Film students and Explorers; a first independent festival night with trains everywhere&quot;,
+  &quot;blog_angle&quot;: &quot;Tribeca turns 25 and the birthday party is free, outdoors, and over after Sunday&quot;,
+  &quot;backing&quot;: &quot;Primary: tribecafilm.com (retrieved this cycle). Corroboration: amNY festival coverage of the June 3 to 14 edition&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Teen Takeovers Branch Council&quot;,
+  &quot;org&quot;: &quot;Brooklyn Public Library&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Rolling application, cohorts plan monthly after hours takeover events&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Select BPL branches across Brooklyn (multi branch, no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free; participants receive a stipend and community service hours&quot;,
+  &quot;eligibility&quot;: &quot;Ages 16 to 19, high school students&quot;,
+  &quot;url&quot;: &quot;https://www.bklynlibrary.org/support/volunteer/branch-council&quot;,
+  &quot;score&quot;: 80,
+  &quot;score_rationale&quot;: &quot;Paid responsibility at a named institution, open now, real event production artifact&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors and Builders, 10th to 12th; the kid who organizes the group chat anyway&quot;,
+  &quot;blog_angle&quot;: &quot;The library will pay your teenager to throw parties in it, and almost nobody knows&quot;,
+  &quot;backing&quot;: &quot;Primary: bklynlibrary.org branch council pages (retrieved this cycle). Corroboration: BPL paid opportunities blog post and live application page&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: program runs at multiple branches, no single confirmed venue&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Teen Digital Media Lab (free design jams)&quot;,
+  &quot;org&quot;: &quot;Museum of the Moving Image&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;cross_field_note&quot;: &quot;Arts and Film: media design&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Recurring Friday afternoons, twice monthly; next dates post on the museum calendar&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Museum of the Moving Image, 36-01 35th Avenue, Astoria, Queens&quot;,
+  &quot;lat&quot;: 40.7564,
+  &quot;lng&quot;: -73.9242,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens ages 14 and up&quot;,
+  &quot;url&quot;: &quot;https://movingimage.org/series/teen-digital-media-lab/&quot;,
+  &quot;score&quot;: 79,
+  &quot;score_rationale&quot;: &quot;Free recurring making time at a major Queens institution with a ladder to its game jams and teen film festival&quot;,
+  &quot;student_fit&quot;: &quot;Builders and film adjacent Explorers, 9th to 11th, Queens families especially&quot;,
+  &quot;blog_angle&quot;: &quot;Exclusive Friday access to a film museum where teens build things, free, twice a month&quot;,
+  &quot;backing&quot;: &quot;Primary: movingimage.org series page (retrieved this cycle). Corroboration: museum&#x27;s Mini Retro Game Jam and 2026 Teen Film Festival pages show a sustained teen program ladder&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Museum and Learning Center school visits (gold vault when available)&quot;,
+  &quot;org&quot;: &quot;Federal Reserve Bank of New York&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;cross_field_note&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Ongoing by reservation for school groups and student programs; at least one hour, up to two with a lesson&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;33 Liberty Street, Financial District, Manhattan&quot;,
+  &quot;lat&quot;: 40.7084,
+  &quot;lng&quot;: -74.0086,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Only open to visits, by reservation, from school groups and student programs&quot;,
+  &quot;url&quot;: &quot;https://www.newyorkfed.org/aboutthefed/museum-and-learning-center-visits&quot;,
+  &quot;score&quot;: 68,
+  &quot;score_rationale&quot;: &quot;Free, unforgettable setting, but school group restriction limits direct family action&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics and future economists, any grade; counselors can broker a school visit&quot;,
+  &quot;blog_angle&quot;: &quot;There is a gold vault under Liberty Street and a school group can stand in it for free&quot;,
+  &quot;backing&quot;: &quot;Primary: newyorkfed.org visits page (retrieved this cycle). Corroboration: Fed economic education team runs the High School Fed Challenge, same outreach arm&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Author talk: Page Powars (Summer at the Library kickoff)&quot;,
+  &quot;org&quot;: &quot;Brooklyn Public Library&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Tuesday, June 16, 2026, 4:00 to 5:00 PM&quot;,
+  &quot;date_start&quot;: &quot;2026-06-16&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;BPL Teen Zone (confirm branch on the calendar listing before forwarding)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens ages 13 to 19&quot;,
+  &quot;url&quot;: &quot;https://www.bklynlibrary.org/calendar&quot;,
+  &quot;score&quot;: 68,
+  &quot;score_rationale&quot;: &quot;Free, dated, working author on writing process; venue branch needs confirming&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics and writers, 8th to 11th; pairs with the summer writing arc&quot;,
+  &quot;blog_angle&quot;: &quot;A working novelist takes teen questions at the library next Tuesday, free&quot;,
+  &quot;backing&quot;: &quot;Primary: bklynlibrary.org events calendar (retrieved this cycle). Corroboration: part of the official Summer at the Library 2026 series&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: branch not yet confirmed&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Career Edge summer courses (commuter application deadline)&quot;,
+  &quot;org&quot;: &quot;NYU School of Professional Studies&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Scores&quot;,
+  &quot;when&quot;: &quot;Commuter application deadline Friday, June 12, 2026; one week courses in July and August&quot;,
+  &quot;date_start&quot;: &quot;2026-06-12&quot;,
+  &quot;date_end&quot;: &quot;2026-06-12&quot;,
+  &quot;location&quot;: &quot;NYU campus, Greenwich Village, Manhattan (building varies by course)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Paid program, $2,579 per course plus $50 nonrefundable application fee&quot;,
+  &quot;eligibility&quot;: &quot;Must have successfully completed grades 9, 10, or 11; essay and transcript required&quot;,
+  &quot;url&quot;: &quot;https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html&quot;,
+  &quot;score&quot;: 42,
+  &quot;score_rationale&quot;: &quot;Vetting risk penalty applied: high cost, effectively open admission, one week format; deadline is real and parents will ask&quot;,
+  &quot;student_fit&quot;: &quot;Listed for vetting conversations, not recommended unmodified; free alternatives usually read better&quot;,
+  &quot;blog_angle&quot;: &quot;The two thousand dollar week versus the free library internship: which one does an admissions reader believe&quot;,
+  &quot;backing&quot;: &quot;Primary: sps.nyu.edu program and course pages (retrieved this cycle). Corroboration: NYU SPS High School Academy standing program&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;vetting_risk&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: course buildings vary&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Youth Advocacy Ambassador and Youth Council&quot;,
+  &quot;org&quot;: &quot;NAMI-NYC&quot;,
+  &quot;field&quot;: &quot;Health and Science of Care&quot;,
+  &quot;cross_field_note&quot;: &quot;Civic and Social Impact: advocacy&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Ongoing program; training cohorts, then a minimum of 3 advocacy actions&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;NYC, sessions virtual and in person (no single confirmed venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Applicants must reside in one of NYC&#x27;s five boroughs and be between 14 and 18 years old&quot;,
+  &quot;url&quot;: &quot;https://naminycmetro.org/teen-volunteers/&quot;,
+  &quot;score&quot;: 69,
+  &quot;score_rationale&quot;: &quot;Free, real advocacy training with a certificate and a verification letter after 3 completed actions; ongoing rather than dated&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors, 9th to 12th, especially students with a personal mental health thread to consolidate&quot;,
+  &quot;blog_angle&quot;: &quot;NAMI-NYC trains teens 14 to 18 as mental health advocates, free, with documented completion&quot;,
+  &quot;backing&quot;: &quot;Primary: naminycmetro.org teen volunteer and advisory pages (retrieved this cycle). Corroboration: peer led teen programs launched with New York City Council support, per NAMI-NYC announcement&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: program runs virtually and at varying locations&quot;
+ },
+ {
+  &quot;name&quot;: &quot;High School Scholarship Program (host a blood drive)&quot;,
+  &quot;org&quot;: &quot;New York Blood Center&quot;,
+  &quot;field&quot;: &quot;Health and Science of Care&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Academic year cycle; schools hosting at least one drive per year qualify, plan in early fall&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;At the student&#x27;s own high school (no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;High schools that host a minimum of one blood drive per academic year; administrators award the scholarship to a student who demonstrates leadership and volunteerism in organizing the drive&quot;,
+  &quot;url&quot;: &quot;https://nybloodcenter.org/support-us/host-blood-drive/high-school-scholarship-program/&quot;,
+  &quot;score&quot;: 70,
+  &quot;score_rationale&quot;: &quot;Leadership artifact plus $500 to $2000 scholarship; requires organizing through the school, which is the barrier and the value&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors and pre health students, 10th to 12th; the consolidation move for scattered volunteer hours&quot;,
+  &quot;blog_angle&quot;: &quot;Organizing one school blood drive yields a leadership role, a scholarship track, and a concrete story, at zero cost&quot;,
+  &quot;backing&quot;: &quot;Primary: nybloodcenter.org scholarship page (retrieved this cycle). Corroboration: NYBC also runs the Heather McNamara advocacy scholarship, same student programs arm&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: takes place at each student&#x27;s school&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Youth Justice Collective&quot;,
+  &quot;org&quot;: &quot;Queens Public Library&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;cross_field_note&quot;: &quot;Humanities and History: podcasting and media&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Ongoing teen program; cohort schedule on the program page&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Queens Public Library branches (multi branch, no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens (confirm exact age band on the program page before any external use)&quot;,
+  &quot;url&quot;: &quot;https://www.queenslibrary.org/programs-activities/teens/other-programs/youth-justice-collective&quot;,
+  &quot;score&quot;: 72,
+  &quot;score_rationale&quot;: &quot;Free civic media making at the most linguistically diverse borough&#x27;s library system; outer borough bonus applied; detail thin, flagged&quot;,
+  &quot;student_fit&quot;: &quot;Connectors and future journalists, 9th to 11th, Queens families especially&quot;,
+  &quot;blog_angle&quot;: &quot;Queens Public Library runs a teen advocacy collective with podcast production, free and unmarketed&quot;,
+  &quot;backing&quot;: &quot;Primary: queenslibrary.org program page (retrieved this cycle). Corroboration: listed in QPL&#x27;s 125 Things To Do and teen programs directory&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;thin_backing&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: multi branch program&quot;
+ },
+ {
+  &quot;name&quot;: &quot;NYNJ World Cup 26 Fan Zone Queens (Group Stage HQ)&quot;,
+  &quot;org&quot;: &quot;FIFA World Cup 2026 NYNJ Host Committee&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;cross_field_note&quot;: &quot;cross field: citywide season hook&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;June 17 to 28, 2026; live match broadcasts in a stadium setting&quot;,
+  &quot;date_start&quot;: &quot;2026-06-17&quot;,
+  &quot;date_end&quot;: &quot;2026-06-28&quot;,
+  &quot;location&quot;: &quot;Louis Armstrong Stadium, USTA Billie Jean King National Tennis Center, Flushing Meadows, Queens&quot;,
+  &quot;lat&quot;: 40.7503,
+  &quot;lng&quot;: -73.8458,
+  &quot;cost&quot;: &quot;Free general admission with advance ticket reservation, code QUEENSHQ, while supplies last&quot;,
+  &quot;eligibility&quot;: &quot;Open to all; all guests must reserve a ticket in advance&quot;,
+  &quot;url&quot;: &quot;https://nynjfwc26.com/queens/&quot;,
+  &quot;score&quot;: 77,
+  &quot;score_rationale&quot;: &quot;Free stadium scale World Cup viewing in Queens, the season&#x27;s defining hook; reservation friction is the only barrier&quot;,
+  &quot;student_fit&quot;: &quot;Everyone; the summer your kid will actually remember, in the world&#x27;s borough&quot;,
+  &quot;blog_angle&quot;: &quot;The official Queens fan zone puts the World Cup inside Louis Armstrong Stadium free, reserve ahead&quot;,
+  &quot;backing&quot;: &quot;Primary: nynjfwc26.com Queens page and host committee press release with the mayor and governor (retrieved this cycle)&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Brooklyn Fan Zone at Brooklyn Bridge Park&quot;,
+  &quot;org&quot;: &quot;FIFA World Cup 2026 NYNJ Host Committee&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;cross_field_note&quot;: &quot;cross field: citywide season hook&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;June 13 to July 19, 2026, daily programming and match viewings&quot;,
+  &quot;date_start&quot;: &quot;2026-06-13&quot;,
+  &quot;date_end&quot;: &quot;2026-07-19&quot;,
+  &quot;location&quot;: &quot;Brooklyn Bridge Park, Dumbo, Brooklyn&quot;,
+  &quot;lat&quot;: 40.7038,
+  &quot;lng&quot;: -73.992,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://nynjfwc26.com/fan-events/&quot;,
+  &quot;score&quot;: 70,
+  &quot;score_rationale&quot;: &quot;Free, waterfront, runs five weeks starting this Saturday; pure Stories material&quot;,
+  &quot;student_fit&quot;: &quot;Explorers and any family; the lowest friction World Cup entry point&quot;,
+  &quot;blog_angle&quot;: &quot;Match viewings under the bridge all tournament, free, starting Saturday&quot;,
+  &quot;backing&quot;: &quot;Primary: nynjfwc26.com fan events page and host committee press release (retrieved this cycle)&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Bronx Fan Zone at Bronx Terminal Market&quot;,
+  &quot;org&quot;: &quot;FIFA World Cup 2026 NYNJ Host Committee&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;cross_field_note&quot;: &quot;cross field: citywide season hook&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;June 13 and 14, 2026, matchday and local cultural programming&quot;,
+  &quot;date_start&quot;: &quot;2026-06-13&quot;,
+  &quot;date_end&quot;: &quot;2026-06-14&quot;,
+  &quot;location&quot;: &quot;Bronx Terminal Market, Concourse, the Bronx (south of Yankee Stadium)&quot;,
+  &quot;lat&quot;: 40.826,
+  &quot;lng&quot;: -73.9271,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://nynjfwc26.com/fan-events/&quot;,
+  &quot;score&quot;: 73,
+  &quot;score_rationale&quot;: &quot;Free, this weekend only, Bronx equity item with outer borough bonus&quot;,
+  &quot;student_fit&quot;: &quot;Bronx families first; a one weekend Story setting&quot;,
+  &quot;blog_angle&quot;: &quot;The Bronx gets its own World Cup weekend at Terminal Market, free, Saturday and Sunday only&quot;,
+  &quot;backing&quot;: &quot;Primary: nynjfwc26.com fan events page and host committee press release (retrieved this cycle)&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Youth Documentary Workshop&quot;,
+  &quot;org&quot;: &quot;Educational Video Center&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;cross_field_note&quot;: &quot;Civic and Social Impact: social justice documentary&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Credit bearing afterschool program, school year cycles; paid summer jobs and mentorship for participants&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Manhattan (confirm current studio address before any external use)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free; participants can earn school credit and paid summer roles&quot;,
+  &quot;eligibility&quot;: &quot;Open to all public high schoolers citywide, especially Transfer, International, Consortium, and District 79 schools&quot;,
+  &quot;url&quot;: &quot;https://www.evc.org/ydw&quot;,
+  &quot;score&quot;: 73,
+  &quot;score_rationale&quot;: &quot;Free, credit bearing, produces a finished documentary, running since 1984; public school restriction noted&quot;,
+  &quot;student_fit&quot;: &quot;Film students and Connectors, 10th to 12th, especially the caseload&#x27;s international and transfer school students&quot;,
+  &quot;blog_angle&quot;: &quot;A documentary workshop running since 1984 that pays public school teens to make real films&quot;,
+  &quot;backing&quot;: &quot;Primary: evc.org program pages (retrieved this cycle). Corroboration: operating since 1984, NYXT and Brooklyn Org coverage&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: studio address not confirmed at primary source this cycle&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Teen Center drop in tech Saturday&quot;,
+  &quot;org&quot;: &quot;New York Public Library&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Saturday, June 13, 2026; drop in, no registration&quot;,
+  &quot;date_start&quot;: &quot;2026-06-13&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;NYPL Teen Centers, multiple branches (Manhattan, Bronx, Staten Island)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens&quot;,
+  &quot;url&quot;: &quot;https://www.nypl.org/summer/2026&quot;,
+  &quot;score&quot;: 71,
+  &quot;score_rationale&quot;: &quot;Free flagship drop in with no registration friction, this Saturday, multi branch reach&quot;,
+  &quot;student_fit&quot;: &quot;Explorers and Builders, 8th to 10th; zero commitment first taste of the Teen Center ladder&quot;,
+  &quot;blog_angle&quot;: &quot;Saturday, free, no signup: the library&#x27;s maker tech floors are open to teens&quot;,
+  &quot;backing&quot;: &quot;Primary: nypl.org Summer at the Library 2026 page (retrieved this cycle)&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: runs at multiple Teen Center branches&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Youth Matters: Teen Ambassadors&quot;,
+  &quot;org&quot;: &quot;Snug Harbor Cultural Center and Botanical Garden&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;cross_field_note&quot;: &quot;Business and Entrepreneurship: arts administration careers&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Month long weekend career exploration program; next cohort dates not yet posted, confirm on the Youth Matters page&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Snug Harbor Cultural Center, 1000 Richmond Terrace, Staten Island&quot;,
+  &quot;lat&quot;: 40.6437,
+  &quot;lng&quot;: -74.1031,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;New York City teens, grades 9 to 12&quot;,
+  &quot;url&quot;: &quot;https://snug-harbor.org/youth-matters/&quot;,
+  &quot;score&quot;: 77,
+  &quot;score_rationale&quot;: &quot;Free arts career exploration on Staten Island, the least served borough; ladder note: Snug Harbor is a Bloomberg Arts Internship partner site&quot;,
+  &quot;student_fit&quot;: &quot;Portfolio Artists and Explorers, 9th to 11th; Staten Island families see almost nothing aimed at them&quot;,
+  &quot;blog_angle&quot;: &quot;Snug Harbor runs a free weekend program where grades 9 to 12 learn how arts careers actually work, artist side and administrative side&quot;,
+  &quot;backing&quot;: &quot;Primary: snug-harbor.org Youth Matters page (retrieved this cycle). Corroboration: Bloomberg Arts Internship partner site per Studio Institute&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Congressional App Challenge 2026&quot;,
+  &quot;org&quot;: &quot;U.S. House of Representatives (district competitions)&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Scores&quot;,
+  &quot;when&quot;: &quot;Open now; competition runs May 1 to October 26, 2026, submissions due 12:00 PM ET October 26&quot;,
+  &quot;date_start&quot;: &quot;2026-05-01&quot;,
+  &quot;date_end&quot;: &quot;2026-10-26&quot;,
+  &quot;location&quot;: &quot;District based, citywide (no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Must be a middle or high school student at the time of app submission; individuals or teams of up to four; district participation varies&quot;,
+  &quot;url&quot;: &quot;https://www.congressionalappchallenge.us/&quot;,
+  &quot;score&quot;: 73,
+  &quot;score_rationale&quot;: &quot;Free congressional credential with a summer long build window open right now; underused in NYC districts&quot;,
+  &quot;student_fit&quot;: &quot;Builders and coders, 8th to 12th; the summer project that becomes a fall credential&quot;,
+  &quot;blog_angle&quot;: &quot;An app built this summer can win a student their congressional district&#x27;s official coding award by October 26&quot;,
+  &quot;backing&quot;: &quot;Primary: congressionalappchallenge.us rules and registration pages (retrieved this cycle). Corroboration: house.gov program page, Queens CB2 distribution&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: district based competition&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Biorocket Youth Research Internship&quot;,
+  &quot;org&quot;: &quot;Genspace&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Spring and summer sessions yearly (2026 summer session July 6 to August 14); application deadlines usually early January&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Genspace community biology lab, Sunset Park, Brooklyn&quot;,
+  &quot;lat&quot;: 40.6566,
+  &quot;lng&quot;: -74.0048,
+  &quot;cost&quot;: &quot;Free; $2,000 stipend for participation&quot;,
+  &quot;eligibility&quot;: &quot;Students must be at least 16 years old and attend a New York City public or charter school within a 45 minute commute to Genspace&quot;,
+  &quot;url&quot;: &quot;https://www.genspace.org/biorocket&quot;,
+  &quot;score&quot;: 70,
+  &quot;score_rationale&quot;: &quot;Paid mentored genetic engineering research at a community lab; long lead January application is the catch and the reason to flag it now&quot;,
+  &quot;student_fit&quot;: &quot;STEM students at public and charter schools, current 10th and 11th graders planning next year&quot;,
+  &quot;blog_angle&quot;: &quot;A Brooklyn community lab pays NYC public school students $2,000 to learn genetic engineering; applications come due in January&quot;,
+  &quot;backing&quot;: &quot;Primary: genspace.org Biorocket page (retrieved this cycle). Corroboration: NYC Science Research Mentoring Consortium member program&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;Pin reuses the verified Genspace Sunset Park venue already in the feed&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Junior Scholars Program 2026 to 2027&quot;,
+  &quot;org&quot;: &quot;Schomburg Center for Research in Black Culture (NYPL)&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Application open now: priority deadline Monday June 15, 2026; final deadline Monday June 29, 2026. Program runs Saturdays 10 AM to 3 PM during the academic year&quot;,
+  &quot;date_start&quot;: &quot;2026-06-15&quot;,
+  &quot;date_end&quot;: &quot;2026-06-29&quot;,
+  &quot;location&quot;: &quot;Schomburg Center, 515 Malcolm X Boulevard, Harlem, Manhattan&quot;,
+  &quot;lat&quot;: 40.8146,
+  &quot;lng&quot;: -73.9404,
+  &quot;cost&quot;: &quot;Tuition free&quot;,
+  &quot;eligibility&quot;: &quot;100 youth from 6th through 12th grades each year&quot;,
+  &quot;url&quot;: &quot;https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program&quot;,
+  &quot;score&quot;: 90,
+  &quot;score_rationale&quot;: &quot;Tuition free yearlong scholarly credential at a world famous research center, selective by volume, and the priority deadline is in five days&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics and humanities students, 6th through 12th; the strongest humanities ladder item in the feed&quot;,
+  &quot;blog_angle&quot;: &quot;The Schomburg Center&#x27;s Saturday scholars program for grades 6 to 12 is tuition free; priority applications close June 15, final June 29&quot;,
+  &quot;backing&quot;: &quot;Primary: nypl.org Junior Scholars program page (retrieved this cycle). Corroboration: program runs yearly with 100 scholars, named contact published, Annual Youth Summit each May&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;The 15th Annual New York City Poetry Festival&quot;,
+  &quot;org&quot;: &quot;The Poetry Society of New York&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;cross_field_note&quot;: &quot;Arts and Film: performance&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Saturday July 18 and Sunday July 19, 2026, 11 AM to 6 PM&quot;,
+  &quot;date_start&quot;: &quot;2026-07-18&quot;,
+  &quot;date_end&quot;: &quot;2026-07-19&quot;,
+  &quot;location&quot;: &quot;Nolan Park, Governors Island&quot;,
+  &quot;lat&quot;: 40.692,
+  &quot;lng&quot;: -74.015,
+  &quot;cost&quot;: &quot;Free to attend (ferry fare separate)&quot;,
+  &quot;eligibility&quot;: &quot;Open to all; children&#x27;s programming included&quot;,
+  &quot;url&quot;: &quot;https://poetrysocietyny.org/nycpofest&quot;,
+  &quot;score&quot;: 78,
+  &quot;score_rationale&quot;: &quot;Free two day festival with open mics and workshops; resolves a verification flag from edition v1; same Sunday as the World Cup final, a scheduling fact worth noting in copy&quot;,
+  &quot;student_fit&quot;: &quot;Writers and Quiet Academics, 8th to 12th; pairs with the weekly NYT contest as a summer writing arc&quot;,
+  &quot;blog_angle&quot;: &quot;250 poets, Victorian houses, open mics, free, July 18 and 19 on Governors Island&quot;,
+  &quot;backing&quot;: &quot;Primary: poetrysocietyny.org festival page (retrieved this cycle). Corroboration: govisland.com official event listing, 15th annual&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;New York City Science and Engineering Fair (NYCSEF)&quot;,
+  &quot;org&quot;: &quot;CUNY and NYC Public Schools&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Annual citywide fair; school year entry process begins in fall, fair in late winter (current 2026 cycle submission listed open until June 30, 2026)&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Citywide, all five boroughs (CUNY host campuses; no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Students in grades 9 to 12 (or college) currently taking relevant courses in school&quot;,
+  &quot;url&quot;: &quot;https://nycsef.org/&quot;,
+  &quot;score&quot;: 82,
+  &quot;score_rationale&quot;: &quot;Free, the largest high school research competition in NYC and the ISEF affiliated spine of the science research ladder; all five boroughs&quot;,
+  &quot;student_fit&quot;: &quot;Builders and Quiet Academics doing research, grades 9 to 12; the destination for any school year research project&quot;,
+  &quot;blog_angle&quot;: &quot;NYCSEF is the free citywide fair roughly 700 NYC students enter each year; the entry process starts in the fall, not the spring&quot;,
+  &quot;backing&quot;: &quot;Primary: nycsef.org (retrieved this cycle). Corroboration: NYSSEF and CUNY enrollment report; ISEF affiliate of long standing&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: citywide competition across CUNY host campuses&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Wharton Global High School Investment Competition&quot;,
+  &quot;org&quot;: &quot;Wharton Global Youth Program, University of Pennsylvania&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;ring&quot;: 4,
+  &quot;cross_field_note&quot;: &quot;Ring 3 for the in person Philadelphia finale&quot;,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Scores&quot;,
+  &quot;when&quot;: &quot;Annual; 2025-26 cycle registered June 30 to September 12, traded fall, finale April 2026. 2026-27 registration expected to open late June 2026&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Online team competition; Global Finale at The Wharton School, Philadelphia&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;High school students in grades 9 to 12, in teams of four to six guided by a teacher advisor&quot;,
+  &quot;url&quot;: &quot;https://globalyouth.wharton.upenn.edu/competitions/investment-competition/&quot;,
+  &quot;score&quot;: 72,
+  &quot;score_rationale&quot;: &quot;Free, named university competition with a real selective finale; online format lowers accessibility and Stories weight; registration window opens within days&quot;,
+  &quot;student_fit&quot;: &quot;Single Track Specialists in finance and Builders, grades 9 to 12; needs a teacher advisor, so plan the sponsor now&quot;,
+  &quot;blog_angle&quot;: &quot;Wharton runs a free team investment competition for grades 9 to 12; the next registration window opens at the end of June and a teacher advisor is required&quot;,
+  &quot;backing&quot;: &quot;Primary: globalyouth.wharton.upenn.edu competition page (retrieved this cycle). Corroboration: 2026 Global Finale results posted by Wharton&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: online competition with an out of area finale&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Academic Year Fellowship (research)&quot;,
+  &quot;org&quot;: &quot;The Jackson Laboratory (JAX)&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;cross_field_note&quot;: &quot;Health and Science of Care: biomedical research&quot;,
+  &quot;ring&quot;: 3,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Rolling applications accepted until August 24, 2026; projects run fall through late spring, minimum 180 hours on site&quot;,
+  &quot;date_start&quot;: &quot;2026-08-24&quot;,
+  &quot;date_end&quot;: &quot;2026-08-24&quot;,
+  &quot;location&quot;: &quot;The Jackson Laboratory campuses (Bar Harbor, Maine and Farmington, Connecticut); out of NYC area&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Unpaid for academic year fellows&quot;,
+  &quot;eligibility&quot;: &quot;High school juniors and seniors and undergraduates interested in a research fellowship; minimum 180 hours at the Laboratory&quot;,
+  &quot;url&quot;: &quot;https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships&quot;,
+  &quot;score&quot;: 60,
+  &quot;score_rationale&quot;: &quot;Genuine research credential at a famous genetics institute, open now on a rolling basis; unpaid and out of area, both real accessibility barriers, scored honestly&quot;,
+  &quot;student_fit&quot;: &quot;Research bound juniors and seniors with travel or relocation capacity; a serious credential, not a casual one&quot;,
+  &quot;blog_angle&quot;: &quot;The Jackson Laboratory takes high school juniors and seniors for academic year research fellowships on a rolling basis through August 24; note it is unpaid and on site in Maine or Connecticut&quot;,
+  &quot;backing&quot;: &quot;Primary: jax.org academic year internships and admission pages (retrieved this cycle). Corroboration: Pathways to Science listing, decades of operation&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: out of NYC area (Maine and Connecticut campuses)&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Simons Summer Research Program (2027 planning item)&quot;,
+  &quot;org&quot;: &quot;Stony Brook University&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 2,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;2026 cycle CLOSED (student deadline was February 5, 2026). Next cycle: nominations and applications open in winter for summer 2027&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Stony Brook University, Long Island (Ring 2, LIRR accessible)&quot;,
+  &quot;lat&quot;: 40.912,
+  &quot;lng&quot;: -73.1235,
+  &quot;cost&quot;: &quot;Research stipend on completion (verify current amount each cycle)&quot;,
+  &quot;eligibility&quot;: &quot;Currently in 11th grade at time of applying; US citizen or permanent resident; at least 16 by program start; high school nomination required, maximum two students per school&quot;,
+  &quot;url&quot;: &quot;https://www.stonybrook.edu/simons/&quot;,
+  &quot;score&quot;: 58,
+  &quot;score_rationale&quot;: &quot;High prestige Long Island research credential, but 2026 is closed so timeliness is low; logged as a winter 2027 watch item with strict eligibility&quot;,
+  &quot;student_fit&quot;: &quot;Current 10th graders (rising 11th) on a research track; the nomination cap means start the school conversation early&quot;,
+  &quot;blog_angle&quot;: &quot;Simons at Stony Brook is one of the region&#x27;s most selective research programs; the catch is that students must be nominated by their school in 11th grade, so the planning happens a year ahead&quot;,
+  &quot;backing&quot;: &quot;Primary: stonybrook.edu Simons application guidelines (retrieved this cycle). Corroboration: long running program, multiple application guides&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ }
+];
+window.DEADLINE_BOARD = [
+ {
+  &quot;closes&quot;: &quot;June 12, 2026&quot;,
+  &quot;closes_iso&quot;: &quot;2026-06-12&quot;,
+  &quot;program&quot;: &quot;NYU SPS Career Edge, commuter application&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;eligibility&quot;: &quot;Completed grades 9 to 11; paid program, vetting risk flagged&quot;,
+  &quot;url&quot;: &quot;https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html&quot;,
+  &quot;note&quot;: &quot;Added June 10 2026; flagged pay to play pattern, listed because families ask&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;June 15, 2026 priority; June 29, 2026 final&quot;,
+  &quot;closes_iso&quot;: &quot;2026-06-15&quot;,
+  &quot;program&quot;: &quot;Schomburg Junior Scholars Program 2026 to 2027&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;eligibility&quot;: &quot;Grades 6 to 12; tuition free; 100 scholars per year&quot;,
+  &quot;url&quot;: &quot;https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program&quot;,
+  &quot;note&quot;: &quot;Confirmed open at nypl.org June 10 2026; the most urgent real deadline in the feed&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;Expected late June 2026 (registration opens)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-06-30&quot;,
+  &quot;program&quot;: &quot;Wharton Global HS Investment Competition 2026-27 registration&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;eligibility&quot;: &quot;Grades 9 to 12, teams of 4 to 6, teacher advisor required; free&quot;,
+  &quot;url&quot;: &quot;https://globalyouth.wharton.upenn.edu/competitions/investment-competition/&quot;,
+  &quot;note&quot;: &quot;Added June 10 2026; last cycle opened June 30, watch for the 2026-27 window opening within days&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;July 15, 2026 (verify)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-07-15&quot;,
+  &quot;program&quot;: &quot;Bronx Museum Teen Council, fall cycle&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;eligibility&quot;: &quot;NYC HS students 14 to 19; paid&quot;,
+  &quot;url&quot;: &quot;https://bronxmuseum.org/learn/teens/&quot;,
+  &quot;note&quot;: &quot;June 10 2026 check: fall 2026 deadline not yet posted on bronxmuseum.org; spring 2026 deadline was February 1; July 15 estimate stays flagged as verify&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;August 1, 2026 (verify)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-08-01&quot;,
+  &quot;program&quot;: &quot;Apollo Theater Academy fall internships&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;eligibility&quot;: &quot;NYC HS students; paid&quot;,
+  &quot;url&quot;: &quot;https://www.apollotheater.org&quot;,
+  &quot;note&quot;: &quot;Sample seed; verify posting&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;Rolling&quot;,
+  &quot;closes_iso&quot;: &quot;2026-08-15&quot;,
+  &quot;program&quot;: &quot;NYSCI Science Career Ladder (Explainers)&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;HS students; paid&quot;,
+  &quot;url&quot;: &quot;https://nysci.org&quot;,
+  &quot;note&quot;: &quot;Rolling; verified active June 2026&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;August 24, 2026 (rolling)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-08-24&quot;,
+  &quot;program&quot;: &quot;JAX Academic Year Fellowship (research)&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;HS juniors and seniors; unpaid; 180 hours on site in Maine or Connecticut&quot;,
+  &quot;url&quot;: &quot;https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships&quot;,
+  &quot;note&quot;: &quot;Added June 10 2026; rolling research fellowship, out of NYC area, unpaid&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;September 2026 opens (watch)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-09-10&quot;,
+  &quot;program&quot;: &quot;Scholastic Art and Writing Awards, NYC region&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;eligibility&quot;: &quot;Grades 7 to 12&quot;,
+  &quot;url&quot;: &quot;https://www.artandwriting.org&quot;,
+  &quot;note&quot;: &quot;Sample seed; submissions historically open Sept, regional deadlines Dec&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;October 2026 (watch)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-10-15&quot;,
+  &quot;program&quot;: &quot;NYCSEF registration via schools&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;NYC HS students with research projects&quot;,
+  &quot;url&quot;: &quot;https://nycsef.cs.cuny.edu&quot;,
+  &quot;note&quot;: &quot;Sample seed; fall registration pattern&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;October 26, 2026, 12:00 PM ET&quot;,
+  &quot;closes_iso&quot;: &quot;2026-10-26&quot;,
+  &quot;program&quot;: &quot;Congressional App Challenge 2026&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;Middle or high school students; teams up to 4; district participation varies&quot;,
+  &quot;url&quot;: &quot;https://www.congressionalappchallenge.us/&quot;,
+  &quot;note&quot;: &quot;Window confirmed open at the official site June 10 2026; summer build, fall submission&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;November 2026 (watch)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-11-12&quot;,
+  &quot;program&quot;: &quot;Regeneron Science Talent Search&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;HS seniors with original research&quot;,
+  &quot;url&quot;: &quot;https://www.societyforscience.org/regeneron-sts/&quot;,
+  &quot;note&quot;: &quot;Sample seed; annual November deadline pattern&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;March 31, 2027 (window opens January 1, 2027)&quot;,
+  &quot;closes_iso&quot;: &quot;2027-03-31&quot;,
+  &quot;program&quot;: &quot;NewYork-Presbyterian summer teen volunteering, summer 2027 cohort&quot;,
+  &quot;field&quot;: &quot;Health and Science of Care&quot;,
+  &quot;eligibility&quot;: &quot;Ages 15 to 17, valid social security number, 120 hour summer minimum&quot;,
+  &quot;url&quot;: &quot;https://www.nyp.org/volunteer/summer-volunteering&quot;,
+  &quot;note&quot;: &quot;Long lead time item: 2026 window closed March 31; flagging now because clearance and references take months&quot;
+ }
+];
+
+&lt;/script&gt;
+&lt;script&gt;
+const data = (window.FEED_DATA||[]).filter(i=&gt;i.status!==&quot;expired&quot;);
+const board = window.DEADLINE_BOARD||[];
+document.getElementById(&#x27;updated&#x27;).textContent = window.FEED_UPDATED ? (&#x27;Last cycle: &#x27;+window.FEED_UPDATED) : &#x27;No cycles run yet.&#x27;;
+
+const fieldSel=document.getElementById(&#x27;field&#x27;);
+[...new Set(data.map(i=&gt;i.field).filter(Boolean))].sort().forEach(f=&gt;{const o=document.createElement(&#x27;option&#x27;);o.textContent=f;fieldSel.appendChild(o);});
+
+const state={free:true,newonly:false,niche:false};
+const els=[&#x27;q&#x27;,&#x27;field&#x27;,&#x27;ring&#x27;,&#x27;rung&#x27;,&#x27;ledger&#x27;,&#x27;review&#x27;,&#x27;sort&#x27;].map(id=&gt;document.getElementById(id));
+els.forEach(el=&gt;el.addEventListener(&#x27;input&#x27;,render));
+const freeT=document.getElementById(&#x27;free&#x27;), newT=document.getElementById(&#x27;newonly&#x27;);
+freeT.onclick=()=&gt;{state.free=!state.free;freeT.classList.toggle(&#x27;on&#x27;);freeT.textContent=state.free?&#x27;✓ Free only&#x27;:&#x27;Free only: off&#x27;;render();};
+freeT.classList.add(&#x27;on&#x27;);
+newT.onclick=()=&gt;{state.newonly=!state.newonly;newT.classList.toggle(&#x27;on&#x27;);render();};
+const nicheT=document.getElementById(&#x27;niche&#x27;);
+nicheT.onclick=()=&gt;{state.niche=!state.niche;nicheT.classList.toggle(&#x27;on&#x27;);render();};
+
+const isFree=i=&gt;/^free/i.test(i.cost||&#x27;&#x27;);
+const daysSince=d=&gt;{try{return (Date.now()-new Date(d))/864e5}catch(e){return 999}};
+
+function render(){
+  const [q,f,ring,rung,led,rev,sort]=els.map(e=&gt;e.value);
+  let list=data.filter(i=&gt;
+    (!q || JSON.stringify(i).toLowerCase().includes(q.toLowerCase())) &amp;&amp;
+    (!f || i.field===f) &amp;&amp; (!ring || String(i.ring)===ring) &amp;&amp;
+    (!rung || String(i.rung)===rung) &amp;&amp; (!led || i.ledger===led) &amp;&amp;
+    (!state.free || isFree(i)) &amp;&amp; (!state.newonly || daysSince(i.first_seen)&lt;=7) &amp;&amp;
+    (!rev || (i.review_status||&#x27;unreviewed&#x27;)===rev) &amp;&amp; (!state.niche || i.niche===true)
+  );
+  if(sort===&#x27;score&#x27;) list.sort((a,b)=&gt;(b.score||0)-(a.score||0));
+  if(sort===&#x27;recent&#x27;) list.sort((a,b)=&gt;new Date(b.first_seen||0)-new Date(a.first_seen||0));
+  if(sort===&#x27;deadline&#x27;) list.sort((a,b)=&gt;String(a.when).localeCompare(String(b.when)));
+  document.getElementById(&#x27;count&#x27;).textContent=list.length+&#x27; of &#x27;+data.length+&#x27; opportunities shown&#x27;;
+  const c=document.getElementById(&#x27;cards&#x27;); c.innerHTML=&#x27;&#x27;;
+  if(!list.length){c.innerHTML=&#x27;&lt;div class=&quot;empty&quot;&gt;&#x27;+(data.length?&#x27;Nothing matches these filters.&#x27;:&#x27;The feed is empty. Run the first cycle: &lt;code&gt;claude -p &quot;/cycle&quot;&lt;/code&gt;&#x27;)+&#x27;&lt;/div&gt;&#x27;;return;}
+  for(const i of list){
+    const flags=(i.flags||[]).filter(x=&gt;x!==&#x27;verified&#x27;).map(x=&gt;`&lt;span class=&quot;tag flag&quot;&gt;${x.replace(/_/g,&#x27; &#x27;)}&lt;/span&gt;`).join(&#x27;&#x27;);
+    const isNew=daysSince(i.first_seen)&lt;=7?&#x27;&lt;span class=&quot;tag new&quot;&gt;New&lt;/span&gt;&#x27;:&#x27;&#x27;;
+    const rev=(i.review_status||&#x27;unreviewed&#x27;)===&#x27;approved&#x27;?&#x27;&lt;span class=&quot;tag&quot; style=&quot;background:#DFEEE2;color:#2E6240&quot;&gt;Approved&lt;/span&gt;&#x27;:&#x27;&lt;span class=&quot;tag flag&quot;&gt;Unreviewed&lt;/span&gt;&#x27;;
+    const niche=i.niche?&#x27;&lt;span class=&quot;tag&quot; style=&quot;background:#E9E2F2;color:#4E3A72&quot;&gt;Niche&lt;/span&gt;&#x27;:&#x27;&#x27;;
+    c.insertAdjacentHTML(&#x27;beforeend&#x27;,`
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;div class=&quot;row&quot;&gt;
+        &lt;div&gt;&lt;div class=&quot;name&quot;&gt;${i.name||&#x27;&#x27;}&lt;/div&gt;&lt;div class=&quot;org&quot;&gt;${i.org||&#x27;&#x27;} · ${i.location||&#x27;&#x27;}&lt;/div&gt;&lt;/div&gt;
+        &lt;div class=&quot;tags&quot;&gt;${isNew}${rev}${niche}&lt;span class=&quot;tag&quot;&gt;${i.field||&#x27;&#x27;}&lt;/span&gt;&lt;span class=&quot;tag&quot;&gt;Rung ${i.rung||&#x27;?&#x27;} · ${i.ledger||&#x27;&#x27;}&lt;/span&gt;&lt;span class=&quot;tag score&quot;&gt;${i.score??&#x27;–&#x27;}&lt;/span&gt;${flags}&lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;meta&quot;&gt;&lt;span&gt;&lt;b&gt;WHEN&lt;/b&gt; ${i.when||&#x27;&#x27;}&lt;/span&gt;&lt;span&gt;&lt;b&gt;COST&lt;/b&gt; ${i.cost||&#x27;&#x27;}&lt;/span&gt;&lt;span&gt;&lt;b&gt;ELIGIBILITY&lt;/b&gt; ${i.eligibility||&#x27;Open&#x27;}&lt;/span&gt;&lt;/div&gt;
+      ${i.blog_angle?`&lt;div class=&quot;angle&quot;&gt;&lt;b&gt;BLOG ANGLE&lt;/b&gt;&amp;nbsp; ${i.blog_angle}&lt;/div&gt;`:&#x27;&#x27;}
+      ${i.student_fit?`&lt;div class=&quot;fit&quot;&gt;&lt;b&gt;SEND TO&lt;/b&gt;&amp;nbsp; ${i.student_fit}&lt;/div&gt;`:&#x27;&#x27;}
+      ${i.url?`&lt;a class=&quot;src&quot; href=&quot;${i.url}&quot; target=&quot;_blank&quot; rel=&quot;noreferrer&quot;&gt;Open source page →&lt;/a&gt;`:&#x27;&#x27;}
+    &lt;/div&gt;`);
+  }
+}
+
+function renderBoard(){
+  const b=document.getElementById(&#x27;board&#x27;);
+  if(!board.length){b.innerHTML=&#x27;&lt;div class=&quot;empty&quot;&gt;No open application windows tracked yet.&lt;/div&gt;&#x27;;return;}
+  b.innerHTML=&#x27;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Closes&lt;/th&gt;&lt;th&gt;Program&lt;/th&gt;&lt;th&gt;Field&lt;/th&gt;&lt;th&gt;Eligibility&lt;/th&gt;&lt;th&gt;&lt;/th&gt;&lt;/tr&gt;&#x27;+
+    board.map(w=&gt;`&lt;tr&gt;&lt;td&gt;&lt;b&gt;${w.closes||&#x27;&#x27;}&lt;/b&gt;&lt;/td&gt;&lt;td&gt;${w.program||&#x27;&#x27;}&lt;/td&gt;&lt;td&gt;${w.field||&#x27;&#x27;}&lt;/td&gt;&lt;td&gt;${w.eligibility||&#x27;&#x27;}&lt;/td&gt;&lt;td&gt;${w.url?`&lt;a class=&quot;src&quot; style=&quot;margin:0&quot; href=&quot;${w.url}&quot; target=&quot;_blank&quot;&gt;Link&lt;/a&gt;`:&#x27;&#x27;}&lt;/td&gt;&lt;/tr&gt;`).join(&#x27;&#x27;)+&#x27;&lt;/table&gt;&#x27;;
+}
+render(); renderBoard();
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"></iframe>
+  <iframe id="f-map" srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;WP Internal Opportunity Map&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&quot;&gt;
+&lt;style&gt;
+@import url(&#x27;https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Raleway:wght@400;600&amp;display=swap&#x27;);
+body{margin:0;font-family:&#x27;Raleway&#x27;,sans-serif;color:#143757}
+.banner{background:#8A2B2B;color:#fff;text-align:center;font-family:&#x27;Montserrat&#x27;,sans-serif;font-weight:800;font-size:11px;letter-spacing:.14em;padding:7px}
+header{background:#143757;padding:14px 18px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+h1{font-family:&#x27;Montserrat&#x27;,sans-serif;color:#fff;margin:0;font-size:18px}
+.nav a{color:#ED7D14;font-weight:600;text-decoration:none;font-size:13px;margin-left:14px}
+#map{height:calc(100vh - 92px)}
+.legend{background:#fff;padding:8px 12px;border-radius:10px;box-shadow:0 1px 6px rgba(20,55,87,.2);font-size:12px;line-height:1.7}
+.dot{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:5px;vertical-align:middle}
+.popup b{font-family:&#x27;Montserrat&#x27;,sans-serif}
+.popup .un{color:#8A2B2B;font-size:11px;font-weight:700}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;banner&quot;&gt;INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE&lt;/div&gt;
+&lt;header&gt;&lt;h1&gt;Opportunity Map&lt;/h1&gt;&lt;div class=&quot;nav&quot;&gt;&lt;a href=&quot;feed.html&quot;&gt;Feed&lt;/a&gt;&lt;a href=&quot;calendar.html&quot;&gt;Calendar&lt;/a&gt;&lt;/div&gt;&lt;/header&gt;
+&lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+&lt;script src=&quot;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+// Auto generated by scripts/build_dashboard.py. Do not edit by hand.
+window.FEED_UPDATED = &quot;June 10, 2026 14:35&quot;;
+window.FEED_DATA = [
+ {
+  &quot;name&quot;: &quot;First Saturday (free museum night)&quot;,
+  &quot;org&quot;: &quot;Brooklyn Museum&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Saturday, August 1, 2026, evening (monthly series; July date skipped for holiday weekend, verify)&quot;,
+  &quot;date_start&quot;: &quot;2026-08-01&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Prospect Heights, Brooklyn&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://www.brooklynmuseum.org/visit/first_saturdays&quot;,
+  &quot;score&quot;: 78,
+  &quot;score_rationale&quot;: &quot;Free flagship at a named institution, recurring, strong Stories, low Scores&quot;,
+  &quot;student_fit&quot;: &quot;Explorers, any grade; the lowest friction museum night in the city&quot;,
+  &quot;blog_angle&quot;: &quot;The free museum night that doubles as a Brooklyn block party, and why showing up monthly beats one fancy program&quot;,
+  &quot;niche&quot;: false,
+  &quot;first_seen&quot;: &quot;2026-06-01&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: museum site (recurring series, decades running). Corroboration: wide press coverage.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6712,
+  &quot;lng&quot;: -73.9636
+ },
+ {
+  &quot;name&quot;: &quot;Teen glassblowing demos and open studio&quot;,
+  &quot;org&quot;: &quot;UrbanGlass&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Select Saturdays through summer 2026 (verify session dates)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-21&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Fort Greene, Brooklyn&quot;,
+  &quot;cost&quot;: &quot;Free demos; classes paid with scholarships&quot;,
+  &quot;eligibility&quot;: &quot;Teens welcome at demos&quot;,
+  &quot;url&quot;: &quot;https://urbanglass.org&quot;,
+  &quot;score&quot;: 74,
+  &quot;score_rationale&quot;: &quot;Outer borough bonus, rare craft equals memorable narrative, ladder into classes&quot;,
+  &quot;student_fit&quot;: &quot;Builders and Portfolio Artists, 9th to 11th; tactile kids who hate lectures&quot;,
+  &quot;blog_angle&quot;: &quot;Nobody&#x27;s college essay is about glassblowing in Fort Greene, which is exactly the point&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-01&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: operating since 1977, named teaching staff.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6866,
+  &quot;lng&quot;: -73.9776
+ },
+ {
+  &quot;name&quot;: &quot;Summer Documentary Lab&quot;,
+  &quot;org&quot;: &quot;Reel Works&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 cohort; rolling interviews (verify current window)&quot;,
+  &quot;date_start&quot;: &quot;2026-07-06&quot;,
+  &quot;date_end&quot;: &quot;2026-08-14&quot;,
+  &quot;location&quot;: &quot;Gowanus, Brooklyn&quot;,
+  &quot;cost&quot;: &quot;Free, with mentorship&quot;,
+  &quot;eligibility&quot;: &quot;NYC teens; application and interview&quot;,
+  &quot;url&quot;: &quot;https://www.reelworks.org&quot;,
+  &quot;score&quot;: 86,
+  &quot;score_rationale&quot;: &quot;Free, selective, produces a finished film, mentor recommender; Lead tier&quot;,
+  &quot;student_fit&quot;: &quot;Film students needing a produced artifact; direct fit for portfolio building summers&quot;,
+  &quot;blog_angle&quot;: &quot;A free Brooklyn film lab that ends with a real documentary, versus the four thousand dollar camp that ends with a certificate&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-01&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: 25+ years operating, named funders, alumni in industry.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6745,
+  &quot;lng&quot;: -73.9888
+ },
+ {
+  &quot;name&quot;: &quot;Sculpture park opening and teen art days&quot;,
+  &quot;org&quot;: &quot;Socrates Sculpture Park&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Summer 2026 exhibition season, open daily; teen events monthly (verify)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-14&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Long Island City, Queens&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://socratessculpturepark.org&quot;,
+  &quot;score&quot;: 71,
+  &quot;score_rationale&quot;: &quot;Outer borough bonus, free always, strong setting, low credential value&quot;,
+  &quot;student_fit&quot;: &quot;Explorers; pair with Noguchi Museum across the street for a full art Saturday&quot;,
+  &quot;blog_angle&quot;: &quot;An art world afternoon in Queens that costs nothing: two institutions, one block, zero tickets&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-01&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: park site. Corroboration: NYC Parks partner institution since 1986.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7689,
+  &quot;lng&quot;: -73.9362
+ },
+ {
+  &quot;name&quot;: &quot;Science Career Ladder (Explainers)&quot;,
+  &quot;org&quot;: &quot;New York Hall of Science&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Rolling applications for paid teen Explainer roles (verify current openings)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-15&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Corona, Queens&quot;,
+  &quot;cost&quot;: &quot;Paid employment&quot;,
+  &quot;eligibility&quot;: &quot;HS students; application&quot;,
+  &quot;url&quot;: &quot;https://nysci.org&quot;,
+  &quot;score&quot;: 88,
+  &quot;score_rationale&quot;: &quot;Paid, multi year ladder R2 to R3, famous alumni outcomes, outer borough; Lead tier&quot;,
+  &quot;student_fit&quot;: &quot;STEM kids in Queens especially; the single best teach to learn job in the borough&quot;,
+  &quot;blog_angle&quot;: &quot;The Queens museum job that quietly built a generation of scientists, and how to get on the ladder&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-04&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: NYSCI site (program verified active in June 2026 spot check). Corroboration: 35+ year program, published research on outcomes.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.747,
+  &quot;lng&quot;: -73.8513
+ },
+ {
+  &quot;name&quot;: &quot;Oyster restoration volunteer days&quot;,
+  &quot;org&quot;: &quot;Billion Oyster Project&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 public volunteer days, Governors Island (verify calendar)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-27&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Governors Island&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens welcome; some events 14+ or with adult, verify per event&quot;,
+  &quot;url&quot;: &quot;https://www.billionoysterproject.org&quot;,
+  &quot;score&quot;: 84,
+  &quot;score_rationale&quot;: &quot;Free, hands in the harbor, citizen science data, ladder to school research partnerships&quot;,
+  &quot;student_fit&quot;: &quot;Service hearted and environmental STEM kids; marine angle for sailors&quot;,
+  &quot;blog_angle&quot;: &quot;Your kid can spend Saturday rebuilding the harbor&#x27;s reef, free, ferry included in the story&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-04&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: NY Harbor School partnership, major press, a decade of operation.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6895,
+  &quot;lng&quot;: -74.0167
+ },
+ {
+  &quot;name&quot;: &quot;Open lab afternoons&quot;,
+  &quot;org&quot;: &quot;BioBus / BioBase Harlem&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Weekly community lab sessions (verify summer schedule)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-18&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;East Harlem, Manhattan&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens welcome&quot;,
+  &quot;url&quot;: &quot;https://www.biobus.org&quot;,
+  &quot;score&quot;: 76,
+  &quot;score_rationale&quot;: &quot;Free microscopy access, internship ladder above it, community science culture&quot;,
+  &quot;student_fit&quot;: &quot;9th and 10th grade Explorers curious about lab science without the application barrier yet&quot;,
+  &quot;blog_angle&quot;: &quot;Before the fancy research program: the free Harlem lab where kids just get to look through the microscope&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-04&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: named scientists on staff, NSF and foundation funding.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7957,
+  &quot;lng&quot;: -73.9389
+ },
+ {
+  &quot;name&quot;: &quot;Teen biotech crash course&quot;,
+  &quot;org&quot;: &quot;Genspace&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 session (verify dates and aid)&quot;,
+  &quot;date_start&quot;: &quot;2026-07-13&quot;,
+  &quot;date_end&quot;: &quot;2026-07-24&quot;,
+  &quot;location&quot;: &quot;Sunset Park, Brooklyn&quot;,
+  &quot;cost&quot;: &quot;Paid with scholarships available&quot;,
+  &quot;eligibility&quot;: &quot;HS students&quot;,
+  &quot;url&quot;: &quot;https://www.genspace.org&quot;,
+  &quot;score&quot;: 73,
+  &quot;score_rationale&quot;: &quot;Real wet lab skills, community biolab setting, cost partially offsets&quot;,
+  &quot;student_fit&quot;: &quot;STEM kids ready for pipettes before they are ready for applications&quot;,
+  &quot;blog_angle&quot;: &quot;The community biolab in Sunset Park where teenagers do actual genetic engineering&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-04&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: first community biolab in the country, press history.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;vetting_note_cost&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.6566,
+  &quot;lng&quot;: -74.0048
+ },
+ {
+  &quot;name&quot;: &quot;Free public lectures, summer series&quot;,
+  &quot;org&quot;: &quot;CUNY Graduate Center&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Summer and fall 2026 calendar (verify individual events)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-24&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Midtown Manhattan, Fifth Avenue at 34th&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to the public&quot;,
+  &quot;url&quot;: &quot;https://www.gc.cuny.edu/public-programs&quot;,
+  &quot;score&quot;: 75,
+  &quot;score_rationale&quot;: &quot;Major scholars, zero cost, zero barrier, the most underused intellectual resource in midtown&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics, 10th to 12th; send the kid who reads at lunch&quot;,
+  &quot;blog_angle&quot;: &quot;World class minds speak for free in midtown most weeks, and almost no high schooler knows&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-07&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: GC events calendar. Corroboration: university public programming archive going back years.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7486,
+  &quot;lng&quot;: -73.984
+ },
+ {
+  &quot;name&quot;: &quot;Summer Reading Contest&quot;,
+  &quot;org&quot;: &quot;The New York Times Learning Network&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 4,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;June 5 to August 14, 2026; new prompt each Friday, responses due the following Friday 9 AM ET (dates third party sourced, confirm at nytimes.com before send)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-12&quot;,
+  &quot;date_end&quot;: &quot;2026-08-14&quot;,
+  &quot;location&quot;: &quot;Virtual&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Ages 13 to 19 worldwide&quot;,
+  &quot;url&quot;: &quot;https://www.nytimes.com/section/learning&quot;,
+  &quot;score&quot;: 81,
+  &quot;score_rationale&quot;: &quot;Free, weekly publication stakes, writing artifact, national but low barrier; Ring 4 earning its slot&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics and Late Starters; a real byline chance every single week of summer&quot;,
+  &quot;blog_angle&quot;: &quot;A weekly shot at being published by the Times all summer, free, from the couch&quot;,
+  &quot;niche&quot;: false,
+  &quot;first_seen&quot;: &quot;2026-06-07&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: Learning Network contest calendar (annual since 2010). Corroboration: published winner archives.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;sample&quot;,
+   &quot;verify_needed&quot;
+  ]
+ },
+ {
+  &quot;name&quot;: &quot;Book arts and bibliography exhibitions&quot;,
+  &quot;org&quot;: &quot;The Grolier Club&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Current exhibition, free, weekdays plus Saturday hours (verify)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-20&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Upper East Side, Manhattan&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to the public&quot;,
+  &quot;url&quot;: &quot;https://www.grolierclub.org&quot;,
+  &quot;score&quot;: 69,
+  &quot;score_rationale&quot;: &quot;Deep niche, free, extraordinary setting; low connectivity holds the score down&quot;,
+  &quot;student_fit&quot;: &quot;The rare book kid; the Quiet Academic who needs to know this room exists&quot;,
+  &quot;blog_angle&quot;: &quot;The 140 year old book club hiding in plain sight on East 60th, free to walk into&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-07&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: club site. Corroboration: founded 1884, exhibition press reviews.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7637,
+  &quot;lng&quot;: -73.9698
+ },
+ {
+  &quot;name&quot;: &quot;Teen storytelling workshop&quot;,
+  &quot;org&quot;: &quot;The Moth Education Program&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Fall 2026 school year programs; summer community events (verify)&quot;,
+  &quot;date_start&quot;: &quot;2026-09-15&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Various NYC locations&quot;,
+  &quot;cost&quot;: &quot;Free through schools&quot;,
+  &quot;eligibility&quot;: &quot;HS students via participating programs&quot;,
+  &quot;url&quot;: &quot;https://themoth.org/education&quot;,
+  &quot;score&quot;: 80,
+  &quot;score_rationale&quot;: &quot;Narrative skill is essay skill; the most directly transferable program in the humanities section&quot;,
+  &quot;student_fit&quot;: &quot;Every 11th grader about to face the personal statement; especially reluctant writers&quot;,
+  &quot;blog_angle&quot;: &quot;The storytelling stage that secretly teaches the college essay better than any tutor&quot;,
+  &quot;niche&quot;: false,
+  &quot;first_seen&quot;: &quot;2026-06-07&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org education page. Corroboration: national program, published curriculum, radio archive.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null
+ },
+ {
+  &quot;name&quot;: &quot;The People&#x27;s Money: youth participation in citywide voting&quot;,
+  &quot;org&quot;: &quot;NYC Civic Engagement Commission&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Annual participatory budgeting vote window (2026 window dates: verify, historically late spring)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-13&quot;,
+  &quot;date_end&quot;: &quot;2026-06-30&quot;,
+  &quot;location&quot;: &quot;All five boroughs plus online&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;NYC residents age 11 and up can vote&quot;,
+  &quot;url&quot;: &quot;https://www.participate.nyc.gov&quot;,
+  &quot;score&quot;: 77,
+  &quot;score_rationale&quot;: &quot;Real civic act available to minors, citywide, free; a genuinely unusual eligibility story&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors; also a soft civic entry for any Explorer&quot;,
+  &quot;blog_angle&quot;: &quot;Your ninth grader can legally vote this month, on the city budget, and almost nobody tells them&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: NYC CEC portal. Corroboration: city charter mandated program, annual cycles since 2023.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;eligibility_restricted&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null
+ },
+ {
+  &quot;name&quot;: &quot;Citizen Pruner certification course&quot;,
+  &quot;org&quot;: &quot;Trees New York&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 course cycle (verify dates; teens have certified)&quot;,
+  &quot;date_start&quot;: &quot;2026-07-08&quot;,
+  &quot;date_end&quot;: &quot;2026-07-29&quot;,
+  &quot;location&quot;: &quot;Manhattan sessions plus street fieldwork&quot;,
+  &quot;cost&quot;: &quot;Around $100 with reduced rates, verify&quot;,
+  &quot;eligibility&quot;: &quot;Open enrollment, minors verify policy&quot;,
+  &quot;url&quot;: &quot;https://www.treesny.org&quot;,
+  &quot;score&quot;: 72,
+  &quot;score_rationale&quot;: &quot;A real city license a teenager can hold; quirky credential plus ongoing service hours&quot;,
+  &quot;student_fit&quot;: &quot;Environmental kids and Builders; the strangest real credential in the feed&quot;,
+  &quot;blog_angle&quot;: &quot;The city will license your teenager to legally prune street trees, and the story writes itself&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: program running since 1976 under city authorization.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;vetting_note_cost&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.7075,
+  &quot;lng&quot;: -74.0113
+ },
+ {
+  &quot;name&quot;: &quot;Open boathouse and community rowing&quot;,
+  &quot;org&quot;: &quot;Rocking the Boat&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Summer 2026 public sessions on the Bronx River (verify calendar)&quot;,
+  &quot;date_start&quot;: &quot;2026-06-28&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Hunts Point, the Bronx&quot;,
+  &quot;cost&quot;: &quot;Free public sessions&quot;,
+  &quot;eligibility&quot;: &quot;Open community events; youth programs by application&quot;,
+  &quot;url&quot;: &quot;https://rockingtheboat.org&quot;,
+  &quot;score&quot;: 79,
+  &quot;score_rationale&quot;: &quot;Outer borough bonus, boatbuilding plus river science ladder above it, sailing crossover&quot;,
+  &quot;student_fit&quot;: &quot;Maritime inclined students; the Bronx answer to the yacht club&quot;,
+  &quot;blog_angle&quot;: &quot;Kids build wooden boats in Hunts Point and row them on the Bronx River, free, and it leads somewhere&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: 25+ years, named funders, documented youth outcomes.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;recurring&quot;,
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.8155,
+  &quot;lng&quot;: -73.8825
+ },
+ {
+  &quot;name&quot;: &quot;Summer Teen Internship (intergenerational service)&quot;,
+  &quot;org&quot;: &quot;DOROT&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Summer 2026 session (verify application status; often fills by late spring)&quot;,
+  &quot;date_start&quot;: &quot;2026-07-01&quot;,
+  &quot;date_end&quot;: &quot;2026-08-07&quot;,
+  &quot;location&quot;: &quot;Upper West Side, Manhattan plus visits&quot;,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;HS students; application&quot;,
+  &quot;url&quot;: &quot;https://www.dorotusa.org&quot;,
+  &quot;score&quot;: 82,
+  &quot;score_rationale&quot;: &quot;Structured service with training and reflection, a distinctive narrative against generic hours&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors consolidating scattered volunteering into one deep thread&quot;,
+  &quot;blog_angle&quot;: &quot;The internship where the deliverable is a friendship with someone four times your age&quot;,
+  &quot;niche&quot;: true,
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;backing&quot;: &quot;Sample seed. Primary: org site. Corroboration: 50 year organization, formal teen program with cohorts.&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;status&quot;: &quot;active&quot;,
+  &quot;flags&quot;: [
+   &quot;sample&quot;
+  ],
+  &quot;lat&quot;: 40.787,
+  &quot;lng&quot;: -73.9754
+ },
+ {
+  &quot;name&quot;: &quot;Tribeca Festival Games Gallery&quot;,
+  &quot;org&quot;: &quot;Tribeca Festival&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;cross_field_note&quot;: &quot;Business and Entrepreneurship: game industry exposure&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;June 10 to 14, 2026, during the 25th Tribeca Festival&quot;,
+  &quot;date_start&quot;: &quot;2026-06-10&quot;,
+  &quot;date_end&quot;: &quot;2026-06-14&quot;,
+  &quot;location&quot;: &quot;Pier 57, Hudson River Park at West 15th Street, Chelsea, Manhattan&quot;,
+  &quot;lat&quot;: 40.7424,
+  &quot;lng&quot;: -74.0096,
+  &quot;cost&quot;: &quot;Free and open to the public&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://tribecafilm.com/festival&quot;,
+  &quot;score&quot;: 80,
+  &quot;score_rationale&quot;: &quot;Free at a famous festival, closes Sunday, rare games industry exposure for teens&quot;,
+  &quot;student_fit&quot;: &quot;Builders and game design students, any grade; also Explorers who think museums are not for them&quot;,
+  &quot;blog_angle&quot;: &quot;The famous film festival has a free games wing on a pier this week, and your teenager can walk right in&quot;,
+  &quot;backing&quot;: &quot;Primary: tribecafilm.com festival guide (retrieved this cycle). Corroboration: 25th annual festival, citywide press coverage of the June 3 to 14 edition&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Tribeca at 25: free outdoor screenings&quot;,
+  &quot;org&quot;: &quot;Tribeca Festival&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Festival runs June 3 to 14, 2026; outdoor series at Hudson Yards, check each evening&#x27;s title&quot;,
+  &quot;date_start&quot;: &quot;2026-06-10&quot;,
+  &quot;date_end&quot;: &quot;2026-06-14&quot;,
+  &quot;location&quot;: &quot;Hudson Yards public square, West Side, Manhattan&quot;,
+  &quot;lat&quot;: 40.7536,
+  &quot;lng&quot;: -74.0017,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://tribecafilm.com/festival&quot;,
+  &quot;score&quot;: 75,
+  &quot;score_rationale&quot;: &quot;Free flagship, final festival weekend, anniversary series of landmark premieres&quot;,
+  &quot;student_fit&quot;: &quot;Film students and Explorers; a first independent festival night with trains everywhere&quot;,
+  &quot;blog_angle&quot;: &quot;Tribeca turns 25 and the birthday party is free, outdoors, and over after Sunday&quot;,
+  &quot;backing&quot;: &quot;Primary: tribecafilm.com (retrieved this cycle). Corroboration: amNY festival coverage of the June 3 to 14 edition&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Teen Takeovers Branch Council&quot;,
+  &quot;org&quot;: &quot;Brooklyn Public Library&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Rolling application, cohorts plan monthly after hours takeover events&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Select BPL branches across Brooklyn (multi branch, no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free; participants receive a stipend and community service hours&quot;,
+  &quot;eligibility&quot;: &quot;Ages 16 to 19, high school students&quot;,
+  &quot;url&quot;: &quot;https://www.bklynlibrary.org/support/volunteer/branch-council&quot;,
+  &quot;score&quot;: 80,
+  &quot;score_rationale&quot;: &quot;Paid responsibility at a named institution, open now, real event production artifact&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors and Builders, 10th to 12th; the kid who organizes the group chat anyway&quot;,
+  &quot;blog_angle&quot;: &quot;The library will pay your teenager to throw parties in it, and almost nobody knows&quot;,
+  &quot;backing&quot;: &quot;Primary: bklynlibrary.org branch council pages (retrieved this cycle). Corroboration: BPL paid opportunities blog post and live application page&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: program runs at multiple branches, no single confirmed venue&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Teen Digital Media Lab (free design jams)&quot;,
+  &quot;org&quot;: &quot;Museum of the Moving Image&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;cross_field_note&quot;: &quot;Arts and Film: media design&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Recurring Friday afternoons, twice monthly; next dates post on the museum calendar&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Museum of the Moving Image, 36-01 35th Avenue, Astoria, Queens&quot;,
+  &quot;lat&quot;: 40.7564,
+  &quot;lng&quot;: -73.9242,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens ages 14 and up&quot;,
+  &quot;url&quot;: &quot;https://movingimage.org/series/teen-digital-media-lab/&quot;,
+  &quot;score&quot;: 79,
+  &quot;score_rationale&quot;: &quot;Free recurring making time at a major Queens institution with a ladder to its game jams and teen film festival&quot;,
+  &quot;student_fit&quot;: &quot;Builders and film adjacent Explorers, 9th to 11th, Queens families especially&quot;,
+  &quot;blog_angle&quot;: &quot;Exclusive Friday access to a film museum where teens build things, free, twice a month&quot;,
+  &quot;backing&quot;: &quot;Primary: movingimage.org series page (retrieved this cycle). Corroboration: museum&#x27;s Mini Retro Game Jam and 2026 Teen Film Festival pages show a sustained teen program ladder&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Museum and Learning Center school visits (gold vault when available)&quot;,
+  &quot;org&quot;: &quot;Federal Reserve Bank of New York&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;cross_field_note&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Ongoing by reservation for school groups and student programs; at least one hour, up to two with a lesson&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;33 Liberty Street, Financial District, Manhattan&quot;,
+  &quot;lat&quot;: 40.7084,
+  &quot;lng&quot;: -74.0086,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Only open to visits, by reservation, from school groups and student programs&quot;,
+  &quot;url&quot;: &quot;https://www.newyorkfed.org/aboutthefed/museum-and-learning-center-visits&quot;,
+  &quot;score&quot;: 68,
+  &quot;score_rationale&quot;: &quot;Free, unforgettable setting, but school group restriction limits direct family action&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics and future economists, any grade; counselors can broker a school visit&quot;,
+  &quot;blog_angle&quot;: &quot;There is a gold vault under Liberty Street and a school group can stand in it for free&quot;,
+  &quot;backing&quot;: &quot;Primary: newyorkfed.org visits page (retrieved this cycle). Corroboration: Fed economic education team runs the High School Fed Challenge, same outreach arm&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Author talk: Page Powars (Summer at the Library kickoff)&quot;,
+  &quot;org&quot;: &quot;Brooklyn Public Library&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Tuesday, June 16, 2026, 4:00 to 5:00 PM&quot;,
+  &quot;date_start&quot;: &quot;2026-06-16&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;BPL Teen Zone (confirm branch on the calendar listing before forwarding)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens ages 13 to 19&quot;,
+  &quot;url&quot;: &quot;https://www.bklynlibrary.org/calendar&quot;,
+  &quot;score&quot;: 68,
+  &quot;score_rationale&quot;: &quot;Free, dated, working author on writing process; venue branch needs confirming&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics and writers, 8th to 11th; pairs with the summer writing arc&quot;,
+  &quot;blog_angle&quot;: &quot;A working novelist takes teen questions at the library next Tuesday, free&quot;,
+  &quot;backing&quot;: &quot;Primary: bklynlibrary.org events calendar (retrieved this cycle). Corroboration: part of the official Summer at the Library 2026 series&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: branch not yet confirmed&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Career Edge summer courses (commuter application deadline)&quot;,
+  &quot;org&quot;: &quot;NYU School of Professional Studies&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Scores&quot;,
+  &quot;when&quot;: &quot;Commuter application deadline Friday, June 12, 2026; one week courses in July and August&quot;,
+  &quot;date_start&quot;: &quot;2026-06-12&quot;,
+  &quot;date_end&quot;: &quot;2026-06-12&quot;,
+  &quot;location&quot;: &quot;NYU campus, Greenwich Village, Manhattan (building varies by course)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Paid program, $2,579 per course plus $50 nonrefundable application fee&quot;,
+  &quot;eligibility&quot;: &quot;Must have successfully completed grades 9, 10, or 11; essay and transcript required&quot;,
+  &quot;url&quot;: &quot;https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html&quot;,
+  &quot;score&quot;: 42,
+  &quot;score_rationale&quot;: &quot;Vetting risk penalty applied: high cost, effectively open admission, one week format; deadline is real and parents will ask&quot;,
+  &quot;student_fit&quot;: &quot;Listed for vetting conversations, not recommended unmodified; free alternatives usually read better&quot;,
+  &quot;blog_angle&quot;: &quot;The two thousand dollar week versus the free library internship: which one does an admissions reader believe&quot;,
+  &quot;backing&quot;: &quot;Primary: sps.nyu.edu program and course pages (retrieved this cycle). Corroboration: NYU SPS High School Academy standing program&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;vetting_risk&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: course buildings vary&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Youth Advocacy Ambassador and Youth Council&quot;,
+  &quot;org&quot;: &quot;NAMI-NYC&quot;,
+  &quot;field&quot;: &quot;Health and Science of Care&quot;,
+  &quot;cross_field_note&quot;: &quot;Civic and Social Impact: advocacy&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Ongoing program; training cohorts, then a minimum of 3 advocacy actions&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;NYC, sessions virtual and in person (no single confirmed venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Applicants must reside in one of NYC&#x27;s five boroughs and be between 14 and 18 years old&quot;,
+  &quot;url&quot;: &quot;https://naminycmetro.org/teen-volunteers/&quot;,
+  &quot;score&quot;: 69,
+  &quot;score_rationale&quot;: &quot;Free, real advocacy training with a certificate and a verification letter after 3 completed actions; ongoing rather than dated&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors, 9th to 12th, especially students with a personal mental health thread to consolidate&quot;,
+  &quot;blog_angle&quot;: &quot;NAMI-NYC trains teens 14 to 18 as mental health advocates, free, with documented completion&quot;,
+  &quot;backing&quot;: &quot;Primary: naminycmetro.org teen volunteer and advisory pages (retrieved this cycle). Corroboration: peer led teen programs launched with New York City Council support, per NAMI-NYC announcement&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: program runs virtually and at varying locations&quot;
+ },
+ {
+  &quot;name&quot;: &quot;High School Scholarship Program (host a blood drive)&quot;,
+  &quot;org&quot;: &quot;New York Blood Center&quot;,
+  &quot;field&quot;: &quot;Health and Science of Care&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Academic year cycle; schools hosting at least one drive per year qualify, plan in early fall&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;At the student&#x27;s own high school (no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;High schools that host a minimum of one blood drive per academic year; administrators award the scholarship to a student who demonstrates leadership and volunteerism in organizing the drive&quot;,
+  &quot;url&quot;: &quot;https://nybloodcenter.org/support-us/host-blood-drive/high-school-scholarship-program/&quot;,
+  &quot;score&quot;: 70,
+  &quot;score_rationale&quot;: &quot;Leadership artifact plus $500 to $2000 scholarship; requires organizing through the school, which is the barrier and the value&quot;,
+  &quot;student_fit&quot;: &quot;Service Hearted Connectors and pre health students, 10th to 12th; the consolidation move for scattered volunteer hours&quot;,
+  &quot;blog_angle&quot;: &quot;Organizing one school blood drive yields a leadership role, a scholarship track, and a concrete story, at zero cost&quot;,
+  &quot;backing&quot;: &quot;Primary: nybloodcenter.org scholarship page (retrieved this cycle). Corroboration: NYBC also runs the Heather McNamara advocacy scholarship, same student programs arm&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: takes place at each student&#x27;s school&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Youth Justice Collective&quot;,
+  &quot;org&quot;: &quot;Queens Public Library&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;cross_field_note&quot;: &quot;Humanities and History: podcasting and media&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Ongoing teen program; cohort schedule on the program page&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Queens Public Library branches (multi branch, no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens (confirm exact age band on the program page before any external use)&quot;,
+  &quot;url&quot;: &quot;https://www.queenslibrary.org/programs-activities/teens/other-programs/youth-justice-collective&quot;,
+  &quot;score&quot;: 72,
+  &quot;score_rationale&quot;: &quot;Free civic media making at the most linguistically diverse borough&#x27;s library system; outer borough bonus applied; detail thin, flagged&quot;,
+  &quot;student_fit&quot;: &quot;Connectors and future journalists, 9th to 11th, Queens families especially&quot;,
+  &quot;blog_angle&quot;: &quot;Queens Public Library runs a teen advocacy collective with podcast production, free and unmarketed&quot;,
+  &quot;backing&quot;: &quot;Primary: queenslibrary.org program page (retrieved this cycle). Corroboration: listed in QPL&#x27;s 125 Things To Do and teen programs directory&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;thin_backing&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: multi branch program&quot;
+ },
+ {
+  &quot;name&quot;: &quot;NYNJ World Cup 26 Fan Zone Queens (Group Stage HQ)&quot;,
+  &quot;org&quot;: &quot;FIFA World Cup 2026 NYNJ Host Committee&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;cross_field_note&quot;: &quot;cross field: citywide season hook&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;June 17 to 28, 2026; live match broadcasts in a stadium setting&quot;,
+  &quot;date_start&quot;: &quot;2026-06-17&quot;,
+  &quot;date_end&quot;: &quot;2026-06-28&quot;,
+  &quot;location&quot;: &quot;Louis Armstrong Stadium, USTA Billie Jean King National Tennis Center, Flushing Meadows, Queens&quot;,
+  &quot;lat&quot;: 40.7503,
+  &quot;lng&quot;: -73.8458,
+  &quot;cost&quot;: &quot;Free general admission with advance ticket reservation, code QUEENSHQ, while supplies last&quot;,
+  &quot;eligibility&quot;: &quot;Open to all; all guests must reserve a ticket in advance&quot;,
+  &quot;url&quot;: &quot;https://nynjfwc26.com/queens/&quot;,
+  &quot;score&quot;: 77,
+  &quot;score_rationale&quot;: &quot;Free stadium scale World Cup viewing in Queens, the season&#x27;s defining hook; reservation friction is the only barrier&quot;,
+  &quot;student_fit&quot;: &quot;Everyone; the summer your kid will actually remember, in the world&#x27;s borough&quot;,
+  &quot;blog_angle&quot;: &quot;The official Queens fan zone puts the World Cup inside Louis Armstrong Stadium free, reserve ahead&quot;,
+  &quot;backing&quot;: &quot;Primary: nynjfwc26.com Queens page and host committee press release with the mayor and governor (retrieved this cycle)&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Brooklyn Fan Zone at Brooklyn Bridge Park&quot;,
+  &quot;org&quot;: &quot;FIFA World Cup 2026 NYNJ Host Committee&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;cross_field_note&quot;: &quot;cross field: citywide season hook&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;June 13 to July 19, 2026, daily programming and match viewings&quot;,
+  &quot;date_start&quot;: &quot;2026-06-13&quot;,
+  &quot;date_end&quot;: &quot;2026-07-19&quot;,
+  &quot;location&quot;: &quot;Brooklyn Bridge Park, Dumbo, Brooklyn&quot;,
+  &quot;lat&quot;: 40.7038,
+  &quot;lng&quot;: -73.992,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://nynjfwc26.com/fan-events/&quot;,
+  &quot;score&quot;: 70,
+  &quot;score_rationale&quot;: &quot;Free, waterfront, runs five weeks starting this Saturday; pure Stories material&quot;,
+  &quot;student_fit&quot;: &quot;Explorers and any family; the lowest friction World Cup entry point&quot;,
+  &quot;blog_angle&quot;: &quot;Match viewings under the bridge all tournament, free, starting Saturday&quot;,
+  &quot;backing&quot;: &quot;Primary: nynjfwc26.com fan events page and host committee press release (retrieved this cycle)&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Bronx Fan Zone at Bronx Terminal Market&quot;,
+  &quot;org&quot;: &quot;FIFA World Cup 2026 NYNJ Host Committee&quot;,
+  &quot;field&quot;: &quot;Civic and Social Impact&quot;,
+  &quot;cross_field_note&quot;: &quot;cross field: citywide season hook&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;June 13 and 14, 2026, matchday and local cultural programming&quot;,
+  &quot;date_start&quot;: &quot;2026-06-13&quot;,
+  &quot;date_end&quot;: &quot;2026-06-14&quot;,
+  &quot;location&quot;: &quot;Bronx Terminal Market, Concourse, the Bronx (south of Yankee Stadium)&quot;,
+  &quot;lat&quot;: 40.826,
+  &quot;lng&quot;: -73.9271,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Open to all&quot;,
+  &quot;url&quot;: &quot;https://nynjfwc26.com/fan-events/&quot;,
+  &quot;score&quot;: 73,
+  &quot;score_rationale&quot;: &quot;Free, this weekend only, Bronx equity item with outer borough bonus&quot;,
+  &quot;student_fit&quot;: &quot;Bronx families first; a one weekend Story setting&quot;,
+  &quot;blog_angle&quot;: &quot;The Bronx gets its own World Cup weekend at Terminal Market, free, Saturday and Sunday only&quot;,
+  &quot;backing&quot;: &quot;Primary: nynjfwc26.com fan events page and host committee press release (retrieved this cycle)&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Youth Documentary Workshop&quot;,
+  &quot;org&quot;: &quot;Educational Video Center&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;cross_field_note&quot;: &quot;Civic and Social Impact: social justice documentary&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 3,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Credit bearing afterschool program, school year cycles; paid summer jobs and mentorship for participants&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Manhattan (confirm current studio address before any external use)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free; participants can earn school credit and paid summer roles&quot;,
+  &quot;eligibility&quot;: &quot;Open to all public high schoolers citywide, especially Transfer, International, Consortium, and District 79 schools&quot;,
+  &quot;url&quot;: &quot;https://www.evc.org/ydw&quot;,
+  &quot;score&quot;: 73,
+  &quot;score_rationale&quot;: &quot;Free, credit bearing, produces a finished documentary, running since 1984; public school restriction noted&quot;,
+  &quot;student_fit&quot;: &quot;Film students and Connectors, 10th to 12th, especially the caseload&#x27;s international and transfer school students&quot;,
+  &quot;blog_angle&quot;: &quot;A documentary workshop running since 1984 that pays public school teens to make real films&quot;,
+  &quot;backing&quot;: &quot;Primary: evc.org program pages (retrieved this cycle). Corroboration: operating since 1984, NYXT and Brooklyn Org coverage&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: studio address not confirmed at primary source this cycle&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Teen Center drop in tech Saturday&quot;,
+  &quot;org&quot;: &quot;New York Public Library&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Saturday, June 13, 2026; drop in, no registration&quot;,
+  &quot;date_start&quot;: &quot;2026-06-13&quot;,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;NYPL Teen Centers, multiple branches (Manhattan, Bronx, Staten Island)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Teens&quot;,
+  &quot;url&quot;: &quot;https://www.nypl.org/summer/2026&quot;,
+  &quot;score&quot;: 71,
+  &quot;score_rationale&quot;: &quot;Free flagship drop in with no registration friction, this Saturday, multi branch reach&quot;,
+  &quot;student_fit&quot;: &quot;Explorers and Builders, 8th to 10th; zero commitment first taste of the Teen Center ladder&quot;,
+  &quot;blog_angle&quot;: &quot;Saturday, free, no signup: the library&#x27;s maker tech floors are open to teens&quot;,
+  &quot;backing&quot;: &quot;Primary: nypl.org Summer at the Library 2026 page (retrieved this cycle)&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: runs at multiple Teen Center branches&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Youth Matters: Teen Ambassadors&quot;,
+  &quot;org&quot;: &quot;Snug Harbor Cultural Center and Botanical Garden&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;cross_field_note&quot;: &quot;Business and Entrepreneurship: arts administration careers&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 2,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Month long weekend career exploration program; next cohort dates not yet posted, confirm on the Youth Matters page&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Snug Harbor Cultural Center, 1000 Richmond Terrace, Staten Island&quot;,
+  &quot;lat&quot;: 40.6437,
+  &quot;lng&quot;: -74.1031,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;New York City teens, grades 9 to 12&quot;,
+  &quot;url&quot;: &quot;https://snug-harbor.org/youth-matters/&quot;,
+  &quot;score&quot;: 77,
+  &quot;score_rationale&quot;: &quot;Free arts career exploration on Staten Island, the least served borough; ladder note: Snug Harbor is a Bloomberg Arts Internship partner site&quot;,
+  &quot;student_fit&quot;: &quot;Portfolio Artists and Explorers, 9th to 11th; Staten Island families see almost nothing aimed at them&quot;,
+  &quot;blog_angle&quot;: &quot;Snug Harbor runs a free weekend program where grades 9 to 12 learn how arts careers actually work, artist side and administrative side&quot;,
+  &quot;backing&quot;: &quot;Primary: snug-harbor.org Youth Matters page (retrieved this cycle). Corroboration: Bloomberg Arts Internship partner site per Studio Institute&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Congressional App Challenge 2026&quot;,
+  &quot;org&quot;: &quot;U.S. House of Representatives (district competitions)&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Scores&quot;,
+  &quot;when&quot;: &quot;Open now; competition runs May 1 to October 26, 2026, submissions due 12:00 PM ET October 26&quot;,
+  &quot;date_start&quot;: &quot;2026-05-01&quot;,
+  &quot;date_end&quot;: &quot;2026-10-26&quot;,
+  &quot;location&quot;: &quot;District based, citywide (no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Must be a middle or high school student at the time of app submission; individuals or teams of up to four; district participation varies&quot;,
+  &quot;url&quot;: &quot;https://www.congressionalappchallenge.us/&quot;,
+  &quot;score&quot;: 73,
+  &quot;score_rationale&quot;: &quot;Free congressional credential with a summer long build window open right now; underused in NYC districts&quot;,
+  &quot;student_fit&quot;: &quot;Builders and coders, 8th to 12th; the summer project that becomes a fall credential&quot;,
+  &quot;blog_angle&quot;: &quot;An app built this summer can win a student their congressional district&#x27;s official coding award by October 26&quot;,
+  &quot;backing&quot;: &quot;Primary: congressionalappchallenge.us rules and registration pages (retrieved this cycle). Corroboration: house.gov program page, Queens CB2 distribution&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: district based competition&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Biorocket Youth Research Internship&quot;,
+  &quot;org&quot;: &quot;Genspace&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Spring and summer sessions yearly (2026 summer session July 6 to August 14); application deadlines usually early January&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Genspace community biology lab, Sunset Park, Brooklyn&quot;,
+  &quot;lat&quot;: 40.6566,
+  &quot;lng&quot;: -74.0048,
+  &quot;cost&quot;: &quot;Free; $2,000 stipend for participation&quot;,
+  &quot;eligibility&quot;: &quot;Students must be at least 16 years old and attend a New York City public or charter school within a 45 minute commute to Genspace&quot;,
+  &quot;url&quot;: &quot;https://www.genspace.org/biorocket&quot;,
+  &quot;score&quot;: 70,
+  &quot;score_rationale&quot;: &quot;Paid mentored genetic engineering research at a community lab; long lead January application is the catch and the reason to flag it now&quot;,
+  &quot;student_fit&quot;: &quot;STEM students at public and charter schools, current 10th and 11th graders planning next year&quot;,
+  &quot;blog_angle&quot;: &quot;A Brooklyn community lab pays NYC public school students $2,000 to learn genetic engineering; applications come due in January&quot;,
+  &quot;backing&quot;: &quot;Primary: genspace.org Biorocket page (retrieved this cycle). Corroboration: NYC Science Research Mentoring Consortium member program&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;Pin reuses the verified Genspace Sunset Park venue already in the feed&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Junior Scholars Program 2026 to 2027&quot;,
+  &quot;org&quot;: &quot;Schomburg Center for Research in Black Culture (NYPL)&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Application open now: priority deadline Monday June 15, 2026; final deadline Monday June 29, 2026. Program runs Saturdays 10 AM to 3 PM during the academic year&quot;,
+  &quot;date_start&quot;: &quot;2026-06-15&quot;,
+  &quot;date_end&quot;: &quot;2026-06-29&quot;,
+  &quot;location&quot;: &quot;Schomburg Center, 515 Malcolm X Boulevard, Harlem, Manhattan&quot;,
+  &quot;lat&quot;: 40.8146,
+  &quot;lng&quot;: -73.9404,
+  &quot;cost&quot;: &quot;Tuition free&quot;,
+  &quot;eligibility&quot;: &quot;100 youth from 6th through 12th grades each year&quot;,
+  &quot;url&quot;: &quot;https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program&quot;,
+  &quot;score&quot;: 90,
+  &quot;score_rationale&quot;: &quot;Tuition free yearlong scholarly credential at a world famous research center, selective by volume, and the priority deadline is in five days&quot;,
+  &quot;student_fit&quot;: &quot;Quiet Academics and humanities students, 6th through 12th; the strongest humanities ladder item in the feed&quot;,
+  &quot;blog_angle&quot;: &quot;The Schomburg Center&#x27;s Saturday scholars program for grades 6 to 12 is tuition free; priority applications close June 15, final June 29&quot;,
+  &quot;backing&quot;: &quot;Primary: nypl.org Junior Scholars program page (retrieved this cycle). Corroboration: program runs yearly with 100 scholars, named contact published, Annual Youth Summit each May&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;The 15th Annual New York City Poetry Festival&quot;,
+  &quot;org&quot;: &quot;The Poetry Society of New York&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;cross_field_note&quot;: &quot;Arts and Film: performance&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 1,
+  &quot;ledger&quot;: &quot;Stories&quot;,
+  &quot;when&quot;: &quot;Saturday July 18 and Sunday July 19, 2026, 11 AM to 6 PM&quot;,
+  &quot;date_start&quot;: &quot;2026-07-18&quot;,
+  &quot;date_end&quot;: &quot;2026-07-19&quot;,
+  &quot;location&quot;: &quot;Nolan Park, Governors Island&quot;,
+  &quot;lat&quot;: 40.692,
+  &quot;lng&quot;: -74.015,
+  &quot;cost&quot;: &quot;Free to attend (ferry fare separate)&quot;,
+  &quot;eligibility&quot;: &quot;Open to all; children&#x27;s programming included&quot;,
+  &quot;url&quot;: &quot;https://poetrysocietyny.org/nycpofest&quot;,
+  &quot;score&quot;: 78,
+  &quot;score_rationale&quot;: &quot;Free two day festival with open mics and workshops; resolves a verification flag from edition v1; same Sunday as the World Cup final, a scheduling fact worth noting in copy&quot;,
+  &quot;student_fit&quot;: &quot;Writers and Quiet Academics, 8th to 12th; pairs with the weekly NYT contest as a summer writing arc&quot;,
+  &quot;blog_angle&quot;: &quot;250 poets, Victorian houses, open mics, free, July 18 and 19 on Governors Island&quot;,
+  &quot;backing&quot;: &quot;Primary: poetrysocietyny.org festival page (retrieved this cycle). Corroboration: govisland.com official event listing, 15th annual&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ },
+ {
+  &quot;name&quot;: &quot;New York City Science and Engineering Fair (NYCSEF)&quot;,
+  &quot;org&quot;: &quot;CUNY and NYC Public Schools&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 1,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Annual citywide fair; school year entry process begins in fall, fair in late winter (current 2026 cycle submission listed open until June 30, 2026)&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Citywide, all five boroughs (CUNY host campuses; no single venue)&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;Students in grades 9 to 12 (or college) currently taking relevant courses in school&quot;,
+  &quot;url&quot;: &quot;https://nycsef.org/&quot;,
+  &quot;score&quot;: 82,
+  &quot;score_rationale&quot;: &quot;Free, the largest high school research competition in NYC and the ISEF affiliated spine of the science research ladder; all five boroughs&quot;,
+  &quot;student_fit&quot;: &quot;Builders and Quiet Academics doing research, grades 9 to 12; the destination for any school year research project&quot;,
+  &quot;blog_angle&quot;: &quot;NYCSEF is the free citywide fair roughly 700 NYC students enter each year; the entry process starts in the fall, not the spring&quot;,
+  &quot;backing&quot;: &quot;Primary: nycsef.org (retrieved this cycle). Corroboration: NYSSEF and CUNY enrollment report; ISEF affiliate of long standing&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: citywide competition across CUNY host campuses&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Wharton Global High School Investment Competition&quot;,
+  &quot;org&quot;: &quot;Wharton Global Youth Program, University of Pennsylvania&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;ring&quot;: 4,
+  &quot;cross_field_note&quot;: &quot;Ring 3 for the in person Philadelphia finale&quot;,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Scores&quot;,
+  &quot;when&quot;: &quot;Annual; 2025-26 cycle registered June 30 to September 12, traded fall, finale April 2026. 2026-27 registration expected to open late June 2026&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Online team competition; Global Finale at The Wharton School, Philadelphia&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Free&quot;,
+  &quot;eligibility&quot;: &quot;High school students in grades 9 to 12, in teams of four to six guided by a teacher advisor&quot;,
+  &quot;url&quot;: &quot;https://globalyouth.wharton.upenn.edu/competitions/investment-competition/&quot;,
+  &quot;score&quot;: 72,
+  &quot;score_rationale&quot;: &quot;Free, named university competition with a real selective finale; online format lowers accessibility and Stories weight; registration window opens within days&quot;,
+  &quot;student_fit&quot;: &quot;Single Track Specialists in finance and Builders, grades 9 to 12; needs a teacher advisor, so plan the sponsor now&quot;,
+  &quot;blog_angle&quot;: &quot;Wharton runs a free team investment competition for grades 9 to 12; the next registration window opens at the end of June and a teacher advisor is required&quot;,
+  &quot;backing&quot;: &quot;Primary: globalyouth.wharton.upenn.edu competition page (retrieved this cycle). Corroboration: 2026 Global Finale results posted by Wharton&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: false,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;recurring&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: online competition with an out of area finale&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Academic Year Fellowship (research)&quot;,
+  &quot;org&quot;: &quot;The Jackson Laboratory (JAX)&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;cross_field_note&quot;: &quot;Health and Science of Care: biomedical research&quot;,
+  &quot;ring&quot;: 3,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;Rolling applications accepted until August 24, 2026; projects run fall through late spring, minimum 180 hours on site&quot;,
+  &quot;date_start&quot;: &quot;2026-08-24&quot;,
+  &quot;date_end&quot;: &quot;2026-08-24&quot;,
+  &quot;location&quot;: &quot;The Jackson Laboratory campuses (Bar Harbor, Maine and Farmington, Connecticut); out of NYC area&quot;,
+  &quot;lat&quot;: null,
+  &quot;lng&quot;: null,
+  &quot;cost&quot;: &quot;Unpaid for academic year fellows&quot;,
+  &quot;eligibility&quot;: &quot;High school juniors and seniors and undergraduates interested in a research fellowship; minimum 180 hours at the Laboratory&quot;,
+  &quot;url&quot;: &quot;https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships&quot;,
+  &quot;score&quot;: 60,
+  &quot;score_rationale&quot;: &quot;Genuine research credential at a famous genetics institute, open now on a rolling basis; unpaid and out of area, both real accessibility barriers, scored honestly&quot;,
+  &quot;student_fit&quot;: &quot;Research bound juniors and seniors with travel or relocation capacity; a serious credential, not a casual one&quot;,
+  &quot;blog_angle&quot;: &quot;The Jackson Laboratory takes high school juniors and seniors for academic year research fellowships on a rolling basis through August 24; note it is unpaid and on site in Maine or Connecticut&quot;,
+  &quot;backing&quot;: &quot;Primary: jax.org academic year internships and admission pages (retrieved this cycle). Corroboration: Pathways to Science listing, decades of operation&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;,
+  &quot;pin_note&quot;: &quot;No pin: out of NYC area (Maine and Connecticut campuses)&quot;
+ },
+ {
+  &quot;name&quot;: &quot;Simons Summer Research Program (2027 planning item)&quot;,
+  &quot;org&quot;: &quot;Stony Brook University&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;ring&quot;: 2,
+  &quot;rung&quot;: 4,
+  &quot;ledger&quot;: &quot;Both&quot;,
+  &quot;when&quot;: &quot;2026 cycle CLOSED (student deadline was February 5, 2026). Next cycle: nominations and applications open in winter for summer 2027&quot;,
+  &quot;date_start&quot;: null,
+  &quot;date_end&quot;: null,
+  &quot;location&quot;: &quot;Stony Brook University, Long Island (Ring 2, LIRR accessible)&quot;,
+  &quot;lat&quot;: 40.912,
+  &quot;lng&quot;: -73.1235,
+  &quot;cost&quot;: &quot;Research stipend on completion (verify current amount each cycle)&quot;,
+  &quot;eligibility&quot;: &quot;Currently in 11th grade at time of applying; US citizen or permanent resident; at least 16 by program start; high school nomination required, maximum two students per school&quot;,
+  &quot;url&quot;: &quot;https://www.stonybrook.edu/simons/&quot;,
+  &quot;score&quot;: 58,
+  &quot;score_rationale&quot;: &quot;High prestige Long Island research credential, but 2026 is closed so timeliness is low; logged as a winter 2027 watch item with strict eligibility&quot;,
+  &quot;student_fit&quot;: &quot;Current 10th graders (rising 11th) on a research track; the nomination cap means start the school conversation early&quot;,
+  &quot;blog_angle&quot;: &quot;Simons at Stony Brook is one of the region&#x27;s most selective research programs; the catch is that students must be nominated by their school in 11th grade, so the planning happens a year ahead&quot;,
+  &quot;backing&quot;: &quot;Primary: stonybrook.edu Simons application guidelines (retrieved this cycle). Corroboration: long running program, multiple application guides&quot;,
+  &quot;review_status&quot;: &quot;unreviewed&quot;,
+  &quot;niche&quot;: true,
+  &quot;flags&quot;: [
+   &quot;verified&quot;,
+   &quot;eligibility_restricted&quot;
+  ],
+  &quot;first_seen&quot;: &quot;2026-06-10&quot;
+ }
+];
+window.DEADLINE_BOARD = [
+ {
+  &quot;closes&quot;: &quot;June 12, 2026&quot;,
+  &quot;closes_iso&quot;: &quot;2026-06-12&quot;,
+  &quot;program&quot;: &quot;NYU SPS Career Edge, commuter application&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;eligibility&quot;: &quot;Completed grades 9 to 11; paid program, vetting risk flagged&quot;,
+  &quot;url&quot;: &quot;https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html&quot;,
+  &quot;note&quot;: &quot;Added June 10 2026; flagged pay to play pattern, listed because families ask&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;June 15, 2026 priority; June 29, 2026 final&quot;,
+  &quot;closes_iso&quot;: &quot;2026-06-15&quot;,
+  &quot;program&quot;: &quot;Schomburg Junior Scholars Program 2026 to 2027&quot;,
+  &quot;field&quot;: &quot;Humanities and History&quot;,
+  &quot;eligibility&quot;: &quot;Grades 6 to 12; tuition free; 100 scholars per year&quot;,
+  &quot;url&quot;: &quot;https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program&quot;,
+  &quot;note&quot;: &quot;Confirmed open at nypl.org June 10 2026; the most urgent real deadline in the feed&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;Expected late June 2026 (registration opens)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-06-30&quot;,
+  &quot;program&quot;: &quot;Wharton Global HS Investment Competition 2026-27 registration&quot;,
+  &quot;field&quot;: &quot;Business and Entrepreneurship&quot;,
+  &quot;eligibility&quot;: &quot;Grades 9 to 12, teams of 4 to 6, teacher advisor required; free&quot;,
+  &quot;url&quot;: &quot;https://globalyouth.wharton.upenn.edu/competitions/investment-competition/&quot;,
+  &quot;note&quot;: &quot;Added June 10 2026; last cycle opened June 30, watch for the 2026-27 window opening within days&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;July 15, 2026 (verify)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-07-15&quot;,
+  &quot;program&quot;: &quot;Bronx Museum Teen Council, fall cycle&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;eligibility&quot;: &quot;NYC HS students 14 to 19; paid&quot;,
+  &quot;url&quot;: &quot;https://bronxmuseum.org/learn/teens/&quot;,
+  &quot;note&quot;: &quot;June 10 2026 check: fall 2026 deadline not yet posted on bronxmuseum.org; spring 2026 deadline was February 1; July 15 estimate stays flagged as verify&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;August 1, 2026 (verify)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-08-01&quot;,
+  &quot;program&quot;: &quot;Apollo Theater Academy fall internships&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;eligibility&quot;: &quot;NYC HS students; paid&quot;,
+  &quot;url&quot;: &quot;https://www.apollotheater.org&quot;,
+  &quot;note&quot;: &quot;Sample seed; verify posting&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;Rolling&quot;,
+  &quot;closes_iso&quot;: &quot;2026-08-15&quot;,
+  &quot;program&quot;: &quot;NYSCI Science Career Ladder (Explainers)&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;HS students; paid&quot;,
+  &quot;url&quot;: &quot;https://nysci.org&quot;,
+  &quot;note&quot;: &quot;Rolling; verified active June 2026&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;August 24, 2026 (rolling)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-08-24&quot;,
+  &quot;program&quot;: &quot;JAX Academic Year Fellowship (research)&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;HS juniors and seniors; unpaid; 180 hours on site in Maine or Connecticut&quot;,
+  &quot;url&quot;: &quot;https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships&quot;,
+  &quot;note&quot;: &quot;Added June 10 2026; rolling research fellowship, out of NYC area, unpaid&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;September 2026 opens (watch)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-09-10&quot;,
+  &quot;program&quot;: &quot;Scholastic Art and Writing Awards, NYC region&quot;,
+  &quot;field&quot;: &quot;Arts and Film&quot;,
+  &quot;eligibility&quot;: &quot;Grades 7 to 12&quot;,
+  &quot;url&quot;: &quot;https://www.artandwriting.org&quot;,
+  &quot;note&quot;: &quot;Sample seed; submissions historically open Sept, regional deadlines Dec&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;October 2026 (watch)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-10-15&quot;,
+  &quot;program&quot;: &quot;NYCSEF registration via schools&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;NYC HS students with research projects&quot;,
+  &quot;url&quot;: &quot;https://nycsef.cs.cuny.edu&quot;,
+  &quot;note&quot;: &quot;Sample seed; fall registration pattern&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;October 26, 2026, 12:00 PM ET&quot;,
+  &quot;closes_iso&quot;: &quot;2026-10-26&quot;,
+  &quot;program&quot;: &quot;Congressional App Challenge 2026&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;Middle or high school students; teams up to 4; district participation varies&quot;,
+  &quot;url&quot;: &quot;https://www.congressionalappchallenge.us/&quot;,
+  &quot;note&quot;: &quot;Window confirmed open at the official site June 10 2026; summer build, fall submission&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;November 2026 (watch)&quot;,
+  &quot;closes_iso&quot;: &quot;2026-11-12&quot;,
+  &quot;program&quot;: &quot;Regeneron Science Talent Search&quot;,
+  &quot;field&quot;: &quot;STEM and Tech&quot;,
+  &quot;eligibility&quot;: &quot;HS seniors with original research&quot;,
+  &quot;url&quot;: &quot;https://www.societyforscience.org/regeneron-sts/&quot;,
+  &quot;note&quot;: &quot;Sample seed; annual November deadline pattern&quot;
+ },
+ {
+  &quot;closes&quot;: &quot;March 31, 2027 (window opens January 1, 2027)&quot;,
+  &quot;closes_iso&quot;: &quot;2027-03-31&quot;,
+  &quot;program&quot;: &quot;NewYork-Presbyterian summer teen volunteering, summer 2027 cohort&quot;,
+  &quot;field&quot;: &quot;Health and Science of Care&quot;,
+  &quot;eligibility&quot;: &quot;Ages 15 to 17, valid social security number, 120 hour summer minimum&quot;,
+  &quot;url&quot;: &quot;https://www.nyp.org/volunteer/summer-volunteering&quot;,
+  &quot;note&quot;: &quot;Long lead time item: 2026 window closed March 31; flagging now because clearance and references take months&quot;
+ }
+];
+
+&lt;/script&gt;
+&lt;script&gt;
+const FIELD_COLORS={&quot;Arts and Film&quot;:&quot;#ED7D14&quot;,&quot;STEM and Tech&quot;:&quot;#143757&quot;,&quot;Humanities and History&quot;:&quot;#7A5AA8&quot;,&quot;Civic and Social Impact&quot;:&quot;#2E8B57&quot;,&quot;Business and Entrepreneurship&quot;:&quot;#B8860B&quot;,&quot;Health and Science of Care&quot;:&quot;#C0392B&quot;};
+const map=L.map(&#x27;map&#x27;).setView([40.72,-73.95],11);
+L.tileLayer(&#x27;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#x27;,{maxZoom:19,attribution:&#x27;© OpenStreetMap contributors&#x27;}).addTo(map);
+const items=(window.FEED_DATA||[]).filter(i=&gt;i.lat&amp;&amp;i.lng&amp;&amp;i.status!==&quot;expired&quot;);
+const bounds=[];
+for(const i of items){
+  const c=FIELD_COLORS[i.field]||&quot;#5A6E80&quot;;
+  const m=L.circleMarker([i.lat,i.lng],{radius:9,color:&quot;#fff&quot;,weight:2,fillColor:c,fillOpacity:.95}).addTo(map);
+  m.bindPopup(`&lt;div class=&quot;popup&quot;&gt;&lt;b&gt;${i.name}&lt;/b&gt;&lt;br&gt;${i.org} · ${i.location||&quot;&quot;}&lt;br&gt;${i.when||&quot;&quot;}&lt;br&gt;&lt;b&gt;${i.cost||&quot;&quot;}&lt;/b&gt; · ${i.ledger||&quot;&quot;} · Rung ${i.rung||&quot;?&quot;}${(i.review_status||&quot;unreviewed&quot;)!==&quot;approved&quot;?&#x27;&lt;br&gt;&lt;span class=&quot;un&quot;&gt;UNREVIEWED&lt;/span&gt;&#x27;:&quot;&quot;}${i.url?`&lt;br&gt;&lt;a href=&quot;${i.url}&quot; target=&quot;_blank&quot;&gt;Source →&lt;/a&gt;`:&quot;&quot;}&lt;/div&gt;`);
+  bounds.push([i.lat,i.lng]);
+}
+if(bounds.length)map.fitBounds(bounds,{padding:[40,40]});
+const legend=L.control({position:&#x27;bottomright&#x27;});
+legend.onAdd=()=&gt;{const div=L.DomUtil.create(&#x27;div&#x27;,&#x27;legend&#x27;);
+div.innerHTML=&#x27;&lt;b style=&quot;font-family:Montserrat&quot;&gt;Fields&lt;/b&gt;&lt;br&gt;&#x27;+Object.entries(FIELD_COLORS).map(([f,c])=&gt;`&lt;span class=&quot;dot&quot; style=&quot;background:${c}&quot;&gt;&lt;/span&gt;${f}`).join(&#x27;&lt;br&gt;&#x27;)+`&lt;br&gt;&lt;br&gt;${items.length} pinned of ${(window.FEED_DATA||[]).length} items`;
+return div;};
+legend.addTo(map);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;
+"></iframe>
+  <iframe id="f-cal" srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;meta charset=&quot;UTF-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+&lt;title&gt;WP Internal Opportunity Calendar&lt;/title&gt;&lt;style&gt;
+@import url(&#x27;https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&amp;family=Raleway:wght@400;600&amp;display=swap&#x27;);
+body{margin:0;background:#FBF3E6;font-family:&#x27;Raleway&#x27;,sans-serif;color:#143757}
+.banner{background:#8A2B2B;color:#fff;text-align:center;font-family:&#x27;Montserrat&#x27;,sans-serif;font-weight:800;font-size:12px;letter-spacing:.14em;padding:8px}
+header{background:#143757;padding:22px} .wrap{max-width:1100px;margin:0 auto;padding:0 16px 60px}
+h1{font-family:&#x27;Montserrat&#x27;,sans-serif;color:#fff;margin:0;font-size:24px} .sub{color:#C9D6E2;font-size:13px;margin:4px 0 0}
+h2{font-family:&#x27;Montserrat&#x27;,sans-serif;font-size:18px;margin:28px 0 8px}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 10px rgba(20,55,87,.08);table-layout:fixed}
+th{background:#143757;color:#fff;font-family:&#x27;Montserrat&#x27;,sans-serif;font-size:10px;letter-spacing:.08em;padding:8px}
+td{vertical-align:top;border:1px solid #EFEAE0;height:86px;padding:4px;font-size:11px}
+td.pad{background:#F6F0E2} td.today{background:#FDF1E3;outline:2px solid #ED7D14;outline-offset:-2px}
+.num{font-family:&#x27;Montserrat&#x27;,sans-serif;font-weight:700;font-size:11px;display:block;margin-bottom:3px}
+.chip{display:block;margin:2px 0;padding:3px 5px;border-radius:6px;background:#DCE7F1;color:#143757;text-decoration:none;font-size:10px;line-height:1.25;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.chip.deadline{background:#ED7D14;color:#fff;font-weight:600}
+.chip.un{border-left:3px solid #8A2B2B}
+.more{font-size:9.5px;color:#5A6E80}
+.legend{margin-top:16px;font-size:12px;color:#5A6E80} .sw{display:inline-block;width:10px;height:10px;border-radius:3px;vertical-align:middle;margin:0 4px 0 12px}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;banner&quot;&gt;INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE&lt;/div&gt;
+&lt;header&gt;&lt;div class=&quot;wrap&quot; style=&quot;padding:0 16px&quot;&gt;&lt;h1&gt;Opportunity Calendar&lt;/h1&gt;
+&lt;p class=&quot;sub&quot;&gt;Generated June 10, 2026 · 44 dated entries · subscribe via wagner-prep-internal.ics&lt;/p&gt;&lt;/div&gt;&lt;/header&gt;
+&lt;div class=&quot;wrap&quot;&gt;&lt;h2&gt;June 2026&lt;/h2&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Sun&lt;/th&gt;&lt;th&gt;Mon&lt;/th&gt;&lt;th&gt;Tue&lt;/th&gt;&lt;th&gt;Wed&lt;/th&gt;&lt;th&gt;Thu&lt;/th&gt;&lt;th&gt;Fri&lt;/th&gt;&lt;th&gt;Sat&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;1&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;2&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;3&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;4&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;5&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;6&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;7&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;8&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;9&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day today&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;10&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://tribecafilm.com/festival&#x27; target=&#x27;_blank&#x27; title=&#x27;Tribeca Festival Games Gallery&#x27;&gt;Tribeca Festival Games Gallery&lt;/a&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://tribecafilm.com/festival&#x27; target=&#x27;_blank&#x27; title=&#x27;Tribeca at 25: free outdoor screenings&#x27;&gt;Tribeca at 25: free outdoor screen&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;11&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;12&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.nytimes.com/section/learning&#x27; target=&#x27;_blank&#x27; title=&#x27;Summer Reading Contest&#x27;&gt;Summer Reading Contest&lt;/a&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html&#x27; target=&#x27;_blank&#x27; title=&#x27;Career Edge summer courses (commuter application deadline)&#x27;&gt;Career Edge summer courses (commut&lt;/a&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: Career Edge summer courses (commuter application deadline)&#x27;&gt;DEADLINE: Career Edge summer cours&lt;/a&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: NYU SPS Career Edge, commuter application&#x27;&gt;DEADLINE: NYU SPS Career Edge, com&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;13&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.participate.nyc.gov&#x27; target=&#x27;_blank&#x27; title=&#x27;The People&amp;#x27;s Money: youth participation in citywide voting&#x27;&gt;The People&amp;#x27;s Money: youth particip&lt;/a&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://nynjfwc26.com/fan-events/&#x27; target=&#x27;_blank&#x27; title=&#x27;Brooklyn Fan Zone at Brooklyn Bridge Park&#x27;&gt;Brooklyn Fan Zone at Brooklyn Brid&lt;/a&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://nynjfwc26.com/fan-events/&#x27; target=&#x27;_blank&#x27; title=&#x27;Bronx Fan Zone at Bronx Terminal Market&#x27;&gt;Bronx Fan Zone at Bronx Terminal M&lt;/a&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.nypl.org/summer/2026&#x27; target=&#x27;_blank&#x27; title=&#x27;Teen Center drop in tech Saturday&#x27;&gt;Teen Center drop in tech Saturday&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;14&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://socratessculpturepark.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Sculpture park opening and teen art days&#x27;&gt;Sculpture park opening and teen ar&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;15&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://nysci.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Science Career Ladder (Explainers)&#x27;&gt;Science Career Ladder (Explainers)&lt;/a&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program&#x27; target=&#x27;_blank&#x27; title=&#x27;Junior Scholars Program 2026 to 2027&#x27;&gt;Junior Scholars Program 2026 to 20&lt;/a&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: Schomburg Junior Scholars Program 2026 to 2027&#x27;&gt;DEADLINE: Schomburg Junior Scholar&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;16&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.bklynlibrary.org/calendar&#x27; target=&#x27;_blank&#x27; title=&#x27;Author talk: Page Powars (Summer at the Library kickoff)&#x27;&gt;Author talk: Page Powars (Summer a&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;17&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://nynjfwc26.com/queens/&#x27; target=&#x27;_blank&#x27; title=&#x27;NYNJ World Cup 26 Fan Zone Queens (Group Stage HQ)&#x27;&gt;NYNJ World Cup 26 Fan Zone Queens &lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;18&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.biobus.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Open lab afternoons&#x27;&gt;Open lab afternoons&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;19&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;20&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.grolierclub.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Book arts and bibliography exhibitions&#x27;&gt;Book arts and bibliography exhibit&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;21&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://urbanglass.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Teen glassblowing demos and open studio&#x27;&gt;Teen glassblowing demos and open s&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;22&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;23&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;24&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.gc.cuny.edu/public-programs&#x27; target=&#x27;_blank&#x27; title=&#x27;Free public lectures, summer series&#x27;&gt;Free public lectures, summer serie&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;25&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;26&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;27&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.billionoysterproject.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Oyster restoration volunteer days&#x27;&gt;Oyster restoration volunteer days&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;28&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://rockingtheboat.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Open boathouse and community rowing&#x27;&gt;Open boathouse and community rowin&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;29&lt;/span&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: Junior Scholars Program 2026 to 2027&#x27;&gt;DEADLINE: Junior Scholars Program &lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;30&lt;/span&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://globalyouth.wharton.upenn.edu/competitions/investment-competition/&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: Wharton Global HS Investment Competition 2026-27 registration&#x27;&gt;DEADLINE: Wharton Global HS Invest&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;July 2026&lt;/h2&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Sun&lt;/th&gt;&lt;th&gt;Mon&lt;/th&gt;&lt;th&gt;Tue&lt;/th&gt;&lt;th&gt;Wed&lt;/th&gt;&lt;th&gt;Thu&lt;/th&gt;&lt;th&gt;Fri&lt;/th&gt;&lt;th&gt;Sat&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;1&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.dorotusa.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Summer Teen Internship (intergenerational service)&#x27;&gt;Summer Teen Internship (intergener&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;2&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;3&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;4&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;5&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;6&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.reelworks.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Summer Documentary Lab&#x27;&gt;Summer Documentary Lab&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;7&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;8&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.treesny.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Citizen Pruner certification course&#x27;&gt;Citizen Pruner certification cours&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;9&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;10&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;11&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;12&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;13&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.genspace.org&#x27; target=&#x27;_blank&#x27; title=&#x27;Teen biotech crash course&#x27;&gt;Teen biotech crash course&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;14&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;15&lt;/span&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://bronxmuseum.org/learn/teens/&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: Bronx Museum Teen Council, fall cycle&#x27;&gt;DEADLINE: Bronx Museum Teen Counci&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;16&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;17&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;18&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://poetrysocietyny.org/nycpofest&#x27; target=&#x27;_blank&#x27; title=&#x27;The 15th Annual New York City Poetry Festival&#x27;&gt;The 15th Annual New York City Poet&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;19&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;20&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;21&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;22&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;23&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;24&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;25&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;26&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;27&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;28&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;29&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;30&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;31&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;h2&gt;August 2026&lt;/h2&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;Sun&lt;/th&gt;&lt;th&gt;Mon&lt;/th&gt;&lt;th&gt;Tue&lt;/th&gt;&lt;th&gt;Wed&lt;/th&gt;&lt;th&gt;Thu&lt;/th&gt;&lt;th&gt;Fri&lt;/th&gt;&lt;th&gt;Sat&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;1&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.brooklynmuseum.org/visit/first_saturdays&#x27; target=&#x27;_blank&#x27; title=&#x27;First Saturday (free museum night)&#x27;&gt;First Saturday (free museum night)&lt;/a&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://www.apollotheater.org&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: Apollo Theater Academy fall internships&#x27;&gt;DEADLINE: Apollo Theater Academy f&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;2&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;3&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;4&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;5&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;6&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;7&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;8&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;9&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;10&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;11&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;12&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;13&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;14&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;15&lt;/span&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://nysci.org&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: NYSCI Science Career Ladder (Explainers)&#x27;&gt;DEADLINE: NYSCI Science Career Lad&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;16&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;17&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;18&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;19&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;20&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;21&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;22&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;23&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;24&lt;/span&gt;&lt;a class=&#x27;chip event un&#x27; href=&#x27;https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships&#x27; target=&#x27;_blank&#x27; title=&#x27;Academic Year Fellowship (research)&#x27;&gt;Academic Year Fellowship (research&lt;/a&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: Academic Year Fellowship (research)&#x27;&gt;DEADLINE: Academic Year Fellowship&lt;/a&gt;&lt;a class=&#x27;chip deadline un&#x27; href=&#x27;https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships&#x27; target=&#x27;_blank&#x27; title=&#x27;DEADLINE: JAX Academic Year Fellowship (research)&#x27;&gt;DEADLINE: JAX Academic Year Fellow&lt;/a&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;25&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;26&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;27&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;28&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;29&lt;/span&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;30&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;day&#x27;&gt;&lt;span class=&#x27;num&#x27;&gt;31&lt;/span&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;td class=&#x27;pad&#x27;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;p class=&quot;legend&quot;&gt;Legend: &lt;span class=&quot;sw&quot; style=&quot;background:#DCE7F1&quot;&gt;&lt;/span&gt; event &lt;span class=&quot;sw&quot; style=&quot;background:#ED7D14&quot;&gt;&lt;/span&gt; deadline &lt;span class=&quot;sw&quot; style=&quot;background:#fff;border-left:3px solid #8A2B2B;border-radius:0&quot;&gt;&lt;/span&gt; unreviewed (red edge = needs human vetting)&lt;/p&gt;
+&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;"></iframe>
+</div>
+<script>
+document.querySelectorAll('.tab').forEach(function(b){
+  b.addEventListener('click',function(){
+    document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('on');});
+    document.querySelectorAll('iframe').forEach(function(x){x.classList.remove('on');});
+    b.classList.add('on');
+    document.getElementById(b.dataset.f).classList.add('on');
+  });
+});
+</script>
+</body></html>

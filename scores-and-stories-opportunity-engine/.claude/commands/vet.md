@@ -1,0 +1,3 @@
+Run the vetting check variant (playbook Part 9.4) on the program named in the arguments: $ARGUMENTS
+
+Establish from primary sources: real operator, true cost including extras, admission process (selective or open), what students produce or receive, scholarship tracks, reputation signals. Apply the pay to play test from playbook 2.4. Find 2 to 3 NYC area alternatives at lower cost or higher selectivity from the source directory. Output a counselor brief: one sentence verdict, evidence, alternatives, suggested family facing framing that is honest without dismissing the parent's instinct. Do not add the vetted program to the public feed unless it passes; flagged programs go to the digest's vetting log only. No dashes in prose.

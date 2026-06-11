@@ -1,0 +1,269 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Wagner Prep//Opportunity Engine//EN
+X-WR-CALNAME:WP Internal Opportunities
+BEGIN:VEVENT
+UID:wp-engine-20260501-0@wagnerprep
+DTSTART;VALUE=DATE:20260501
+SUMMARY:WP INTERNAL: Congressional App Challenge 2026
+DESCRIPTION:Internal draft\, verify before external use. https://www.congressionalappchallenge.us/
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260610-1@wagnerprep
+DTSTART;VALUE=DATE:20260610
+SUMMARY:WP INTERNAL: Tribeca Festival Games Gallery
+DESCRIPTION:Internal draft\, verify before external use. https://tribecafilm.com/festival
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260610-2@wagnerprep
+DTSTART;VALUE=DATE:20260610
+SUMMARY:WP INTERNAL: Tribeca at 25: free outdoor screenings
+DESCRIPTION:Internal draft\, verify before external use. https://tribecafilm.com/festival
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260612-3@wagnerprep
+DTSTART;VALUE=DATE:20260612
+SUMMARY:WP INTERNAL: Career Edge summer courses (commuter application deadline)
+DESCRIPTION:Internal draft\, verify before external use. https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260612-4@wagnerprep
+DTSTART;VALUE=DATE:20260612
+SUMMARY:WP INTERNAL: DEADLINE: Career Edge summer courses (commuter application deadline)
+DESCRIPTION:Internal draft\, verify before external use. https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260612-5@wagnerprep
+DTSTART;VALUE=DATE:20260612
+SUMMARY:WP INTERNAL: DEADLINE: NYU SPS Career Edge\, commuter application
+DESCRIPTION:Internal draft\, verify before external use. https://www.sps.nyu.edu/high-school-academy/programs/career-edge.html
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260612-6@wagnerprep
+DTSTART;VALUE=DATE:20260612
+SUMMARY:WP INTERNAL: Summer Reading Contest
+DESCRIPTION:Internal draft\, verify before external use. https://www.nytimes.com/section/learning
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260613-7@wagnerprep
+DTSTART;VALUE=DATE:20260613
+SUMMARY:WP INTERNAL: Bronx Fan Zone at Bronx Terminal Market
+DESCRIPTION:Internal draft\, verify before external use. https://nynjfwc26.com/fan-events/
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260613-8@wagnerprep
+DTSTART;VALUE=DATE:20260613
+SUMMARY:WP INTERNAL: Brooklyn Fan Zone at Brooklyn Bridge Park
+DESCRIPTION:Internal draft\, verify before external use. https://nynjfwc26.com/fan-events/
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260613-9@wagnerprep
+DTSTART;VALUE=DATE:20260613
+SUMMARY:WP INTERNAL: Teen Center drop in tech Saturday
+DESCRIPTION:Internal draft\, verify before external use. https://www.nypl.org/summer/2026
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260613-10@wagnerprep
+DTSTART;VALUE=DATE:20260613
+SUMMARY:WP INTERNAL: The People's Money: youth participation in citywide voting
+DESCRIPTION:Internal draft\, verify before external use. https://www.participate.nyc.gov
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260614-11@wagnerprep
+DTSTART;VALUE=DATE:20260614
+SUMMARY:WP INTERNAL: Sculpture park opening and teen art days
+DESCRIPTION:Internal draft\, verify before external use. https://socratessculpturepark.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260615-12@wagnerprep
+DTSTART;VALUE=DATE:20260615
+SUMMARY:WP INTERNAL: DEADLINE: Schomburg Junior Scholars Program 2026 to 2027
+DESCRIPTION:Internal draft\, verify before external use. https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260615-13@wagnerprep
+DTSTART;VALUE=DATE:20260615
+SUMMARY:WP INTERNAL: Junior Scholars Program 2026 to 2027
+DESCRIPTION:Internal draft\, verify before external use. https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260615-14@wagnerprep
+DTSTART;VALUE=DATE:20260615
+SUMMARY:WP INTERNAL: Science Career Ladder (Explainers)
+DESCRIPTION:Internal draft\, verify before external use. https://nysci.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260616-15@wagnerprep
+DTSTART;VALUE=DATE:20260616
+SUMMARY:WP INTERNAL: Author talk: Page Powars (Summer at the Library kickoff)
+DESCRIPTION:Internal draft\, verify before external use. https://www.bklynlibrary.org/calendar
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260617-16@wagnerprep
+DTSTART;VALUE=DATE:20260617
+SUMMARY:WP INTERNAL: NYNJ World Cup 26 Fan Zone Queens (Group Stage HQ)
+DESCRIPTION:Internal draft\, verify before external use. https://nynjfwc26.com/queens/
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260618-17@wagnerprep
+DTSTART;VALUE=DATE:20260618
+SUMMARY:WP INTERNAL: Open lab afternoons
+DESCRIPTION:Internal draft\, verify before external use. https://www.biobus.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260620-18@wagnerprep
+DTSTART;VALUE=DATE:20260620
+SUMMARY:WP INTERNAL: Book arts and bibliography exhibitions
+DESCRIPTION:Internal draft\, verify before external use. https://www.grolierclub.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260621-19@wagnerprep
+DTSTART;VALUE=DATE:20260621
+SUMMARY:WP INTERNAL: Teen glassblowing demos and open studio
+DESCRIPTION:Internal draft\, verify before external use. https://urbanglass.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260624-20@wagnerprep
+DTSTART;VALUE=DATE:20260624
+SUMMARY:WP INTERNAL: Free public lectures\, summer series
+DESCRIPTION:Internal draft\, verify before external use. https://www.gc.cuny.edu/public-programs
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260627-21@wagnerprep
+DTSTART;VALUE=DATE:20260627
+SUMMARY:WP INTERNAL: Oyster restoration volunteer days
+DESCRIPTION:Internal draft\, verify before external use. https://www.billionoysterproject.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260628-22@wagnerprep
+DTSTART;VALUE=DATE:20260628
+SUMMARY:WP INTERNAL: Open boathouse and community rowing
+DESCRIPTION:Internal draft\, verify before external use. https://rockingtheboat.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260629-23@wagnerprep
+DTSTART;VALUE=DATE:20260629
+SUMMARY:WP INTERNAL: DEADLINE: Junior Scholars Program 2026 to 2027
+DESCRIPTION:Internal draft\, verify before external use. https://www.nypl.org/about/fellowships-institutes/schomburg-junior-scholars-program
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260630-24@wagnerprep
+DTSTART;VALUE=DATE:20260630
+SUMMARY:WP INTERNAL: DEADLINE: Wharton Global HS Investment Competition 2026-27 registration
+DESCRIPTION:Internal draft\, verify before external use. https://globalyouth.wharton.upenn.edu/competitions/investment-competition/
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260701-25@wagnerprep
+DTSTART;VALUE=DATE:20260701
+SUMMARY:WP INTERNAL: Summer Teen Internship (intergenerational service)
+DESCRIPTION:Internal draft\, verify before external use. https://www.dorotusa.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260706-26@wagnerprep
+DTSTART;VALUE=DATE:20260706
+SUMMARY:WP INTERNAL: Summer Documentary Lab
+DESCRIPTION:Internal draft\, verify before external use. https://www.reelworks.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260708-27@wagnerprep
+DTSTART;VALUE=DATE:20260708
+SUMMARY:WP INTERNAL: Citizen Pruner certification course
+DESCRIPTION:Internal draft\, verify before external use. https://www.treesny.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260713-28@wagnerprep
+DTSTART;VALUE=DATE:20260713
+SUMMARY:WP INTERNAL: Teen biotech crash course
+DESCRIPTION:Internal draft\, verify before external use. https://www.genspace.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260715-29@wagnerprep
+DTSTART;VALUE=DATE:20260715
+SUMMARY:WP INTERNAL: DEADLINE: Bronx Museum Teen Council\, fall cycle
+DESCRIPTION:Internal draft\, verify before external use. https://bronxmuseum.org/learn/teens/
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260718-30@wagnerprep
+DTSTART;VALUE=DATE:20260718
+SUMMARY:WP INTERNAL: The 15th Annual New York City Poetry Festival
+DESCRIPTION:Internal draft\, verify before external use. https://poetrysocietyny.org/nycpofest
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260801-31@wagnerprep
+DTSTART;VALUE=DATE:20260801
+SUMMARY:WP INTERNAL: DEADLINE: Apollo Theater Academy fall internships
+DESCRIPTION:Internal draft\, verify before external use. https://www.apollotheater.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260801-32@wagnerprep
+DTSTART;VALUE=DATE:20260801
+SUMMARY:WP INTERNAL: First Saturday (free museum night)
+DESCRIPTION:Internal draft\, verify before external use. https://www.brooklynmuseum.org/visit/first_saturdays
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260815-33@wagnerprep
+DTSTART;VALUE=DATE:20260815
+SUMMARY:WP INTERNAL: DEADLINE: NYSCI Science Career Ladder (Explainers)
+DESCRIPTION:Internal draft\, verify before external use. https://nysci.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260824-34@wagnerprep
+DTSTART;VALUE=DATE:20260824
+SUMMARY:WP INTERNAL: Academic Year Fellowship (research)
+DESCRIPTION:Internal draft\, verify before external use. https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260824-35@wagnerprep
+DTSTART;VALUE=DATE:20260824
+SUMMARY:WP INTERNAL: DEADLINE: Academic Year Fellowship (research)
+DESCRIPTION:Internal draft\, verify before external use. https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260824-36@wagnerprep
+DTSTART;VALUE=DATE:20260824
+SUMMARY:WP INTERNAL: DEADLINE: JAX Academic Year Fellowship (research)
+DESCRIPTION:Internal draft\, verify before external use. https://www.jax.org/education-and-learning/high-school-students-and-undergraduates/academic-year-internships
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260910-37@wagnerprep
+DTSTART;VALUE=DATE:20260910
+SUMMARY:WP INTERNAL: DEADLINE: Scholastic Art and Writing Awards\, NYC region
+DESCRIPTION:Internal draft\, verify before external use. https://www.artandwriting.org
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20260915-38@wagnerprep
+DTSTART;VALUE=DATE:20260915
+SUMMARY:WP INTERNAL: Teen storytelling workshop
+DESCRIPTION:Internal draft\, verify before external use. https://themoth.org/education
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20261015-39@wagnerprep
+DTSTART;VALUE=DATE:20261015
+SUMMARY:WP INTERNAL: DEADLINE: NYCSEF registration via schools
+DESCRIPTION:Internal draft\, verify before external use. https://nycsef.cs.cuny.edu
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20261026-40@wagnerprep
+DTSTART;VALUE=DATE:20261026
+SUMMARY:WP INTERNAL: DEADLINE: Congressional App Challenge 2026
+DESCRIPTION:Internal draft\, verify before external use. https://www.congressionalappchallenge.us/
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20261026-41@wagnerprep
+DTSTART;VALUE=DATE:20261026
+SUMMARY:WP INTERNAL: DEADLINE: Congressional App Challenge 2026
+DESCRIPTION:Internal draft\, verify before external use. https://www.congressionalappchallenge.us/
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20261112-42@wagnerprep
+DTSTART;VALUE=DATE:20261112
+SUMMARY:WP INTERNAL: DEADLINE: Regeneron Science Talent Search
+DESCRIPTION:Internal draft\, verify before external use. https://www.societyforscience.org/regeneron-sts/
+END:VEVENT
+BEGIN:VEVENT
+UID:wp-engine-20270331-43@wagnerprep
+DTSTART;VALUE=DATE:20270331
+SUMMARY:WP INTERNAL: DEADLINE: NewYork-Presbyterian summer teen volunteering\, summer 2027 cohort
+DESCRIPTION:Internal draft\, verify before external use. https://www.nyp.org/volunteer/summer-volunteering
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wagner Prep Opportunity Feed</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:wght@400;500;600&display=swap');
+:root { --navy:#143757; --orange:#ED7D14; --cream:#FBF3E6; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--cream); font-family:'Raleway',sans-serif; color:var(--navy); }
+header { background:var(--navy); padding:26px 22px; }
+.wrap { max-width:1000px; margin:0 auto; }
+.kicker { font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; letter-spacing:.18em; color:var(--orange); text-transform:uppercase; }
+h1 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:28px; color:#fff; margin:6px 0 2px; }
+.sub { color:#C9D6E2; font-size:13.5px; margin:0; }
+.panel { background:#fff; border-radius:14px; padding:18px 20px; margin:20px auto; box-shadow:0 2px 12px rgba(20,55,87,.08); }
+.filters { display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+select, input[type=text], input[type=number] { padding:9px 11px; border-radius:9px; border:1.5px solid #D8DEE6; font-family:'Raleway',sans-serif; font-size:13.5px; color:var(--navy); background:#fff; }
+input[type=text] { flex:1 1 180px; min-width:150px; }
+.toggle { padding:9px 14px; border-radius:999px; font-size:13px; font-weight:600; cursor:pointer; user-select:none; border:1.5px solid #D8D2C4; background:#EFEAE0; }
+.toggle.on { background:var(--navy); color:#fff; border-color:var(--navy); }
+.toggle.on.orange { background:var(--orange); border-color:var(--orange); }
+.count { font-size:13px; color:#5A6E80; margin:14px 2px 8px; }
+.card { background:#fff; border-radius:14px; padding:18px 20px; margin-bottom:13px; box-shadow:0 1px 6px rgba(20,55,87,.07); }
+.row { display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:flex-start; }
+.name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:16.5px; }
+.org { font-size:13px; color:#5A6E80; margin-top:2px; }
+.tags { display:flex; gap:6px; flex-shrink:0; flex-wrap:wrap; }
+.tag { font-family:'Montserrat',sans-serif; font-weight:700; font-size:10.5px; padding:5px 10px; border-radius:999px; letter-spacing:.05em; text-transform:uppercase; background:#EFEAE0; color:var(--navy); }
+.tag.score { background:var(--navy); color:#fff; }
+.tag.new { background:var(--orange); color:#fff; }
+.tag.flag { background:#FFF4D6; color:#8A6A00; }
+.meta { display:flex; gap:16px; flex-wrap:wrap; margin-top:10px; font-size:13px; }
+.meta b { font-family:'Montserrat',sans-serif; font-size:11px; }
+.angle { margin-top:10px; font-size:13.5px; line-height:1.55; background:var(--cream); border-radius:10px; padding:9px 13px; }
+.angle b { font-family:'Montserrat',sans-serif; font-size:11px; color:var(--orange); letter-spacing:.08em; }
+.fit { margin-top:7px; font-size:13.5px; line-height:1.55; background:#F4F7FA; border-radius:10px; padding:9px 13px; }
+.fit b { font-family:'Montserrat',sans-serif; font-size:11px; letter-spacing:.08em; }
+a.src { display:inline-block; margin-top:10px; color:var(--orange); font-weight:600; font-size:13px; text-decoration:none; }
+.empty { text-align:center; padding:36px 20px; color:#5A6E80; }
+h2.sect { font-family:'Montserrat',sans-serif; font-size:15px; letter-spacing:.06em; text-transform:uppercase; margin:28px 2px 10px; }
+table { width:100%; border-collapse:collapse; background:#fff; border-radius:12px; overflow:hidden; box-shadow:0 1px 6px rgba(20,55,87,.07); font-size:13px; }
+th { background:var(--navy); color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; letter-spacing:.06em; text-transform:uppercase; text-align:left; padding:10px 12px; }
+td { padding:10px 12px; border-top:1px solid #EFEAE0; }
+.updated { font-size:12px; color:#9AAABA; }
+@media (max-width:640px){ .filters{gap:8px} }
+</style>
+</head>
+<body><div style="background:#B8860B;color:#fff;text-align:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;padding:6px 10px;">TRIAL RUN DATA · live verified finds mixed with illustrative seed items · every item is unreviewed until a human approves it · <a href="index.html" style="color:#fff;">about this site</a></div>
+<div style="background:#8A2B2B;color:#fff;text-align:center;font-family:'Montserrat',sans-serif;font-weight:800;font-size:12px;letter-spacing:.14em;padding:8px">INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE</div>
+<header><div class="wrap">
+  <div class="kicker">Wagner Prep · Internal Team Tool</div>
+  <h1>Opportunity Feed</h1>
+  <p class="sub">Live ranked feed from the research engine. Verify at the source before anything reaches a family. <span class="updated" id="updated"></span> · <a href="calendar.html" style="color:#ED7D14;font-weight:600;text-decoration:none">Calendar →</a> · <a href="map.html" style="color:#ED7D14;font-weight:600;text-decoration:none">Map →</a></p>
+</div></header>
+
+<div class="wrap" style="padding:0 18px 60px">
+  <div class="panel"><div class="filters">
+    <input type="text" id="q" placeholder="Search names, orgs, neighborhoods...">
+    <select id="field"><option value="">All fields</option></select>
+    <select id="ring"><option value="">All rings</option><option value="1">Ring 1 · NYC</option><option value="2">Ring 2 · Commutable</option><option value="3">Ring 3 · Northeast</option><option value="4">Ring 4 · Online</option></select>
+    <select id="rung"><option value="">All rungs</option><option value="1">1 · Exposure</option><option value="2">2 · Engagement</option><option value="3">3 · Production</option><option value="4">4 · Credential</option></select>
+    <select id="ledger"><option value="">Scores + Stories</option><option>Stories</option><option>Scores</option><option>Both</option></select>
+    <span class="toggle orange" id="free">✓ Free only</span>
+    <span class="toggle" id="newonly">New this week</span>
+    <select id="review"><option value="">Any review status</option><option value="unreviewed">Unreviewed</option><option value="approved">Approved</option></select>
+    <span class="toggle" id="niche">Niche only</span>
+    <select id="sort"><option value="score">Sort: score</option><option value="recent">Sort: newest</option><option value="deadline">Sort: when</option></select>
+  </div></div>
+
+  <div class="count" id="count"></div>
+  <div id="cards"></div>
+
+  <h2 class="sect">Deadline board</h2>
+  <div id="board"></div>
+</div>
+
+<script src="opportunities.js"></script>
+<script>
+const data = (window.FEED_DATA||[]).filter(i=>i.status!=="expired");
+const board = window.DEADLINE_BOARD||[];
+document.getElementById('updated').textContent = window.FEED_UPDATED ? ('Last cycle: '+window.FEED_UPDATED) : 'No cycles run yet.';
+
+const fieldSel=document.getElementById('field');
+[...new Set(data.map(i=>i.field).filter(Boolean))].sort().forEach(f=>{const o=document.createElement('option');o.textContent=f;fieldSel.appendChild(o);});
+
+const state={free:true,newonly:false,niche:false};
+const els=['q','field','ring','rung','ledger','review','sort'].map(id=>document.getElementById(id));
+els.forEach(el=>el.addEventListener('input',render));
+const freeT=document.getElementById('free'), newT=document.getElementById('newonly');
+freeT.onclick=()=>{state.free=!state.free;freeT.classList.toggle('on');freeT.textContent=state.free?'✓ Free only':'Free only: off';render();};
+freeT.classList.add('on');
+newT.onclick=()=>{state.newonly=!state.newonly;newT.classList.toggle('on');render();};
+const nicheT=document.getElementById('niche');
+nicheT.onclick=()=>{state.niche=!state.niche;nicheT.classList.toggle('on');render();};
+
+const isFree=i=>/^free/i.test(i.cost||'');
+const daysSince=d=>{try{return (Date.now()-new Date(d))/864e5}catch(e){return 999}};
+
+function render(){
+  const [q,f,ring,rung,led,rev,sort]=els.map(e=>e.value);
+  let list=data.filter(i=>
+    (!q || JSON.stringify(i).toLowerCase().includes(q.toLowerCase())) &&
+    (!f || i.field===f) && (!ring || String(i.ring)===ring) &&
+    (!rung || String(i.rung)===rung) && (!led || i.ledger===led) &&
+    (!state.free || isFree(i)) && (!state.newonly || daysSince(i.first_seen)<=7) &&
+    (!rev || (i.review_status||'unreviewed')===rev) && (!state.niche || i.niche===true)
+  );
+  if(sort==='score') list.sort((a,b)=>(b.score||0)-(a.score||0));
+  if(sort==='recent') list.sort((a,b)=>new Date(b.first_seen||0)-new Date(a.first_seen||0));
+  if(sort==='deadline') list.sort((a,b)=>String(a.when).localeCompare(String(b.when)));
+  document.getElementById('count').textContent=list.length+' of '+data.length+' opportunities shown';
+  const c=document.getElementById('cards'); c.innerHTML='';
+  if(!list.length){c.innerHTML='<div class="empty">'+(data.length?'Nothing matches these filters.':'The feed is empty. Run the first cycle: <code>claude -p "/cycle"</code>')+'</div>';return;}
+  for(const i of list){
+    const flags=(i.flags||[]).filter(x=>x!=='verified').map(x=>`<span class="tag flag">${x.replace(/_/g,' ')}</span>`).join('');
+    const isNew=daysSince(i.first_seen)<=7?'<span class="tag new">New</span>':'';
+    const rev=(i.review_status||'unreviewed')==='approved'?'<span class="tag" style="background:#DFEEE2;color:#2E6240">Approved</span>':'<span class="tag flag">Unreviewed</span>';
+    const niche=i.niche?'<span class="tag" style="background:#E9E2F2;color:#4E3A72">Niche</span>':'';
+    c.insertAdjacentHTML('beforeend',`
+    <div class="card">
+      <div class="row">
+        <div><div class="name">${i.name||''}</div><div class="org">${i.org||''} · ${i.location||''}</div></div>
+        <div class="tags">${isNew}${rev}${niche}<span class="tag">${i.field||''}</span><span class="tag">Rung ${i.rung||'?'} · ${i.ledger||''}</span><span class="tag score">${i.score??'–'}</span>${flags}</div>
+      </div>
+      <div class="meta"><span><b>WHEN</b> ${i.when||''}</span><span><b>COST</b> ${i.cost||''}</span><span><b>ELIGIBILITY</b> ${i.eligibility||'Open'}</span></div>
+      ${i.blog_angle?`<div class="angle"><b>BLOG ANGLE</b>&nbsp; ${i.blog_angle}</div>`:''}
+      ${i.student_fit?`<div class="fit"><b>SEND TO</b>&nbsp; ${i.student_fit}</div>`:''}
+      ${i.url?`<a class="src" href="${i.url}" target="_blank" rel="noreferrer">Open source page →</a>`:''}
+    </div>`);
+  }
+}
+
+function renderBoard(){
+  const b=document.getElementById('board');
+  if(!board.length){b.innerHTML='<div class="empty">No open application windows tracked yet.</div>';return;}
+  b.innerHTML='<table><tr><th>Closes</th><th>Program</th><th>Field</th><th>Eligibility</th><th></th></tr>'+
+    board.map(w=>`<tr><td><b>${w.closes||''}</b></td><td>${w.program||''}</td><td>${w.field||''}</td><td>${w.eligibility||''}</td><td>${w.url?`<a class="src" style="margin:0" href="${w.url}" target="_blank">Link</a>`:''}</td></tr>`).join('')+'</table>';
+}
+render(); renderBoard();
+</script>
+</body>
+</html>

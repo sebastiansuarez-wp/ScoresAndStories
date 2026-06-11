@@ -1,0 +1,31 @@
+{
+ "field_wheel": [
+  "Arts and Film",
+  "STEM and Tech",
+  "Humanities and History",
+  "Civic and Social Impact",
+  "Business and Entrepreneurship",
+  "Health and Science of Care"
+ ],
+ "field_index": 3,
+ "library_wheel": [
+  "New York Public Library",
+  "Brooklyn Public Library",
+  "Queens Public Library"
+ ],
+ "library_index": 0,
+ "borough_wheel": [
+  "Museum of the Moving Image (Queens)",
+  "Bronx Museum of the Arts (Bronx)",
+  "Brooklyn Museum (Brooklyn)",
+  "Snug Harbor Cultural Center (Staten Island)"
+ ],
+ "borough_index": 1,
+ "monthly_supplements": {
+  "first_cycle": "Ring 3 sweep",
+  "mid_month": "Ring 4 sweep",
+  "last_cycle": "Seasonal preview"
+ },
+ "last_run": "2026-06-10T10:30:00Z",
+ "cycles_completed": 9
+}

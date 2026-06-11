@@ -1,0 +1,26 @@
+# macOS / editor noise
+.DS_Store
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Runtime logs
+*.log
+cycle.log
+
+# Local-only generated exports / scratch
+_downloads-staging/
+*.tmp
+
+# Keep PDFs only if they are intentional deliverables.
+# Uncomment this if exports should be regenerated locally instead of versioned:
+# docs/exports/*.pdf

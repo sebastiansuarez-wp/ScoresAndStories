@@ -1,0 +1,15 @@
+{
+  "updated": "2026-06-10",
+  "how_this_works": "The interests funnel. Counselors add one entry per active student interest, using a codename, never a real name or identifying combination. Each cycle the engine reads this file, runs one or two targeted searches per active entry on top of the normal sweep, and tags matching finds with the flag interest:CODE so they surface on the weekly page and in the digest. Deep confidential runs stay in /match and never touch shared state. Keep entries to what the search needs: grade band, boroughs, keywords.",
+  "interests": [
+    {
+      "code": "EXAMPLE-10-BK",
+      "active": false,
+      "grade_band": "10",
+      "boroughs": ["Brooklyn"],
+      "keywords": ["film", "stop motion", "animation"],
+      "notes": "Example entry. Copy this shape, set active to true, and the next cycle will search for it.",
+      "added": "2026-06-10"
+    }
+  ]
+}

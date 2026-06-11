@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overnight Shift Log · June 10, 2026 · Scores and Stories</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Raleway:wght@400;500;600&display=swap');
+:root { --navy:#143757; --orange:#ED7D14; --cream:#FBF3E6; --maroon:#8A2B2B; }
+* { box-sizing:border-box; }
+body { margin:0; background:var(--cream); font-family:'Raleway',sans-serif; color:var(--navy); }
+.banner { background:var(--maroon); color:#fff; text-align:center; font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.14em; padding:8px 10px; }
+header { background:var(--navy); padding:30px 22px 26px; }
+.wrap { max-width:980px; margin:0 auto; padding:0 18px; }
+.kicker { font-family:'Montserrat',sans-serif; font-weight:800; font-size:12px; letter-spacing:.18em; color:var(--orange); text-transform:uppercase; }
+h1 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:32px; color:#fff; margin:8px 0 4px; }
+.sub { color:#C9D6E2; font-size:14.5px; margin:0; max-width:720px; line-height:1.55; }
+.topnav { margin-top:16px; }
+.topnav a { color:#C9D6E2; font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:.06em; text-decoration:none; text-transform:uppercase; margin-right:18px; }
+.topnav a:hover { color:var(--orange); }
+h2 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:19px; margin:34px 0 6px; }
+h2 .n { color:#8FA3B5; font-weight:600; font-size:14px; }
+h3 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:14.5px; margin:24px 0 10px; letter-spacing:.02em; }
+.lede { font-size:14px; color:#3D5468; line-height:1.65; margin:6px 0 4px; max-width:760px; }
+.stats { display:flex; flex-wrap:wrap; gap:10px; margin:22px 0 0; }
+.stat { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.16); border-radius:12px; padding:10px 16px; color:#fff; }
+.stat b { font-family:'Montserrat',sans-serif; font-size:20px; display:block; color:var(--orange); }
+.stat span { font-size:11.5px; color:#C9D6E2; letter-spacing:.04em; text-transform:uppercase; }
+.notice { background:#FDF1DC; border:1.5px solid #E3B765; border-radius:12px; padding:14px 18px; font-size:13.5px; line-height:1.6; margin:22px 0 0; }
+.urgent { background:#fff; border-left:5px solid var(--orange); border-radius:12px; padding:14px 18px; margin:22px 0 0; box-shadow:0 2px 10px rgba(20,55,87,.08); font-size:14px; line-height:1.6; }
+.grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(235px,1fr)); gap:13px; }
+a.card { display:block; background:#fff; border-radius:14px; padding:16px 18px; text-decoration:none; color:var(--navy); box-shadow:0 1px 6px rgba(20,55,87,.07); border:1.5px solid transparent; transition:border .15s; }
+a.card:hover { border-color:var(--orange); }
+a.card.primary { grid-column:1 / -1; background:var(--navy); color:#fff; padding:22px 24px; }
+a.card.primary .desc { color:#C9D6E2; }
+.card .name { font-family:'Montserrat',sans-serif; font-weight:700; font-size:15.5px; }
+.card.primary .name { font-size:19px; color:#fff; }
+.card .desc { font-size:12.8px; color:#5A6E80; margin-top:5px; line-height:1.5; }
+.card .go { font-family:'Montserrat',sans-serif; font-weight:700; font-size:11px; letter-spacing:.08em; color:var(--orange); text-transform:uppercase; margin-top:9px; display:inline-block; }
+footer { margin:46px 0 30px; font-size:12.5px; color:#5A6E80; line-height:1.7; }
+.how { background:#fff; border-radius:14px; padding:18px 22px; box-shadow:0 1px 6px rgba(20,55,87,.07); font-size:13.8px; line-height:1.7; }
+.pgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(330px,1fr)); gap:14px; }
+.pick { background:#fff; border-radius:14px; padding:18px 20px; box-shadow:0 1px 6px rgba(20,55,87,.07); display:flex; flex-direction:column; gap:8px; }
+.hook { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.12em; color:var(--orange); text-transform:uppercase; }
+.pname { font-family:'Montserrat',sans-serif; font-weight:700; font-size:16.5px; line-height:1.35; }
+.porg { font-family:'Raleway',sans-serif; font-weight:500; font-size:13px; color:#5A6E80; }
+.pwhen { font-size:13.2px; color:#3D5468; }
+.pfit { font-size:13.2px; line-height:1.55; }
+.pmeta { margin-top:auto; padding-top:8px; font-size:12px; color:#5A6E80; display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+.free { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; background:#2E8B57; color:#fff; padding:3px 9px; border-radius:999px; }
+.paid { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.08em; background:#EFEAE0; color:var(--navy); padding:3px 9px; border-radius:999px; }
+.un { font-size:10px; color:#A05252; letter-spacing:.05em; font-weight:600; }
+.rot { display:flex; flex-wrap:wrap; gap:9px; margin-top:10px; }
+.rot span { background:#fff; border:1.5px solid #D8D2C4; border-radius:999px; padding:8px 14px; font-size:12.5px; font-weight:600; }
+.rot b { color:var(--orange); font-family:'Montserrat',sans-serif; margin-right:5px; }
+.prow { display:flex; justify-content:space-between; align-items:center; }
+.datechip { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11px; letter-spacing:.08em; color:#fff; background:var(--navy); padding:4px 11px; border-radius:999px; }
+.ftag { font-family:'Montserrat',sans-serif; font-weight:700; font-size:10px; letter-spacing:.08em; color:#8FA3B5; text-transform:uppercase; }
+.itag { font-family:'Montserrat',sans-serif; font-weight:800; font-size:10px; letter-spacing:.05em; background:#7A5AA8; color:#fff; padding:3px 9px; border-radius:999px; }
+.slist { display:flex; flex-direction:column; gap:9px; }
+.srow { background:#fff; border-radius:12px; padding:13px 16px; box-shadow:0 1px 5px rgba(20,55,87,.06); display:flex; gap:14px; align-items:center; font-size:13.2px; }
+.sdate { font-family:'Montserrat',sans-serif; font-weight:800; font-size:11.5px; color:var(--orange); min-width:54px; }
+.sbody { flex:1; line-height:1.5; }
+.snote { font-size:11.8px; color:#5A6E80; }
+.vflag { font-family:'Montserrat',sans-serif; font-weight:800; font-size:9.5px; letter-spacing:.06em; background:var(--maroon); color:#fff; padding:3px 8px; border-radius:999px; white-space:nowrap; }
+
+.mdwrap { max-width:840px; margin:0 auto; padding:8px 18px 60px; }
+.mdbody { background:#fff; border-radius:14px; padding:28px 34px; box-shadow:0 1px 6px rgba(20,55,87,.07); line-height:1.65; font-size:14.5px; }
+.mdbody h1 { color:var(--navy); font-size:23px; margin:18px 0 10px; }
+.mdbody h2 { font-size:18px; border-bottom:2px solid var(--cream); padding-bottom:6px; }
+.mdbody h3 { font-family:'Montserrat',sans-serif; font-size:15px; margin:20px 0 8px; }
+.mdbody a { color:var(--orange); }
+.mdbody table { border-collapse:collapse; width:100%; font-size:13px; margin:14px 0; }
+.mdbody th { background:var(--navy); color:#fff; font-family:'Montserrat',sans-serif; font-size:11px; letter-spacing:.05em; padding:7px 9px; text-align:left; }
+.mdbody td { border:1px solid #EFEAE0; padding:7px 9px; vertical-align:top; }
+.mdbody blockquote { border-left:4px solid var(--orange); margin:14px 0; padding:4px 16px; background:var(--cream); border-radius:0 8px 8px 0; }
+.mdbody code { background:var(--cream); padding:1px 5px; border-radius:5px; font-size:13px; }
+.back { display:inline-block; margin:16px 0 6px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:12px; letter-spacing:.06em; color:var(--orange); text-decoration:none; text-transform:uppercase; }
+</style></head><body>
+<div class="banner">INTERNAL DRAFT · NOT FOR PUBLICATION · VERIFY BEFORE ANY EXTERNAL USE</div>
+<div class="mdwrap"><a class="back" href="index.html">&larr; Back to this week</a>
+<div class="mdbody"><h1>Overnight shift log</h1>
+<p><strong>Shift start:</strong> June 10, 2026, 07:01 UTC, which is 3:01 AM in New York.
+<strong>Operator:</strong> asleep. All decisions below were made autonomously and are logged per instructions.
+<strong>Today's real date:</strong> Wednesday, June 10, 2026.</p>
+<h2>Setup log</h2>
+<ul>
+<li>Unzipped wp-opportunity-engine.zip; wp-engine is the project root (inside the wagner-ai-workbench repo so work survives the ephemeral container via git push).</li>
+<li>Placed mailing-list-edition-01.md in docs/drafts/.</li>
+<li>Read HANDOFF.md, CLAUDE.md, the research playbook, and the source directory. HANDOFF.md wins conflicts, confirmed.</li>
+<li>Tested scripts/build_dashboard.py and scripts/build_calendar.py against sample state: both ran clean, no fixes needed. 16 items, 6 deadline windows, 22 dated calendar entries.</li>
+<li>Created .claude/commands/loop.md encoding the overnight protocol.</li>
+<li>Web search smoke test passed: reverified the Student Historian August 23, 2026 deadline at nyhistory.org, matching the draft edition.</li>
+</ul>
+<h2>Judgment calls</h2>
+<ol>
+<li><strong>Email capability.</strong> The Gmail connector available tonight can create drafts but has no send capability. A draft is not a send, so per the fallback instruction every email is written as a send ready file in docs/outbox/. In addition, a Gmail draft addressed to sebastian@wagnerprep.com is created for each, so each update is one click from sending in the morning. No mail goes to anyone else, nothing is actually sent.</li>
+<li><strong>Cycle count.</strong> Shift began at 3:01 AM New York time. The 7:00 AM stop comes long before 10 cycles at 45 minute spacing would finish, so tonight is planned as approximately 5 cycles. The 7:00 AM cap governs, as instructed ("whichever comes first").</li>
+<li><strong>rotation.json last_run</strong> reads 2026-06-10T09:00:00 with 4 cycles completed. That timestamp is seed data (naive local time, hours in the past). Treated as a normal gap, so cycle 1 is a full cycle, not a light refresh.</li>
+<li><strong>Monthly supplements</strong> (Ring 3 first cycle, Ring 4 mid month, seasonal preview last cycle): June 10 is not the first cycle of the month and mid month is closer to June 15, so no supplement is attached tonight. If cycle volume allows, a small Ring 4 check may ride along with a late cycle.</li>
+<li><strong>Map pin pre check.</strong> Two existing pins violate the citywide rule and are queued for the nightly pin sanity check: "The People's Money" (all five boroughs plus online, pinned at City Hall) and "Teen storytelling workshop" (various NYC locations, pinned near Times Square). Both pins will be removed with the items kept in the feed.</li>
+<li><strong>Webinar_Template.pptx</strong> was attached to the handoff but never referenced in instructions, HANDOFF.md, or CLAUDE.md. Left untouched; noted here so it is not silently lost.</li>
+</ol>
+<h2>Cycle one plan</h2>
+<p>Rotation says the next focus is Business and Entrepreneurship (cycle E, anti pattern filter at maximum), library system Brooklyn Public Library, outer borough anchor Museum of the Moving Image (Queens). Baseline sweep first (deadlines 21 days out, BPL teen events, MoMI teen programming, lecture listings 14 days out), then the focus field deep sweep against the named directory sources. Deliverable variant 1: mailing list edition v2 in the four section age ladder format. Geocode confirmed venues, rebuild all deliverables, prepend digest, then write the cycle 1 entry below.</p>
+<h2>Cycle log</h2>
+<p>(entries appended as cycles complete)</p>
+<h3>Cycle 1 · completed 3:45 AM New York time</h3>
+<ul>
+<li>Focus Business and Entrepreneurship (anti pattern filter at maximum), library BPL, anchor Museum of the Moving Image. 15 web searches, 7 items added to the feed (5 niche, ratio cleared), 5 items to the verification queue, 1 deadline added (NYU Career Edge, June 12, vetting risk flagged).</li>
+<li>Deliverable variant 1 produced: docs/drafts/mailing-list-edition-02-age-ladder-scores-and-stories.md.</li>
+<li>Nightly pin sanity check done this cycle: removed 2 citywide pins (People's Money, Teen storytelling workshop), kept Citizen Pruner pin (fixed HQ classroom, noted street fieldwork caveat), verified remaining 13 pins fall in their stated boroughs. 4 pins added tonight so far (Pier 57, Hudson Yards, MoMI, 33 Liberty Street). 17 pins total.</li>
+<li>OPERATOR MESSAGE received 3:35 AM: cover all fields, not just history, and use Scores and Stories as the explicit framework. Applied immediately: edition v2 spans all six fields and carries ledger tags in the family facing copy. All later variants will do the same.</li>
+</ul>
+<h3>Additional judgment calls, cycle 1</h3>
+<ol start="7">
+<li><strong>WebFetch is blocked</strong> (HTTP 403 on all direct page fetches; network allowlist). Primary source verification is done via domain restricted web searches pinned to the operator institution's own site, which surfaces the official page content. Items that cannot be confirmed against the official domain go to the verification queue without exception.</li>
+<li><strong>Geocoding service blocked</strong> (Nominatim not in network allowlist). Pins are set only for unambiguous fixed institutions whose street address was confirmed on a primary source this cycle (example: MoMI's 36-01 35th Avenue address appears in the museum's own press PDF), using well documented coordinates for those exact addresses. Anything uncertain, multi venue, virtual, or citywide gets no pin and a pin_note saying why.</li>
+<li><strong>NYU Career Edge</strong> scored 42 after the vetting risk penalty, below the publish floor, but it is kept in the archive and on the deadline board because the deadline is in 2 days and parents ask; the v2 edition handles it in an internal vetting note rather than a family facing item.</li>
+</ol>
+<h3>Operator message, 3:55 AM</h3>
+<p>No weird titles: factual finds and easy categories only. Applied from cycle 2 onward. Item titles will state program name, organization, key fact (cost, age band, deadline); section names will be plain (Deadlines, Free this week, By grade band). Edition v2 is left as produced so versions stay comparable, and its headline style is superseded; the morning report will say which version reflects current direction.</p>
+<h3>Cycle 2 · completed 4:45 AM New York time (run early on operator instruction "do one now", scheduled timer for cycle 3 kept armed)</h3>
+<ul>
+<li>Focus Health and Science of Care, library QPL, anchor Bronx Museum. 9 searches. 3 items added, all niche (NAMI-NYC Youth Advocacy Ambassador 69, NYBC blood drive scholarship 70, QPL Youth Justice Collective 72 with thin_backing flag). 1 long lead deadline added (NYP summer 2027, opens January 1). Bronx Museum fall deadline checked: not yet posted, board note updated.</li>
+<li>Directory correction found: Child Mind Institute Youth Mental Health Academy is California only (LA, Bay Area, San Diego), not a NYC program. Source directory entry 236 needs a correction; logged in digest, left for human edit since the playbook is operator owned.</li>
+<li>Deliverable variant 2 produced: docs/drafts/mailing-list-edition-03-deadline-first.md, first deliverable in the factual title and plain category style.</li>
+<li>Email update 1 of maximum 5: outboxed and Gmail drafted, subject "WP Engine cycle 2: top finds".</li>
+<li>No new pins this cycle: all three new items are multi venue or school based, so the citywide rule correctly excludes them; pin_note recorded on each.</li>
+</ul>
+<h3>Cycle 3 · completed 5:25 AM New York time</h3>
+<ul>
+<li>Started when the kept timer fired, about 25 minutes after cycle 2 ended. The under 30 minute rule would normally downgrade this to a light cycle, but the rotation moved to fresh territory (Arts and Film) and the operator explicitly kept this run scheduled, so it ran full but efficient: 8 searches.</li>
+<li>5 items added (2 niche; cycle fell short of the one third niche standard and the digest says so). Headline material: all three official World Cup fan zones confirmed free at the host committee site, including the Bronx Terminal Market zone that exists this weekend only.</li>
+<li>Deliverable variant 3 produced: docs/drafts/this-weekend-edition-01-june-13-14.md.</li>
+<li>3 pins added (Louis Armstrong Stadium, Brooklyn Bridge Park, Bronx Terminal Market), 20 total. EVC and NYPL items correctly unpinned (unconfirmed address, multi branch).</li>
+<li>Verification queue grew: GFS NY Fellows deadline, Brooklyn Museum June Teen Night, Central Park final watch party, both Celebrate Brooklyn weekend listings.</li>
+<li>Cycle 4 timer armed (fires about 5:40 AM); focus will be STEM and Tech, library BPL, anchor Snug Harbor (Staten Island). Email update 2 of 5 goes out after cycle 4.</li>
+</ul>
+<h3>Operator messages, 5:30 AM, and actions taken</h3>
+<ul>
+<li>Style directive: factual versions with no opinion and no filler text; data first, a concise professional takeaways bullet block, the Wagner angle, grade group, and type per item. Applied to the new PDF immediately and to every variant from cycle 4 onward. Confirmed: every iteration is saved as new copy, nothing overwritten.</li>
+<li>Built scripts/build_team_pdf.py (reportlab installed via pip) and produced docs/exports/team-brief-2026-06-10-v1.pdf: one card per item, data bullets only, takeaways page, internal draft banner on every page. New version label per build; the script refuses to overwrite.</li>
+<li>Shared the weekend edition and the PDF directly to the operator in chat (readable on iPhone). Storage answer sent in chat.</li>
+</ul>
+<h3>Cycle 4 · completed 6:05 AM New York time</h3>
+<ul>
+<li>Focus STEM and Tech, anchor Snug Harbor. 3 searches, 3 items added, 3 of 3 niche. Staten Island gets its first pin tonight (Snug Harbor, 21 pins total). Congressional App Challenge added to the deadline board (October 26).</li>
+<li>Deliverable variant 4: Hidden Gem blog draft on the BPL Branch Council, factual style. Team brief PDF v2 rebuilt.</li>
+<li>Email update 2 of 5 outboxed and Gmail drafted.</li>
+</ul>
+<h3>Cycle 5 · completed 6:45 AM New York time</h3>
+<ul>
+<li>Focus Humanities and History. 3 searches, all three verification targets resolved: Schomburg Junior Scholars OPEN with June 15 priority deadline (the night's best find, score 90), Poetry Festival July 18 to 19 confirmed, NYT contest dates pinned (third party, flagged for official confirm).</li>
+<li>Deliverable variant 5: Deadline Watch blog draft (docs/drafts/blog-deadline-watch-01-june.md). Team brief PDF v3 rebuilt.</li>
+<li>2 pins added (Schomburg Center, Nolan Park). 23 pins total, 9 added tonight.</li>
+<li>Variant 6 (Free Beats Paid comparison) not produced as a standalone: the material exists (Career Edge versus the free paid internship slate) but the comparison is already embedded in editions v2 and v3 and the Deadline Watch flag section; with the 7:00 AM stop approaching, the morning report took priority. Logged as a judgment call.</li>
+</ul>
+<h2>Shift end · 6:55 AM New York time</h2>
+<p>MORNING-REPORT.md written to project root, outboxed, and Gmail drafted (email 4 of maximum 5). All deliverables committed and pushed. Loop stopped on schedule before 7:00 AM. Verification queue (11 items) carried forward for the next shift; /loop command is in place for tomorrow.</p>
+<h2>Addendum, 8:15 AM, post shift (operator follow up with Michael Wagner's program links)</h2>
+<ul>
+<li>404 explained to operator: files live under wp-engine/ in the repo, so the path is wp-engine/docs/shift-log-2026-06-10.md, not docs/shift-log-2026-06-10.md. No file was missing; it was a path prefix issue.</li>
+<li>Verified all of Michael's links at primary sources and added 4 programs to the feed (NYCSEF, Wharton Investment Competition, JAX Academic Year Fellowship, Simons Summer Research as a 2027 watch item). Science Career Ladder was already in the feed; not duplicated. 2 deadlines added to the board (JAX Aug 24 rolling, Wharton 2026-27 opening expected late June).</li>
+<li>CONFIDENTIALITY judgment call: Michael's email names a student (Sophia) with match context. Per playbook 9.3, no identifying details were written into any shared state file or deliverable. Programs were added as general feed items only. Recommended the operator use /match for a confidential single student run.</li>
+<li>Honest scoring on the leads: JAX 60 (unpaid, out of area), Simons 58 (closed this year), Wharton 72 (online, free, opens soon), NYCSEF 82 (free, citywide, the research ladder spine).</li>
+<li>New deliverables: docs/drafts/research-and-competitions-edition-01.md, then research-and-competitions-edition-02.md with clearer status tagged categories per operator request. Team brief PDF rebuilt as v4 (now 40 items). Nothing overwritten.</li>
+</ul>
+<h2>Addendum, 9:30 AM: single file dashboard</h2>
+<ul>
+<li>Operator could not open feed.html/map.html standalone because each loads opportunities.js as a sibling file (blank when downloaded alone). Built scripts/build_combined.py producing docs/dashboard.html: Feed, Map, Calendar as tabs in one self contained file, opportunities.js inlined, isolated per view via iframes. Only external loads are OpenStreetMap tiles and Google Fonts (CDN). Opens on iPhone by tapping the single file. Also the basis for a GitHub Pages URL if the operator wants one.</li>
+</ul></div>
+<footer>Scores and Stories · Wagner Prep · internal working document.</footer>
+</div></body></html>
